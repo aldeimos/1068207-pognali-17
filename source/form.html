@@ -58,6 +58,136 @@
   <main class="main">
     <section class="profile">
       <p class="profile__level"></p>
+      <img class="profile__image" src="img/" alt="Фотография в профиле">
+      <button class="profile__button" type="button">Сменить фото</button>
+      <div class="profile__hashtags">
+        <p class="profile__hashtags-subtitle">Тэги</p>
+        <p class="profile__hashtags-content">#бургер #бар #футбол #концерт #крафт</p>
+      </div>
+      <div class="profile__transport">
+        <p class="profile__transport-subtitle">Транспорт</p>
+        <ul class="preference-list profile-preference-list">
+          <li class="profile-preference-list__item">
+            <img class="profile-preference-list__item-logo" src="img/" alt="Иконка самолета">
+            <p class="profile-preference-list__item-tooltip profile-preference-list__item-tooltip--airplane">Авиаперелет
+            </p>
+          </li>
+          <li class="profile-preference-list__item">
+            <img class="profile-preference-list__item-logo" src="img/" alt="Иконка автобуса">
+            <p class="profile-preference-list__item-tooltip profile-preference-list__item-tooltip--transport">
+              Автотранспорт</p>
+          </li>
+          <li class="profile-preference-list__item">
+            <img class="profile-preference-list__item-logo" src="img/" alt="Иконка велосипеда">
+            <p class="profile-preference-list__item-tooltip profile-preference-list__item-tooltip--bicycle">Велосипед
+            </p>
+          </li>
+          <li class="profile-preference-list__item">
+            <img class="profile-preference-list__item-logo" src="img/" alt="Иконка шагающего человека">
+            <p class="profile-preference-list__item-tooltip profile-preference-list__item-tooltip--onfoot">Пешком</p>
+          </li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </section>
+    <section class="plans">
+      <h2 class="plans__title">Мои планы:</h2>
+      <ul class="plans-list">
+        <li class="plans-list__card">
+          <h3 class="plans-list__card-title">1. Франция, Италия</h3>
+          <p class="plans-list__card-companions">3 попутчика</p>
+          <p class="plans-list__card-dates">26 мар – 29 мар</p>
+          <a class="plans-list__card-button" href="#">Изменить</a>
+        </li>
+        <li class="plans-list__card">
+          <h3 class="plans-list__card-title">2. Тайланд, Индонезия</h3>
+          <p class="plans-list__card-companions">1 попутчик</p>
+          <p class="plans-list__card-dates">1 июл – 15 июл</p>
+          <a class="plans-list__card-button" href="#">Изменить</a>
+        </li>
+      </ul>
+    </section>
+    <section class="add-plan">
+      <h2 class="add-plan__title">Добавить планы:</h2>
+      <form class="planning-form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="planning-form__steps">
+          <h3 class="planning-form__title">
+            Шаг 1.<br>
+            Даты пребывания
+          </h3>
+          <p class="planning-form__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
+            поездку и ее предполагаемую длительность.</p>
+          <label class="planning-form__label" for="companions-field">
+            Ищу попутчиков: <span class="planning-form__label--subcontent">Чел.</span>
+          </label>
+          <input class="planning-form__input" type="number" name="companions-sum" min="1" max="5" id="companions-field">
+
+          <label class="planning-form__label" for="duration-field">
+            Длительность: <span class="planning-form__label--subcontent">Дн.</span>
+          </label>
+          <input class="planning-form__input" type="number" name="duration-sum" min="1" max="365" id="duration-field">
+          <p class="planning-form__checkbox">
+            <input class="planning-form__input" type="checkbox" name="kids-option" id="kids-field">
+            <label class="planning-form__label" for="kids-field">Можно с детьми</label>
+          </p>
+          <input type="month" name="month">
+          <a class="planning-firm__button" href="#">Следующий шаг</a>
+        </div>
+        <div class="planning-form__steps">
+          <h3 class="planning-form__title">
+            Шаг 2.<br>
+            Маршрут
+          </h3>
+          <p class="planning-form__desc">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
+            несколько.</p>
+          <select name="country-list">
+            <option value="Bosnia" selected>Босния и Герцеговина</option>
+            <option value="Thailand">Тайланд</option>
+            <option value="Japan">Япония</option>
+            <option value="default" disabled>Выберите страну</option>
+          </select>
+          <select name="country-list">
+            <option value="Bosnia">Босния и Герцеговина</option>
+            <option value="Thailand">Тайланд</option>
+            <option value="Japan">Япония</option>
+            <option value="Czechoslovakia" selected>Чехословакия</option>
+            <option value="default" disabled>Выберите страну</option>
+          </select>
+          <select name="country-list">
+            <option value="Bosnia">Босния и Герцеговина</option>
+            <option value="Thailand">Тайланд</option>
+            <option value="Japan">Япония</option>
+            <option value="default" selected disabled>Выберите страну</option>
+          </select>
+          <a class="planning-firm__button" href="#">Следующий шаг</a>
+          <a class="planning-firm__button planning-firm__button--step-back" href="#">Шаг назад</a>
+        </div>
+        <div class="planning-form__steps">
+          <h3 class="planning-form__title">
+            Шаг 3.<br>
+            Развлечения
+          </h3>
+          <p class="planning-form__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной
+            форме и ставить тэги.</p>
+          <div class="planning-form__steps-entertaiment">
+            <p class="planning-form__coutry-name">
+              <label class="planning-form__label" for="country-field-1">Босния и Герцеговина</label>
+            </p>
+            <textarea class="planning-form__textarea" name="travel-entertainment" id="country-field-1"
+              placeholder="План действий"></textarea>
+          </div>
+          <div class="planning-form__steps-entertaiment">
+            <p class="planning-form__coutry-name">
+              <label class="planning-form__label" for="country-field-2">Чехословакия</label>
+            </p>
+            <textarea class="planning-form__textarea" name="travel-entertainment" id="country-field-2"
+              placeholder=""></textarea>
+          </div>
+          <button class="planning-firm__button planning-firm__button--submit" type="submit">Отправить</button>
+          <a class="planning-firm__button planning-firm__button--step-back" href="#">Шаг назад</a>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="page-footer">
