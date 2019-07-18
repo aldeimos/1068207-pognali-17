@@ -3,42 +3,44 @@
 
 <head>
   <title>Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="page-header page-header--border">
+  <header class="page-header">
     <div class="page-header__wrapper">
-      <a href="#" class="page-header__logo">
-        <img class="page-header__logo-image visually-hidden" src="img/" alt="Логотип компании «Погнали?»" width="100"
-          height="19">
-        <!--Будет появляться на других вьюпортах-->
-        <p class="page-header__logo-text">Погнали?</p>
+      <a href="index.html" class="page-header__logo">
+        <img class="page-header__logo-image" src="../../img/logo-mobile-white.png" alt="Логотип компании «Погнали?»"
+          width="100" height="19">
       </a>
       <button class="page-header__toggle page-header__toggle--open" type="button">Кнопка открытия выпадающего
         меню</button>
-      <button class="page-header__toggle page-header__toggle--close" type="button">Кнопка закрытия выпадающего
+      <button class="page-header__toggle page-header__toggle--close visually-hidden" type="button">Кнопка закрытия
+        выпадающего
         меню</button>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">О сервисе</a>
+          <li class="main-nav__list-item site-list__item">
+            <a class="main-nav__list-link site-list__link" href="#">О сервисе</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Направления</a>
+          <li class="main-nav__list-item site-list__item">
+            <a class="main-nav__list-link site-list__link" href="#">Направления</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Попутчики</a>
+          <li class="main-nav__list-item site-list__item">
+            <a class="main-nav__list-link site-list__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__link" href="#">Авторизация</a>
+            <a class="user-list__link user-list__link-login" href="#">Авторизация</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link-phone" href="tel: +7800555-86-28">8 800 555-86-28</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link-email" href="mailto: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
         </ul>
-        <div class="contacts-info">
-          <a class="contacts-info__phone" href="tel: +7800555-86-28">8 800 555-86-28</a>
-          <a class="contacts-info__email" href="mailto: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
         <ul class="social-list header-social-list">
           <li class="header-social-list__item">
             <a class="header-social-list__link header-social-list__link--fb" href="#">Ссылка на группу в Фейсбук</a>
@@ -52,10 +54,10 @@
           </li>
         </ul>
       </nav>
-      <h1 class="page-header__title">Попутчики</h1>
     </div>
+    <h2 class="page-header__title">Попутчики</h2>
   </header>
-  <main class="main">
+  <main class="main main-catalog">
     <section class="filter">
       <h2 class="filter__title">Подберите идеального попутчика</h2>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="GET">
@@ -141,208 +143,267 @@
         <button class="catalog-filter__button" type="submit">Показать</button>
       </form>
     </section>
-    <section class="companions">
+    <section class="companions-catalog">
       <h2 class="visually-hidden">Выбор попутчика</h2>
       <ul class="companions-list">
-        <li class="companions-list__card">
-          <img class="companions-list__card-picture" src="img/" alt="Фотография попутчика" width="70" height="70">
-          <p class="companions-list__card-name">Таня Фирсова</p>
-          <p class="companions-list__card-additional">1,5 м</p>
-          <p class="companions-list__card-hashtags">#ЗОЖ, #ПП, #Фитнес, #пляж, #авокадо, #смузи</p>
-          <p class="companions-list__card-subtitle">хочет посетить:</p>
-          <ul class="country-list">
+        <li class="companions-list__item">
+          <div class="companions-list__card">
+            <img class="companions-list__card-picture" src="../../img/firsova-mobile@1x.jpg" alt="Фотография попутчика"
+              width="70" height="70">
+            <div class="companions-list__card-submenu">
+              <p class="companions-list__card-name">Таня Фирсова</p>
+              <p class="companions-list__card-additional">1,5 м</p>
+            </div>
+          </div>
+          <p class="companions-list__item-hashtags">#ЗОЖ, #ПП, #Фитнес, #пляж, #авокадо, #смузи</p>
+          <p class="companions-list__item-subtitle">хочет посетить:</p>
+          <ul class="country-list catalog-country-list">
             <li class="country-list__item">
-              <img class="country-list__item-image" src="img/" alt="Флаг Шри-Ланки" width="35" height="24">
+              <img class="country-list__item-image" src="../../img/sri-lanka-flag.png" alt="Флаг Шри-Ланки" width="35"
+                height="24">
               <p class="country-list__item-name">Шри-Ланка</p>
             </li>
             <li class="country-list__item">
-              <img class="country-list__item-image" src="img/" alt="Флаг Тайланда" width="35" height="24">
+              <img class="country-list__item-image" src="../../img/thai-flag.png" alt="Флаг Тайланда" width="35"
+                height="24">
               <p class="country-list__item-name">Тайланд</p>
             </li>
             <li class="country-list__item">
-              <img class="country-list__item-image" src="img/" alt="Флаг Сейшел" width="35" height="24">
+              <img class="country-list__item-image" src="../../img/seychelles-flag.png" alt="Флаг Сейшел" width="35"
+                height="24">
               <p class="country-list__item-name">Сейшелы</p>
             </li>
           </ul>
-          <p class="companions-list__card-subtitle">транспорт:</p>
-          <ul class="preference-list">
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка самолета" width="19" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
-            </li>
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка автобуса" width="17" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
-            </li>
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка велосипеда" width="24" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
-            </li>
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка шагающего человека" width="20" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
-            </li>
-          </ul>
-          <p class="companions-list__card-subtitle">левел:</p>
-          <span class="companions-list__card-level">99</span>
+          <div class="companions-list__item-wrapper">
+            <p class="companions-list__item-subtitle">транспорт:</p>
+            <p class="companions-list__item-subtitle">левел:</p>
+          </div>
+          <div class="companions-list__item-wrapper">
+            <ul class="preference-list catalog-preference-list">
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/plane.svg" alt="Иконка самолета" width="19"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bus@0.15.svg" alt="Иконка автобуса" width="17"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bike@0.15.svg" alt="Иконка велосипеда" width="24"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/run@0.15.svg" alt="Иконка шагающего человека"
+                  width="20" height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
+              </li>
+            </ul>
+            <span class="companions-list__card-level">99</span>
+          </div>
           <a class="companions-list__card-button" href="#">Позвать!</a>
         </li>
-        <li class="companions-list__card">
-          <img class="companions-list__card-picture" src="img/" alt="Фотография попутчика" width="70" height="70">
-          <p class="companions-list__card-name">Петя Демин</p>
-          <p class="companions-list__card-additional">150/p>
-            <p class="companions-list__card-hashtags">#бургер, #бар, #футбол, #концерт, #крафт</p>
-            <p class="companions-list__card-subtitle">хочет посетить:</p>
-            <ul class="country-list">
-              <li class="country-list__item">
-                <img class="country-list__item-image" src="img/" alt="Флаг Бельгии" width="35" height="24">
-                <p class="country-list__item-name">Бельгия</p>
-              </li>
-              <li class="country-list__item">
-                <img class="country-list__item-image" src="img/" alt="Флаг Чехии" width="35" height="24">
-                <p class="country-list__item-name">Чехия</p>
-              </li>
-            </ul>
-            <p class="companions-list__card-subtitle">транспорт:</p>
-            <ul class="preference-list">
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка самолета" width="19" height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
-              </li>
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка автобуса" width="17" height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
-              </li>
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка велосипеда" width="24" height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
-              </li>
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка шагающего человека" width="20"
-                  height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
-              </li>
-            </ul>
-            <p class="companions-list__card-subtitle">левел:</p>
-            <span class="companions-list__card-level">80</span>
-            <a class="companions-list__card-button" href="#">Позвать!</a>
-        </li>
-        <li class="companions-list__card">
-          <img class="companions-list__card-picture" src="img/" alt="Фотография попутчика" width="70" height="70">
-          <p class="companions-list__card-name">Марк Смолов</p>
-          <p class="companions-list__card-additional">1700/p>
-            <p class="companions-list__card-hashtags">#рэп, #тату, #хайпбист, #кроссовки, #суприм</p>
-            <p class="companions-list__card-subtitle">хочет посетить:</p>
-            <ul class="country-list">
-              <li class="country-list__item">
-                <img class="country-list__item-image" src="img/" alt="Флаг США" width="35" height="24">
-                <p class="country-list__item-name">США</p>
-              </li>
-              <li class="country-list__item">
-                <img class="country-list__item-image" src="img/" alt="Флаг Австралии" width="35" height="24">
-                <p class="country-list__item-name">Австралия</p>
-              </li>
-              <li class="country-list__item">
-                <img class="country-list__item-image" src="img/" alt="Флаг Доминиканы" width="35" height="24">
-                <p class="country-list__item-name">Доминикана</p>
-              </li>
-            </ul>
-            <p class="companions-list__card-subtitle">транспорт:</p>
-            <ul class="preference-list">
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка самолета" width="19" height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
-              </li>
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка автобуса" width="17" height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
-              </li>
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка велосипеда" width="24" height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
-              </li>
-              <li class="preference-list__item">
-                <img class="preference-list__item-logo" src="img/" alt="Иконка шагающего человека" width="20"
-                  height="21">
-                <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
-              </li>
-            </ul>
-            <p class="companions-list__card-subtitle">левел:</p>
-            <span class="companions-list__card-level">25</span>
-            <a class="companions-list__card-button" href="#">Позвать!</a>
-        </li>
-        <li class="companions-list__card">
-          <img class="companions-list__card-picture" src="img/" alt="Фотография попутчика" width="70" height="70">
-          <p class="companions-list__card-name">Лариса Роговая</p>
-          <p class="companions-list__card-additional">23</p>
-          <p class="companions-list__card-hashtags">#образование, #карьера, #учеба, #линкедин</p>
-          <p class="companions-list__card-subtitle">хочет посетить:</p>
-          <ul class="country-list">
+        <li class="companions-list__item">
+          <div class="companions-list__card">
+            <img class="companions-list__card-picture" src="../../img/demin-mobile@1x.jpg" alt="Фотография попутчика"
+              width="70" height="70">
+            <div class="companions-list__card-submenu">
+              <p class="companions-list__card-name">Пётр Демин</p>
+              <p class="companions-list__card-additional">150</p>
+            </div>
+          </div>
+          <p class="companions-list__item-hashtags">#бургер #бар #футбол #концерт #бар</p>
+          <p class="companions-list__item-subtitle">хочет посетить:</p>
+          <ul class="country-list catalog-country-list">
             <li class="country-list__item">
-              <img class="country-list__item-image" src="img/" alt="Флаг Великобритании" width="35" height="24">
+              <img class="country-list__item-image" src="../../img/belgium-flag.png" alt="Флаг Бельгии" width="35"
+                height="24">
+              <p class="country-list__item-name">Бельгия</p>
+            </li>
+            <li class="country-list__item">
+              <img class="country-list__item-image" src="../../img/czech-flag.png" alt="Флаг Чехии" width="35"
+                height="24">
+              <p class="country-list__item-name">Тайланд</p>
+            </li>
+          </ul>
+          <div class="companions-list__item-wrapper">
+            <p class="companions-list__item-subtitle">транспорт:</p>
+            <p class="companions-list__item-subtitle">левел:</p>
+          </div>
+          <div class="companions-list__item-wrapper">
+            <ul class="preference-list catalog-preference-list">
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/plane.svg" alt="Иконка самолета" width="19"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bus.svg" alt="Иконка автобуса" width="17"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bike@0.15.svg" alt="Иконка велосипеда" width="24"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/run.svg" alt="Иконка шагающего человека"
+                  width="20" height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
+              </li>
+            </ul>
+            <span class="companions-list__card-level">80</span>
+          </div>
+          <a class="companions-list__card-button" href="#">Позвать!</a>
+        </li>
+        <li class="companions-list__item">
+          <div class="companions-list__card">
+            <img class="companions-list__card-picture" src="../../img/smolov-mobile@1x.jpg" alt="Фотография попутчика"
+              width="70" height="70">
+            <div class="companions-list__card-submenu">
+              <p class="companions-list__card-name">Марк Смолов</p>
+              <p class="companions-list__card-additional">1700</p>
+            </div>
+          </div>
+          <p class="companions-list__item-hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <p class="companions-list__item-subtitle">хочет посетить:</p>
+          <ul class="country-list catalog-country-list">
+            <li class="country-list__item">
+              <img class="country-list__item-image" src="../../img/usa-flag.png" alt="Флаг США" width="35" height="24">
+              <p class="country-list__item-name">США</p>
+            </li>
+            <li class="country-list__item">
+              <img class="country-list__item-image" src="../../img/australia-flag.png" alt="Флаг Австралии" width="35"
+                height="24">
+              <p class="country-list__item-name">Австралия</p>
+            </li>
+            <li class="country-list__item">
+              <img class="country-list__item-image" src="../../img/dominicana-flag.png" alt="Флаг Доминиканы" width="35"
+                height="24">
+              <p class="country-list__item-name">Доминикана</p>
+            </li>
+          </ul>
+          <div class="companions-list__item-wrapper">
+            <p class="companions-list__item-subtitle">транспорт:</p>
+            <p class="companions-list__item-subtitle">левел:</p>
+          </div>
+          <div class="companions-list__item-wrapper">
+            <ul class="preference-list catalog-preference-list">
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/plane.svg" alt="Иконка самолета" width="19"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bus@0.15.svg" alt="Иконка автобуса" width="17"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bike.svg" alt="Иконка велосипеда" width="24"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/run@0.15.svg" alt="Иконка шагающего человека"
+                  width="20" height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
+              </li>
+            </ul>
+            <span class="companions-list__card-level">25</span>
+          </div>
+          <a class="companions-list__card-button" href="#">Позвать!</a>
+        </li>
+        <li class="companions-list__item">
+          <div class="companions-list__card">
+            <img class="companions-list__card-picture" src="../../img/rogovaya-mobile@1x.jpg" alt="Фотография попутчика"
+              width="70" height="70">
+            <div class="companions-list__card-submenu">
+              <p class="companions-list__card-name">Лариса Роговая</p>
+              <p class="companions-list__card-additional">23</p>
+            </div>
+          </div>
+          <p class="companions-list__item-hashtags">#Образование #карьера #учеба #линкедин</p>
+          <p class="companions-list__item-subtitle">хочет посетить:</p>
+          <ul class="country-list catalog-country-list">
+            <li class="country-list__item">
+              <img class="country-list__item-image" src="../../img/britain-flag.png" alt="Флаг Великобритании"
+                width="35" height="24">
               <p class="country-list__item-name">Великобритания</p>
             </li>
             <li class="country-list__item">
-              <img class="country-list__item-image" src="img/" alt="Флаг Германии" width="35" height="24">
+              <img class="country-list__item-image" src="../../img/german-flag.png" alt="Флаг Германии" width="35"
+                height="24">
               <p class="country-list__item-name">Германия</p>
             </li>
           </ul>
-          <p class="companions-list__card-subtitle">транспорт:</p>
-          <ul class="preference-list">
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка самолета" width="19" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
-            </li>
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка автобуса" width="17" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
-            </li>
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка велосипеда" width="24" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
-            </li>
-            <li class="preference-list__item">
-              <img class="preference-list__item-logo" src="img/" alt="Иконка шагающего человека" width="20" height="21">
-              <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
-            </li>
-          </ul>
-          <p class="companions-list__card-subtitle">левел:</p>
-          <span class="companions-list__card-level">50</span>
+          <div class="companions-list__item-wrapper">
+            <p class="companions-list__item-subtitle">транспорт:</p>
+            <p class="companions-list__item-subtitle">левел:</p>
+          </div>
+          <div class="companions-list__item-wrapper">
+            <ul class="preference-list catalog-preference-list">
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/plane.svg" alt="Иконка самолета" width="19"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--airplane">Авиаперелет</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bus.svg" alt="Иконка автобуса" width="17"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--transport">Автотранспорт</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/bike@0.15.svg" alt="Иконка велосипеда" width="24"
+                  height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--bicycle">Велосипед</p>
+              </li>
+              <li class="preference-list__item">
+                <img class="preference-list__item-logo" src="../../img/run@0.15.svg" alt="Иконка шагающего человека"
+                  width="20" height="21">
+                <p class="preference-list__item-tooltip preference-list__item-tooltip--onfoot">Пешком</p>
+              </li>
+            </ul>
+            <span class="companions-list__card-level">50</span>
+          </div>
           <a class="companions-list__card-button" href="#">Позвать!</a>
         </li>
       </ul>
+
       <a class="companions__showmore-button" href="#">Показать еще</a>
-      <ul class="catalog-nav">
-        <li class="catalog-nav__item">
-          <a class="catalog-nav__link catalog-nav__link-prev" href="#">Назад</a>
+      <ul class="catalog__nav">
+        <li class="catalog__nav-item">
+          <a class="catalog__nav-link catalog__nav-link--prev" href="#">Назад</a>
         </li>
-        <li class="catalog-nav__item">
-          <a class="catalog-nav__link catalog-nav__link-next" href="#">Вперед</a>
+        <li class="catalog__nav-item">
+          <a class="catalog__nav-link catalog__nav-link--next" href="#">Вперед</a>
         </li>
       </ul>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer catalog-page-footer">
     <div class="footer__social">
-      <img class="footer__social-logo visually-hidden" src="img/" alt="Логотип компании «Погнали?»" width="100"
-        height="19">
-      <p class="footer__social-logo-text">Погнали?</p>
+      <img class="footer__social-logo" src="../../img/logo-mobile-blue@1x.png" alt="Логотип компании «Погнали?»"
+        width="100" height="19">
       <ul class="social-list footer-social-list">
         <li class="footer-social-list__item">
-          <a class="footer-social-link footer-social-link--fb" href="#">Ссылка на группу в Фейсбук</a>
+          <a class="footer-social-list__link footer-social-list__link--fb" href="#">Ссылка на группу в Фейсбук</a>
         </li>
         <li class="footer-social-list__item">
-          <a class="footer-social-link footer-social-link--vk" href="#">Ссылка на группу Вконтакте</a>
+          <a class="footer-social-list__link footer-social-list__link--vk" href="#">Ссылка на группу Вконтакте</a>
         </li>
         <li class="footer-social-list__item">
-          <a class="footer-social-link footer-social-link--inst" href="#">Ссылка на группу в Инстаграмм</a>
+          <a class="footer-social-list__link footer-social-list__link--inst" href="#">Ссылка на группу в Инстаграмм</a>
         </li>
       </ul>
     </div>
     <div class="footer__copyright">
       <p class="footer__copyright-title">Разработано</p>
-      <img class="footer__copyright-logo" src="img/" alt="Логотип компании-разработчика «HtmlAcademy»" width="27"
-        height="34">
+      <img class="footer__copyright-logo" src="../../img/htmlacademy.svg"
+        alt="Логотип компании-разработчика «HtmlAcademy»" width="27" height="34">
     </div>
   </footer>
 </body>
