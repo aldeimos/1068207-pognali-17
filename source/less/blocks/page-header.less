@@ -1,0 +1,59 @@
+.page-header {
+  position: relative;
+
+  color: #fff;
+
+  background-color: @dark-blue;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.page-header__logo-image {
+  width: 100px;
+  height: 19px;
+  padding: 27px 0px 27px 25px;
+}
+
+.page-header__toggle {
+  position: absolute;
+  font-size: 0;
+  top: 31px;
+  right: 25px;
+
+
+  border: none;
+}
+
+.page-header__toggle--open {
+  content: "";
+
+  width: 25px;
+  height: 11px;
+
+  background: url("../../img/menu.svg") no-repeat center;
+}
+
+.page-header__title {
+  position: relative;
+  display: inline;
+  margin: 0;
+
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 172px;
+    height: 5px;
+
+    background-color: @orange;
+    border-radius: 5px;
+  }
+}

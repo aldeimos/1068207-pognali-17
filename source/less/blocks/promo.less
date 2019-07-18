@@ -1,0 +1,136 @@
+.promo {
+  position: relative;
+  top: -80px;
+  z-index: -3;
+
+  padding-bottom: 40px;
+
+  background-color: #edeff6;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 37px;
+    right: 0;
+
+    width: 100px;
+    height: 100px;
+
+    background: url("../../img/rates.png") no-repeat center;
+  }
+}
+
+.promo__title {
+  width: 112px;
+  margin: 0;
+  margin-bottom: 44px;
+  padding-top: 50px;
+
+  .section-index-title();
+}
+
+.promo__list {
+  .list-default-style();
+  margin-bottom: 30px;
+  padding-left: 25px;
+  padding-right: 44px;
+}
+
+.promo__item {
+  position: relative;
+  padding: 14px 0 13px 0px;
+  border-top: 1px solid rgba(68, 68, 68, 0.05);
+
+  &:nth-child(1)::after {
+    content: "1";
+
+    position: absolute;
+    top: 3px;
+    right: -44px;
+
+    display: flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "BloggerSans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+
+    background-color: #ffa530;
+    border-radius: 50%;
+  }
+
+  &:nth-child(2)::after {
+    content: "2";
+
+    position: absolute;
+    top: 3px;
+    right: -44px;
+
+    display: flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "BloggerSans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+
+    background-color: #ffbd30;
+    border-radius: 50%;
+  }
+
+
+  &:last-child::after {
+    content: "3";
+
+    position: absolute;
+    top: 3px;
+    right: -44px;
+
+    display: flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "BloggerSans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+
+    background-color: @light-yellow;
+    border-radius: 50%;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid rgba(68, 68, 68, 0.05);
+  }
+}
+
+.promo__item-title,
+.promo__item-price {
+  margin: 0;
+  .paragraph-style-text();
+  color: #444;
+}
+
+.promo__button {
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  text-decoration: none;
+  color: @dark-blue;
+}

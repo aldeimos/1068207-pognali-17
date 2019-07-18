@@ -1,0 +1,81 @@
+.directions-list {
+  display: flex;
+  flex-direction: column;
+  .list-default-style();
+}
+
+
+
+.directions-list__wrapper {
+  position: relative;
+  top: -15px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 26px 23px 24px;
+
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.directions-list__item-image {
+  height: 100%;
+}
+
+.directions-list__item-title {
+  margin: 0;
+
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 21px;
+  color: @dark-blue;
+}
+
+.directions-list__item-title--thai::before {
+  content: "";
+
+  position: absolute;
+  z-index: 25;
+
+  width: 35px;
+  height: 24px;
+  background: url("../../img/thai-flag.svg ") no-repeat center;
+}
+
+.directions-list__item-views {
+  position: relative;
+
+  margin: 0;
+
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  color: fade(#444444, 30%);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: -16px;
+
+    width: 11px;
+    height: 11px;
+
+    background: url("../../img/user-icon@0.3.svg");
+  }
+}
+
+.directions-list__item-desc {
+  margin: 0;
+
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: fade(#444444, 30%);
+}

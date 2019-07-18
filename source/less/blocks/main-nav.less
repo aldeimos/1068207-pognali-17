@@ -1,0 +1,33 @@
+.main-nav {
+  position: absolute;
+
+  display: none;
+  padding-top: 25px;
+
+  background-color: #fff;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  .list-default-style();
+}
+
+.main-nav__list-item {
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-bottom: 55px;
+  }
+}
+
+.main-nav__list-link {
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @dark-blue;
+}
