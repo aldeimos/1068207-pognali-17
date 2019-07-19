@@ -1,0 +1,54 @@
+.contacts {
+  position: relative;
+  top: -97px;
+  z-index: -5;
+
+  padding-bottom: 35px;
+
+  background-color: @light-yellow;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.contacts__address-title {
+  width: 145px;
+  margin: 0;
+  margin-bottom: 32px;
+  padding-top: 37px;
+
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: @dark-blue;
+}
+
+.contacts__button {
+  position: relative;
+
+  display: block;
+  padding: 24px 24px 21px 24px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 18px;
+  color: @dark-blue;
+  text-decoration: none;
+
+  border-radius: 10px;
+  border: 2px solid @dark-blue;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 24px;
+
+    width: 10px;
+    height: 14px;
+
+    background: url("../../img/triangle-arrow-right.svg");
+  }
+}

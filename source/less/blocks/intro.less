@@ -1,0 +1,126 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 405px;
+
+  background: url("../../img/traveller-illustration-mobile@1x.png") no-repeat right bottom, url("../../img/globe-back-mobile@1x.jpg") no-repeat left;
+  background-color: @dark-blue;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 2px;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+  color: #ffffff;
+  text-align: center;
+
+  background-color: @dark-blue;
+}
+
+.intro-nav__list {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+
+  .list-default-style();
+}
+
+.intro-nav__link-login {
+  padding: 13px 40px 11px 37px;
+
+  text-decoration: none;
+  .authorization-button();
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+  }
+}
+
+.intro-nav__link--phone,
+.intro-nav__link--email {
+  display: inline-block;
+
+  width: 40px;
+  height: 40px;
+
+  vertical-align: middle;
+
+  border-radius: 50%;
+}
+
+.intro-nav__link--phone {
+  background: #ff8d30 url("../../img/topmenu-phone.svg") no-repeat center;
+  background-size: 45%;
+
+  &:hover {
+    background-color: #f26926;
+  }
+
+  &:active {
+    background: #f26926 url("../../img/topmenu-phone@0.3.svg") no-repeat center;
+    background-size: 45%;
+  }
+}
+
+.intro-nav__link--email {
+  background: #ffbd30 url("../../img/topmenu-mail.svg") no-repeat center;
+  background-size: 45%;
+
+  &:hover {
+    background-color: #ff8d30;
+  }
+
+  &:active {
+    background: #ff8d30 url("../../img/topmenu-mail@0.3.svg") no-repeat center;
+    background-size: 45%;
+  }
+}
+
+.intro__review {
+  min-height: 285px;
+  box-sizing: border-box;
+
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 90px;
+  margin: 0;
+
+  background-color: @dark-blue;
+}
+
+.intro__review-text {
+  margin: 0;
+  margin-bottom: 20px;
+  .paragraph-style-text();
+}
+
+.intro__review-author {
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
+}
+
+.intro__guide {
+  position: relative;
+  min-height: 260px;
+  background-color: #192144;
+}

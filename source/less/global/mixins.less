@@ -1,0 +1,64 @@
+.paragraph-style-text() {
+  font-family: "BloggerSans-Light", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.list-default-style() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.authorization-button() {
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @dark-blue;
+
+  background-color: @light-yellow;
+  border-radius: 30px;
+}
+
+.section-index-title() {
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 24px;
+
+  color: @orange;
+}
+
+.view-all-button() {
+  position: relative;
+
+  display: block;
+  padding: 24px;
+
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration: none;
+  color: @dark-blue;
+
+  background-color: @light-yellow;
+  border-radius: 5px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 24px;
+
+    width: 10px;
+    height: 14px;
+
+    background: url("../../img/triangle-arrow-right.svg");
+  }
+}
