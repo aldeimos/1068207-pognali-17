@@ -33,3 +33,41 @@
   border: none;
   border-radius: 10px;
 }
+
+@media (min-width: @tablet-width) {
+  .cta-form {
+    width: 620px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .cta-form__input {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+
+  .cta-form__button {
+    width: 82px;
+    height: 81px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cta-form {
+    width: 1180px;
+  }
+
+  .cta-form__button {
+    width: auto;
+    height: auto;
+    padding: 31px 153px 28px 37px;
+
+    font-family: "BloggerSans-Bold", "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #1d2e5b;
+    background-position: center right 36px;
+    background-size: 4%;
+  }
+}

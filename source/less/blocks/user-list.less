@@ -1,6 +1,12 @@
+.user-list {
+  display: flex;
+  align-items: flex-start;
+}
+
 .user-list__item {
   &:nth-child(1) {
     margin-bottom: 60px;
+    align-self: center;
   }
 
   &:nth-child(2) {
@@ -24,6 +30,7 @@
 .user-list__link-email {
   position: relative;
 
+  display: block;
   padding-left: 60px;
 
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
@@ -61,5 +68,11 @@
     background: @dark-blue url("../../img/contacts-mail.svg") no-repeat center;
     background-size: 40%;
     border-radius: 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user-list__link-login {
+    display: none;
   }
 }

@@ -1,0 +1,28 @@
+.companions-catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .companions-list {
+    flex-direction: column;
+  }
+}
+
+
+
+@media (min-width: @desktop-width) {
+  .companions-catalog {
+    width: 950px;
+    order: -1;
+  }
+
+  .companions-catalog__wrapper {
+    .companions-list {
+      padding: 0;
+    }
+
+    .companions-list__item {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

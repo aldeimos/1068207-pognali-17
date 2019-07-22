@@ -1,41 +1,52 @@
 .intro {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  min-height: 700px;
+  padding-bottom: 135px;
+
+  background: url("../../img/traveller-illustration-mobile@1x.png") no-repeat center bottom 265px, url("../../img/globe-back-mobile@1x.jpg") no-repeat top center;
 }
 
 .intro__wrapper {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 405px;
+}
 
-  background: url("../../img/traveller-illustration-mobile@1x.png") no-repeat right bottom, url("../../img/globe-back-mobile@1x.jpg") no-repeat left;
-  background-color: @dark-blue;
+.intro__guide {
+  position: absolute;
+  top: 530px;
 }
 
 .intro__title {
+  align-self: center;
   margin: 0;
-  margin-bottom: 2px;
+
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 800;
   line-height: 40px;
   color: #ffffff;
   text-align: center;
+}
 
-  background-color: @dark-blue;
+.intro__title--desktop {
+  display: none;
 }
 
 .intro-nav__list {
   position: relative;
   top: 20px;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
-
   .list-default-style();
+
+  .intro-nav__item:last-child {
+    align-self: center;
+  }
 }
 
 .intro-nav__link-login {
@@ -94,15 +105,12 @@
 }
 
 .intro__review {
-  min-height: 285px;
   box-sizing: border-box;
 
   padding-top: 40px;
   padding-left: 25px;
   padding-right: 90px;
   margin: 0;
-
-  background-color: @dark-blue;
 }
 
 .intro__review-text {
@@ -119,8 +127,92 @@
   line-height: 22px;
 }
 
-.intro__guide {
-  position: relative;
-  min-height: 260px;
-  background-color: #192144;
+
+
+@media (min-width: @tablet-width) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 880px;
+    padding-bottom: 135px;
+
+    background: url("../../img/traveller-illustration-tablet@1x.png") no-repeat center bottom 270px, url("../../img/globe-back-tablet@1x.jpg") no-repeat center bottom 162px;
+  }
+
+  .intro__title {
+    width: 410px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .intro__title--desktop {
+    display: none;
+  }
+
+  .intro-nav__list {
+    display: none;
+  }
+
+  .intro__guide {
+    position: static;
+  }
+
+  .intro__review {
+    width: 262px;
+    margin-bottom: 210px;
+    padding-top: 50px;
+    padding-right: 0;
+  }
+
+  .intro__review-text {
+    width: 280px;
+    .paragraph-style-text-tablet();
+  }
+
+  .intro__review-author {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    min-height: 640px;
+    padding-bottom: 0;
+
+    background: url("../../img/traveller-illustration-desktop@1x.png") no-repeat center bottom, url("../../img/globe-back-desktop@1x.jpg") no-repeat center bottom;
+  }
+
+  .intro__title {
+    display: none;
+  }
+
+  .intro__guide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  .intro__title--desktop {
+    display: block;
+    width: 410px;
+    padding-left: 70px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+
+  .intro__review {
+    margin: 0;
+    margin-right: 30px;
+    padding: 0;
+    padding-top: 15px;
+  }
+
+
 }

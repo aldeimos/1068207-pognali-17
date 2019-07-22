@@ -1,13 +1,46 @@
-.catalog-preference-list {
-  .preference-list__item {
+@media (min-width: @tablet-width) {
+  .catalog-preference-list {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+
+    flex-direction: column;
+    padding: 0;
+
+    .preference-list__item {
+      margin-right: 0;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+  }
+
+  .preference-list__item-title {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-preference-list {
+    position: static;
+
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    padding: 0;
 
-    width: 32.25px;
-    height: 32px;
+    .preference-list__item {
+      margin-right: 14px;
+    }
+  }
 
-    background-color: #edeff6;
-    border-radius: 50%;
+  .preference-list__item--level {
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  .preference-list__item-title {
+    display: none;
   }
 }

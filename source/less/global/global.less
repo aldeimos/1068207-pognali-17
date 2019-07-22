@@ -1,9 +1,6 @@
 body {
-  width: 270px;
-  padding-left: 25px;
-  padding-right: 25px;
+  position: relative;
 
-  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -14,4 +11,32 @@ body {
 
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
+}
+
+.container {
+  width: 270px;
+  padding: 0 25px;
+  margin: 0 auto;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 688px;
+    padding: 0 40px;
+    margin: 0 auto;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1320px;
+    padding: 0 60px;
+    margin: 0 auto;
+    border-left: 1px solid orange;
+    border-right: 1px solid orange;
+  }
 }
