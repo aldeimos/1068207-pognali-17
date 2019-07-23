@@ -1,5 +1,19 @@
 .map {
-  position: absolute;
+  position: relative;
   z-index: -6;
-  bottom: -340px;
+  display: flex;
+  align-items: center;
+  margin-top: -125px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__image {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    justify-content: center;
+  }
 }

@@ -1,5 +1,7 @@
 .header-social-list {
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
 }
 
 .header-social-list__item {
@@ -44,4 +46,10 @@
   height: 18px;
 
   background: url("../../img/instagram.svg") no-repeat center;
+}
+
+@media (min-width: @desktop-width) {
+  .header-social-list {
+    display: none;
+  }
 }

@@ -11,11 +11,15 @@
 
 .companions-list__item {
   margin-bottom: 10px;
-  padding-top: 15px;
   padding-bottom: 22px;
 
   background-color: #ffffff;
   border-radius: 10px;
+}
+
+.companions-list__item-picture {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .companions-list__item-name {
@@ -31,14 +35,65 @@
 }
 
 .companions-list__item-hashtags {
-  margin: 0;
+  width: 180px;
+  margin: 0 auto;
   margin-bottom: 17px;
 
   font-family: "BloggerSans", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+  text-align: center;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .companions-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .companions-list__wrapper {
+    border-radius: 10px;
+  }
+
+  .companions-list__item {
+    flex-grow: 1;
+    padding-bottom: 0;
+
+    &:nth-child(1) {
+      margin-right: 48px;
+    }
+  }
+
+  .companions-list__item-picture {
+    width: 295px;
+    height: 285px;
+  }
+
+  .companions-list__item-name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .companions-list__item-hashtags {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions-list {
+    padding-right: 0;
+  }
+
+  .companions-list__item {
+    &:nth-child(1) {
+      margin-right: 60px;
+    }
+  }
 }
 
 /* catalog.html */
@@ -49,7 +104,16 @@
 }
 
 .companions-list__card-picture {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+}
+
+.companions-list__card-submenu {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  padding-left: 16px;
 }
 
 .companions-list__card-name {
@@ -63,23 +127,46 @@
 }
 
 .companions-list__card-additional {
-  margin: 0;
+  position: relative;
 
+  margin: 0;
+  padding-left: 0;
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 21px;
   color: @dark-blue;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: -35px;
+
+    width: 31px;
+    height: 31px;
+
+    background: url("../../img/heart-active.svg") no-repeat center;
+    background-size: 40%;
+    background-color: #f9eaea;
+    border-radius: 50%;
+  }
 }
 
-.companions-catalog {
-  .companions-list__item-hashtags {
-    font-family: "BloggerSans", "Arial", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    color: rgba(68, 68, 68, 0.1);
-  }
+.companions-list__card-hashtags {
+  position: relative;
+  left: -70px;
+
+  width: 225px;
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.1);
 }
 
 .companions-list__item-wrapper {
@@ -88,6 +175,7 @@
 }
 
 .companions-list__item-subtitle {
+  display: none;
   font-family: "BloggerSans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -96,8 +184,21 @@
   color: #444444;
 }
 
+.companions-list__card-level {
+  margin: 0;
+
+  &--text {
+    margin: 0;
+  }
+}
+
 .companions-list__card-button {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+
   display: block;
+  width: 90%;
   padding-top: 13px;
   padding-bottom: 10px;
 
@@ -112,4 +213,117 @@
 
   background-color: @light-yellow;
   border-radius: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .companions-catalog {
+    .companions-list__item {
+      position: relative;
+      padding: 35px 25px 25px 25px;
+
+      &:nth-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .companions-list__card-picture {
+    width: 190px;
+    height: 190px;
+    border-radius: 10px;
+  }
+
+  .companions-list__card-additional {
+    position: relative;
+    order: 6;
+    padding-left: 60px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -14px;
+      left: -1px;
+
+      width: 50px;
+      height: 50px;
+
+      background: url("../../img/heart-active.svg") no-repeat center;
+      background-size: 40%;
+      background-color: #f9eaea;
+      border-radius: 50%;
+    }
+  }
+
+  .companions-list__card-button {
+    position: static;
+
+    width: auto;
+    padding: 10px 38px;
+  }
+
+  .companions-list__card-submenu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    width: 335px;
+    padding: 0 35px 0 33px;
+    box-sizing: border-box;
+  }
+
+  .companions-list__card {
+    margin: 0;
+  }
+
+  .companions-list__card-name {
+    width: 100%;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .companions-list__card-hashtags {
+    left: 0;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .companions-list__preferences {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions-catalog {
+    .companions-list__item {
+      display: flex;
+      padding: 0;
+    }
+  }
+
+  .companions-list__card-submenu {
+    padding-top: 48px;
+    padding-bottom: 47px;
+    padding-left: 55px;
+  }
+
+  .companions-list__card-picture {
+    width: 285px;
+    height: 305px;
+    border-radius: 0;
+  }
+
+  .companions-list__preferences {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    padding: 49px 44px 42px 43px;
+
+    box-sizing: border-box;
+  }
 }
