@@ -104,7 +104,16 @@
 }
 
 .companions-list__card-picture {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+}
+
+.companions-list__card-submenu {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  padding-left: 16px;
 }
 
 .companions-list__card-name {
@@ -118,23 +127,46 @@
 }
 
 .companions-list__card-additional {
-  margin: 0;
+  position: relative;
 
+  margin: 0;
+  padding-left: 0;
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 21px;
   color: @dark-blue;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: -35px;
+
+    width: 31px;
+    height: 31px;
+
+    background: url("../../img/heart-active.svg") no-repeat center;
+    background-size: 40%;
+    background-color: #f9eaea;
+    border-radius: 50%;
+  }
 }
 
-.companions-catalog {
-  .companions-list__item-hashtags {
-    font-family: "BloggerSans", "Arial", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    color: rgba(68, 68, 68, 0.1);
-  }
+.companions-list__card-hashtags {
+  position: relative;
+  left: -70px;
+
+  width: 225px;
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.1);
 }
 
 .companions-list__item-wrapper {
@@ -152,8 +184,21 @@
   color: #444444;
 }
 
+.companions-list__card-level {
+  margin: 0;
+
+  &--text {
+    margin: 0;
+  }
+}
+
 .companions-list__card-button {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+
   display: block;
+  width: 90%;
   padding-top: 13px;
   padding-bottom: 10px;
 
@@ -211,12 +256,16 @@
   }
 
   .companions-list__card-button {
+    position: static;
+
+    width: auto;
     padding: 10px 38px;
   }
 
   .companions-list__card-submenu {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     align-content: space-between;
     width: 335px;
@@ -236,18 +285,11 @@
   }
 
   .companions-list__card-hashtags {
+    left: 0;
     margin: 0;
 
     font-size: 20px;
     line-height: 24px;
-  }
-
-  .companions-list__card-level {
-    margin: 0;
-
-    &--text {
-      margin: 0;
-    }
   }
 
   .companions-list__preferences {

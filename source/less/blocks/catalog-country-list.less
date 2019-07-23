@@ -3,15 +3,17 @@
 
   display: flex;
   flex-direction: column;
-}
 
-.country-list__item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  .country-list__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 }
 
 .country-list__item-name {
+  margin: 0;
   margin-left: 15px;
 
   font-family: "BloggerSans-Medium", "Arial", sans-serif;
@@ -19,6 +21,10 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dark-blue;
+}
+
+.country-list__item-title {
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {

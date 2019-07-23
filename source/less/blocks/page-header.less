@@ -8,9 +8,10 @@
 
 .page-header__wrapper {
   position: relative;
-  z-index: 123;
-  display: flex;
+  z-index: 1;
 
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -45,6 +46,8 @@
 .page-header__title {
   position: relative;
   display: inline;
+
+  width: 100%;
   margin: 0;
 
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
@@ -73,6 +76,9 @@
   }
 }
 
+.page-header__link {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .page-header {
@@ -87,6 +93,7 @@
   .page-header__link {
     position: relative;
 
+    display: block;
     margin-top: 50px;
     padding-right: 100px;
 
