@@ -8,4 +8,45 @@
   .site-list {
     flex-direction: row;
   }
+
+  .site-list__link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0 4px;
+    margin: 10px 15px;
+    height: 1em;
+  }
+
+  .site-list__link span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+
+    &::before {
+      position: absolute;
+      z-index: -5;
+      top: 100%;
+
+      content: attr(data-hover);
+      font-weight: 700;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .site-list__link:hover span,
+  .site-list__link:focus span {
+    color: @light-yellow;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  .site-list__link:active span {
+    color: fade(@light-yellow, 30%);
+  }
 }

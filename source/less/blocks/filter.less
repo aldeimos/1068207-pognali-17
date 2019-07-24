@@ -1,19 +1,56 @@
 .filter {
+  box-sizing: border-box;
+  display: flex;
+  width: 270px;
   margin-bottom: 30px;
+  /* padding: 26px 25px 22px 25px; */
 }
 
 .filter__title {
+  width: 100%;
   margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  color: @filter-title-blue;
+}
+
+.filter__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 25px 22px 25px;
+
+  border-radius: 20px;
+  background-color: @light-yellow;
+}
+
+@media (min-width: @tablet-width) {
+  .filter {
+    width: 100%;
+  }
+
+  .filter__wrapper {
+    width: 100%;
+    padding: 37px 35px 38px;
+  }
+
+  // Перенести паддинги с фильтра на фильтра враппер)
+
+  .filter__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .filter {
-    display: flex;
-    width: 285px;
+    width: 270px;
+    align-items: flex-start;
   }
 
   .filter__wrapper {
-    display: flex;
-    flex-direction: column;
+    padding: 26px 25px 22px 25px;
   }
 }

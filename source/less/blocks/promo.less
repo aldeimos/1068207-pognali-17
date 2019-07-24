@@ -134,6 +134,10 @@
   color: #444444;
 }
 
+.promo__modal {
+  display: none;
+}
+
 .promo__button {
   align-self: center;
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
@@ -151,15 +155,33 @@
 
   .promo__wrapper {
     &::after {
-      top: 374px;
+      top: 365px;
+      right: 45px;
     }
   }
 
   .promo__list {
+    position: relative;
     margin: 0;
     padding-left: 85px;
     padding-right: 30px;
     padding-bottom: 55px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+
+      top: -40px;
+      right: 0;
+
+      width: 198px;
+      height: 285px;
+
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
 
     .promo__item {
       display: flex;
@@ -213,6 +235,72 @@
       border-radius: 50%;
     }
   }
+
+  //* модалка 
+  .promo__modal {
+    position: absolute;
+    bottom: -605px;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 688px;
+
+    background-color: #ffffff;
+    border-radius: 20px;
+
+    .promo__title {
+      text-align: center;
+    }
+  }
+
+  .promo__modal-list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .list-default-style();
+    padding: 0 91px 51px;
+  }
+
+  .promo__modal-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+
+    border-top: 1px solid rgba(68, 68, 68, 0.05);
+
+    &:last-child {
+      border-bottom: 1px solid rgba(68, 68, 68, 0.05);
+    }
+  }
+
+  .promo__modal-title,
+  .promo__modal-price {
+    margin: 0;
+    .paragraph-style-text();
+    color: #444444;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .promo__modal-button {
+    width: 100%;
+    padding-top: 41px;
+    padding-bottom: 44px;
+
+    font-size: 24px;
+    font-family: "BloggerSans-Bold", "Arial", sans-serif;
+    font-weight: 800;
+    line-height: 24px;
+    color: #1d2e5b;
+
+    background-color: #f3f4f8;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
@@ -231,25 +319,17 @@
   }
 
   .promo__list {
-    position: relative;
     width: 820px;
     margin-left: 70px;
     padding-right: 0;
 
     &::after {
-      content: "";
-
-      position: absolute;
-      z-index: -1;
 
       top: -50px;
       right: -160px;
 
       width: 444px;
       height: 300px;
-
-      background-color: #e2e5f2;
-      border-radius: 20px;
     }
   }
 
