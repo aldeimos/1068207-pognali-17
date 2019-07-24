@@ -17,6 +17,54 @@
 
   background-color: #ffffff;
   border-radius: 10px;
+
+  &--thai {
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 5px;
+      top: -24px;
+
+      width: 70px;
+      height: 47px;
+
+      background: url("../../img/thai-flag.png") no-repeat center;
+      background-size: 50%;
+    }
+  }
+
+  &--france {
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 5px;
+      top: -24px;
+
+      width: 70px;
+      height: 47px;
+
+      background: url("../../img/france-flag.png") no-repeat center;
+      background-size: 50%;
+    }
+  }
+
+  &--czech {
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 5px;
+      top: -24px;
+
+      width: 70px;
+      height: 47px;
+
+      background: url("../../img/czech-flag.png") no-repeat center;
+      background-size: 50%;
+    }
+  }
 }
 
 .directions-list__item-image {
@@ -25,6 +73,7 @@
 }
 
 .directions-list__item-title {
+  position: relative;
   margin: 0;
 
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
@@ -32,17 +81,6 @@
   font-weight: 800;
   line-height: 21px;
   color: @dark-blue;
-}
-
-.directions-list__item-title--thai::before {
-  content: "";
-
-  position: absolute;
-  z-index: 25;
-
-  width: 35px;
-  height: 24px;
-  background: url("../../img/thai-flag.svg ") no-repeat center;
 }
 
 .directions-list__item-views {

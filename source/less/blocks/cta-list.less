@@ -12,6 +12,11 @@
   .user-list__link {
     color: @light-yellow;
 
+    &:hover,
+    &:focus {
+      color: #ffbd30;
+    }
+
     &-phone::before,
     &-email::before {
       background-color: #121936;
@@ -32,6 +37,7 @@
 
       &-phone::before,
       &-email::before {
+        top: -23px;
         left: 35px;
 
         width: 68px;
