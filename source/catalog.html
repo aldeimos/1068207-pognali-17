@@ -82,76 +82,81 @@
           <div class="filter__wrapper">
             <h2 class="filter__title">Подберите идеального попутчика</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="GET">
-              <fieldset class="catalog-filter__fieldset">
-                <legend class="catalog-filter__legend catalog-filter__legend-hobby">Хобби</legend>
+              <div class="catalog-filter__fieldset catalog-filter__fieldset--hobby">
+                <h2 class="catalog-filter__legend catalog-filter__legend--hobby">Хобби:</h2>
                 <div class="catalog-filter__wrapper catalog-filter__wrapper--hobby">
-                  <input class="catalog-filter__input" type="checkbox" name="football" id="football-option">
-                  <label class="catalog-filter__label" for="football-option">Футбол</label>
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="gym" id="gym-option">
+                  <label class="catalog-filter__label" for="gym-option">Спортзал</label>
 
-                  <input class="catalog-filter__input" type="checkbox" name="swimming" id="swimming-option">
-                  <label class="catalog-filter__label" for="swimming-option">Плавание</label>
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="hookah" id="hookah-option">
+                  <label class="catalog-filter__label" for="hookah-option">Кальян</label>
 
-                  <input class="catalog-filter__input" type="checkbox" name="skatebording" id="skate-option">
-                  <label class="catalog-filter__label" for="skate-option">Скейтбординг</label>
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="sofa" id="sofa-option">
+                  <label class="catalog-filter__label" for="sofa-option">Диван</label>
                 </div>
-              </fieldset>
-              <fieldset class="catalog-filter__fieldset">
-                <legend class="catalog-filter__legend catalog-filter__legend--music">Музыка</legend>
+              </div>
+              <div class="catalog-filter__fieldset">
+                <h2 class="catalog-filter__legend catalog-filter__legend--music">Музыка:</h2>
                 <div class="catalog-filter__wrapper catalog-filter__wrapper--music">
-                  <input class="catalog-filter__input" type="checkbox" name="rock" id="rock-option">
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="rock" id="rock-option">
                   <label class="catalog-filter__label" for="rock-option">Тяжелый рок</label>
 
-                  <input class="catalog-filter__input" type="checkbox" name="russian-rap" id="ru-rap-option">
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="russian-rap"
+                    id="ru-rap-option">
                   <label class="catalog-filter__label" for="ru-rap-option">Русский рэп</label>
 
-                  <input class="catalog-filter__input" type="checkbox" name="eurodance" id="eurodance-option">
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="eurodance"
+                    id="eurodance-option">
                   <label class="catalog-filter__label" for="eurodance-option">Евроденс</label>
                 </div>
-              </fieldset>
-              <fieldset class="catalog-filter__fieldset">
-                <legend class="catalog-filter__legend catalog-filter__legend--food">Еда</legend>
+              </div>
+              <div class="catalog-filter__fieldset">
+                <h2 class="catalog-filter__legend catalog-filter__legend--food">Еда:</h2>
                 <div class="catalog-filter__wrapper catalog-filter__wrapper--food">
-                  <input class="catalog-filter__input" type="checkbox" name="ramen" id="ramen-option">
-                  <label class="catalog-filter__label" for="ramen-option">Рамэн</label>
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="meat" id="meat-option">
+                  <label class="catalog-filter__label" for="meat-option">Мясоед</label>
 
-                  <input class="catalog-filter__input" type="checkbox" name="burrito" id="burrito-option">
-                  <label class="catalog-filter__label" for="burrito-option">Буррито</label>
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="healthy"
+                    id="healthy-option">
+                  <label class="catalog-filter__label" for="healthy-option">Сидит на ПП</label>
 
-                  <input class="catalog-filter__input" type="checkbox" name="dumplings" id="dumplings-option">
-                  <label class="catalog-filter__label" for="dumplings-option">Пельмени</label>
+                  <input class="catalog-filter__input visually-hidden" type="checkbox" name="vegan" id="vegan-option">
+                  <label class="catalog-filter__label" for="vegan-option">Веган-сыроед</label>
                 </div>
-              </fieldset>
-              <fieldset class="catalog-filter__fieldset">
-                <legend class="catalog-filter__legend catalog-filter__legend--transport">Транспорт</legend>
+              </div>
+              <div class="catalog-filter__fieldset">
+                <h2 class="catalog-filter__legend catalog-filter__legend--transport">Транспорт:</h2>
                 <div class="catalog-filter__wrapper--transport">
-                  <input class="catalog-filter__input catalog-filter__input--airplane" type="checkbox" name="airplane"
-                    id="airplane-option">
-                  <label class="catalog-filter__label  catalog-filter__label--airplane"
+                  <input class="catalog-filter__input--transport catalog-filter__input--plane visually-hidden"
+                    type="checkbox" name="airplane" id="airplane-option">
+                  <label class="catalog-filter__label--transport catalog-filter__label--plane"
                     for="airplane-option">Самолет</label>
 
-                  <input class="catalog-filter__input catalog-filter__input--bus" type="checkbox" name="bus"
-                    id="bus-option">
-                  <label class="catalog-filter__label  catalog-filter__label--bus" for="bus-option">Автобус</label>
+                  <input class="catalog-filter__input--transport catalog-filter__input--bus visually-hidden"
+                    type="checkbox" name="bus" id="bus-option">
+                  <label class="catalog-filter__label--transport catalog-filter__label--bus"
+                    for="bus-option">Автобус</label>
 
-                  <input class="catalog-filter__input catalog-filter__input--bicycle" type="checkbox" name="bicycle"
-                    id="bicycle-option">
-                  <label class="catalog-filter__label  catalog-filter__label--bicycle"
+                  <input class="catalog-filter__input--transport catalog-filter__input--bicycle visually-hidden"
+                    type="checkbox" name="bicycle" id="bicycle-option">
+                  <label class="catalog-filter__label--transport catalog-filter__label--bicycle"
                     for="bicycle-option">Велосипед</label>
 
-                  <input class="catalog-filter__input catalog-filter__input--onfoot" type="checkbox" name="onfoot"
-                    id="onfoot-option">
-                  <label class="catalog-filter__label  catalog-filter__label--onfoot" for="onfoot-option">Пешком</label>
+                  <input class="catalog-filter__input--transport catalog-filter__input--onfoot visually-hidden"
+                    type="checkbox" name="onfoot" id="onfoot-option">
+                  <label class="catalog-filter__label--transport catalog-filter__label--onfoot"
+                    for="onfoot-option">Пешком</label>
                 </div>
-              </fieldset>
-              <fieldset class="catalog-filter__fieldset">
-                <legend class="catalog-filter__legend catalog-filter__legend--level">Левел</legend>
+              </div>
+              <div class="catalog-filter__fieldset catalog-filter__fieldset--level">
+                <h2 class="catalog-filter__legend catalog-filter__legend--level">Левел:</h2>
                 <div class="catalog-filter__wrapper catalog-filter__wrapper--level">
                   <div class="catalog-filter__price-controls">
                     <label class="visually-hidden" for="minimal-price">Минимальное значение диапазона</label>
-                    <input class="catalog-filter__input catalog-filter__input-min-price" type="text" name="min-price"
-                      id="minimal-price">
-                    <input class="catalog-filter__input catalog-filter__input-max-price" type="text" name="max-price"
-                      id="maximum-price">
+                    <input class="catalog-filter__input catalog-filter__input-min-price" type="number" name="min-price"
+                      id="minimal-price" min="1">
+                    <input class="catalog-filter__input catalog-filter__input-max-price" type="number" name="max-price"
+                      id="maximum-price" max="100">
                     <label class="visually-hidden" for="maximum-price">Максимальное значение диапазона</label>
                   </div>
                   <div class="catalog-filter__range-controls">
@@ -160,11 +165,11 @@
 
                       </div>
                     </div>
+                    <div class="toggle toggle--min"></div>
+                    <div class="toggle toggle--max"></div>
                   </div>
-                  <div class="toggle toggle--min"></div>
-                  <div class="toggle toggle--max"></div>
                 </div>
-              </fieldset>
+              </div>
               <button class="catalog-filter__button" type="submit">Показать</button>
             </form>
           </div>
@@ -474,7 +479,7 @@
       </div>
     </div>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer__catalog">
     <div class="container">
       <div class="footer__wrapper">
         <a href="#">
