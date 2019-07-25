@@ -29,10 +29,7 @@
   .site-list__link span {
     position: relative;
     display: inline-block;
-    /*  -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s; */
     transition: transform 0.3s;
-    /*  transition: transform 0.3s, -webkit-transform 0.3s; */
 
     &::before {
       position: absolute;
@@ -41,7 +38,6 @@
 
       content: attr(data-hover);
       font-weight: 700;
-      /* -webkit-transform: translate3d(0, 0, 0); */
       transform: translate3d(0, 0, 0);
     }
   }
@@ -49,7 +45,6 @@
   .site-list__link:hover span,
   .site-list__link:focus span {
     color: @light-yellow;
-    /* -webkit-transform: translateY(-100%); */
     transform: translateY(-100%);
   }
 
