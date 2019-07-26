@@ -1,6 +1,6 @@
 .page-footer {
   position: absolute;
-  z-index: -5;
+  z-index: 1;
   bottom: -143px;
   left: 50%;
 
@@ -12,6 +12,10 @@
   background-color: #ffffff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.page-footer__catalog {
+  bottom: -272px;
 }
 
 .footer__social {
@@ -31,6 +35,15 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 14px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright-title {
@@ -44,6 +57,10 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     margin-left: -385px;
+  }
+
+  .page-footer__catalog {
+    bottom: -143px;
   }
 
   .footer__wrapper {

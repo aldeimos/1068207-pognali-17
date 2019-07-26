@@ -17,6 +17,27 @@
   &:nth-child(3) {
     margin-right: 10px;
   }
+
+  &--level {
+    box-sizing: border-box;
+    position: absolute;
+    top: -250px;
+    left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid @orange;
+    border-radius: 50px;
+  }
 }
 
 .preference-list__item-tooltip {

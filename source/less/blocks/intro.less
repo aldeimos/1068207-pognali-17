@@ -15,11 +15,6 @@
   flex-direction: column;
 }
 
-.intro__guide {
-  position: absolute;
-  top: 530px;
-}
-
 .intro__title {
   align-self: center;
   margin: 0;
@@ -32,13 +27,9 @@
   text-align: center;
 }
 
-.intro__title--desktop {
-  display: none;
-}
-
 .intro-nav__list {
   position: relative;
-  top: 20px;
+  top: 430px;
 
   display: flex;
   justify-content: space-between;
@@ -106,6 +97,8 @@
 
 .intro__review {
   box-sizing: border-box;
+  position: relative;
+  top: 400px;
 
   padding-top: 40px;
   padding-left: 25px;
@@ -140,13 +133,10 @@
 
   .intro__title {
     width: 410px;
+    margin-left: 0;
 
     font-size: 60px;
     line-height: 70px;
-  }
-
-  .intro__title--desktop {
-    display: none;
   }
 
   .intro-nav__list {
@@ -154,10 +144,13 @@
   }
 
   .intro__guide {
-    position: static;
+    display: flex;
+    flex-direction: column;
   }
 
   .intro__review {
+    top: 0;
+
     width: 262px;
     margin-bottom: 210px;
     padding-top: 50px;

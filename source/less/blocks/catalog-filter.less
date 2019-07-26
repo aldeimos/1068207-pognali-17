@@ -1,0 +1,354 @@
+.catalog-filter__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.catalog-filter__legend {
+  width: 100%;
+  margin: 0;
+  padding: 13px 0;
+
+  font-size: 16px;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @filter-title-blue;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.catalog-filter__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 220px;
+}
+
+.catalog-filter__wrapper--transport {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+.catalog-filter__label,
+.catalog-filter__input {
+  margin-bottom: 12px;
+}
+
+.catalog-filter__label {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 200px;
+  padding-left: 30px;
+
+  font-size: 15px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 15px;
+  color: #444444;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #ffffff;
+    border-radius: 3px;
+  }
+}
+
+.catalog-filter__input:checked + .catalog-filter__label {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: 5px;
+
+    width: 9px;
+    height: 9px;
+
+    background: url("../../img/tick.svg") no-repeat center;
+  }
+}
+
+.catalog-filter__input:focus + .catalog-filter__label::before,
+.catalog-filter__input--transport:focus + .catalog-filter__label--transport {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+.catalog-filter__label--transport {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+
+  font-size: 0;
+
+  border-radius: 50%;
+}
+
+.catalog-filter__label--plane {
+  background: #ffffff url("../../img/plane@0.15.svg") no-repeat center left 7px;
+  background-size: 50%;
+}
+
+.catalog-filter__label--bus {
+  background: #ffffff url("../../img/bus@0.15.svg") no-repeat center;
+  background-size: 50%;
+}
+
+.catalog-filter__label--bicycle {
+  background: url("../../img/bike@0.15.svg") no-repeat center;
+  background-size: 60%;
+  background-color: #ffffff;
+}
+
+.catalog-filter__label--onfoot {
+  background: #ffffff url("../../img/run@0.15.svg") no-repeat center;
+  background-size: 55%;
+}
+
+.catalog-filter__input--plane:checked + .catalog-filter__label--plane {
+  background: #ffffff url("../../img/plane.svg") no-repeat center left 7px;
+  background-size: 50%;
+}
+
+.catalog-filter__input--bus:checked + .catalog-filter__label--bus {
+  background: #ffffff url("../../img/bus.svg") no-repeat center;
+  background-size: 50%;
+}
+
+.catalog-filter__input--bicycle:checked + .catalog-filter__label--bicycle {
+  background: #ffffff url("../../img/bike.svg") no-repeat center;
+  background-size: 60%;
+}
+
+.catalog-filter__input--onfoot:checked + .catalog-filter__label--onfoot {
+  background: #ffffff url("../../img/run.svg") no-repeat center;
+  background-size: 55%;
+}
+
+.catalog-filter__price-controls {
+  display: flex;
+  margin-bottom: 16px;
+
+  input {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0;
+    padding: 12px 0;
+
+    text-align: center;
+
+    border: 1px solid #cbced9;
+  }
+
+  .catalog-filter__input-min-price {
+    border-right: none;
+  }
+}
+
+.catalog-filter__range-controls {
+  position: relative;
+  margin-bottom: 22px;
+  padding-top: 4px;
+}
+
+.catalog-filter__scale {
+  position: relative;
+
+  width: 220px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.catalog-filter__bar {
+  position: absolute;
+  right: 0;
+
+  width: 65%;
+  height: 2px;
+  background-color: @filter-title-blue;
+}
+
+.toggle {
+  position: absolute;
+  top: 0;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: @filter-title-blue;
+  border-radius: 50%;
+}
+
+.toggle--min {
+  left: 76px;
+}
+
+.toggle--max {
+  right: 0;
+}
+
+.catalog-filter__button {
+  width: 100%;
+  padding: 10px 0;
+
+  font-size: 17px;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @filter-title-blue;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-filter__fieldset {
+    display: flex;
+    align-items: center;
+  }
+
+  .catalog-filter__legend {
+    width: 20%;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border: none;
+  }
+
+  .catalog-filter__fieldset--hobby {
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .catalog-filter__fieldset--level {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .catalog-filter__wrapper {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .catalog-filter__label {
+    width: 33.3333%;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: -4px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .catalog-filter__input:checked + .catalog-filter__label {
+    &::after {
+      top: 2px;
+      left: 6px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .catalog-filter__label--transport {
+    margin-bottom: 0;
+  }
+
+  .catalog-filter__price-controls {
+    width: 31%;
+    margin-bottom: 0;
+    margin-left: 60px;
+  }
+
+  .catalog-filter__range-controls {
+    width: 57%;
+
+    margin-bottom: 0;
+    order: -1;
+  }
+
+  .catalog-filter__scale {
+    width: 100%;
+  }
+
+  .toggle--min {
+    left: 95px;
+  }
+
+  .catalog-filter__button {
+    margin-top: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-filter__fieldset {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catalog-filter__legend {
+    width: 100%;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .catalog-filter__wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .catalog-filter__label {
+    width: 100%;
+  }
+
+  .catalog-filter__fieldset--hobby,
+  .catalog-filter__fieldset--level {
+    padding: 0;
+    border: none;
+  }
+
+  .catalog-filter__label,
+  .catalog-filter__input {
+    margin-bottom: 12px;
+  }
+
+  .catalog-filter__label--transport {
+    margin-bottom: 10px;
+  }
+
+  .catalog-filter__price-controls {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 16px;
+  }
+
+  .catalog-filter__range-controls {
+    width: auto;
+    order: 1;
+  }
+
+  .catalog-filter__scale {
+    width: 220px;
+  }
+}
