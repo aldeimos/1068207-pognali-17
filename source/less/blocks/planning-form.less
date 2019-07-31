@@ -66,7 +66,7 @@
 
 .planning-form__label--duration {
   &::after {
-    content: "ДН."
+    content: "ДН.";
   }
 }
 
@@ -121,7 +121,7 @@
   margin-bottom: 20px;
 }
 
-.planning-form__input-checkbox:checked+.planning-form__label-checkbox {
+.planning-form__input-checkbox:checked + .planning-form__label-checkbox {
   &::after {
     content: "";
 
@@ -234,12 +234,10 @@
     width: 50px;
     height: 47px;
 
-    background: #fff url("../../img/dropdown-form.svg") no-repeat center;
+    background: #ffffff url("../../img/dropdown-form.svg") no-repeat center;
     background-size: 30%;
   }
 }
-
-
 
 .planning-form__option-img {
   position: relative;
@@ -330,7 +328,7 @@
   background-color: #ffffff;
 }
 
-.planning-form__select--choose:hover>.planning-form__dropdown {
+.planning-form__select--choose:hover > .planning-form__dropdown {
   display: block;
 }
 
@@ -439,6 +437,8 @@
 
 .planning-form__country-name {
   margin: 0;
+  display: flex;
+  width: 100%;
 }
 
 .planning-form__steps-entertaiment {
@@ -446,11 +446,6 @@
   flex-wrap: wrap;
   width: 100%;
   margin-bottom: 20px;
-}
-
-.planning-form__country-name {
-  display: flex;
-  width: 100%;
 }
 
 .planning-form__label--country {
