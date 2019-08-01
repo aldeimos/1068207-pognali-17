@@ -28,6 +28,14 @@
 
     background: url("../../img/rates.png") no-repeat center;
   }
+
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    &::after {
+      background: url("../../img/rates@2x.png") no-repeat center;
+      background-size: 100px auto;
+    }
+  }
 }
 
 .promo__title {
@@ -309,6 +317,14 @@
       width: 198px;
       height: 198px;
       background: url("../../img/rates@1x.png") no-repeat center;
+    }
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      &::after {
+        background: url("../../img/rates@2x.png") no-repeat center;
+        background-size: 198px auto;
+      }
     }
   }
 

@@ -1,0 +1,96 @@
+.calendar {
+  width: 100%;
+}
+
+.calendar__header {
+  position: relative;
+
+  margin-bottom: 25px;
+}
+
+.calendar__header-button {
+  position: absolute;
+  top: 12px;
+
+  width: 9px;
+  height: 19px;
+  padding: 0;
+
+  font-size: 0;
+
+  background: none;
+  border: none;
+
+  &--prev {
+    left: 0;
+
+    background: url("../../img/month-arrow-left.svg") no-repeat center;
+  }
+
+  &--next {
+    right: 0;
+
+    background: url("../../img/month-arrow-right.svg") no-repeat center;
+  }
+}
+
+.calendar__header-title {
+  margin: 0;
+  padding: 10px 0;
+
+  font-size: 20px;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+}
+
+.calendar__table {
+  width: 100%;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+
+  border-collapse: collapse;
+
+  td {
+    padding: 6px 8px;
+
+    color: fade(#444444, 30%);
+
+    border: 1px solid #cbced9;
+  }
+}
+
+.calendar__table-weekday {
+  padding-bottom: 12px;
+
+  color: #444444;
+
+  &--weekend {
+    color: #ff5c23;
+  }
+}
+
+td.calendar__cell-choosed {
+  color: #ffffff;
+
+  background-color: #1d2e5b;
+
+  &--active {
+    border: 2px solid #ff5c23;
+  }
+}
+
+td.calendar__cell-booking-yes {
+  color: #444444;
+
+  background-color: #edeff6;
+}

@@ -1,0 +1,167 @@
+.profile {
+  margin-bottom: 30px;
+}
+
+.profile__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.profile__level {
+  box-sizing: border-box;
+  padding: 20px 23px 14px 23px;
+
+  border: 2px solid @orange;
+  border-radius: 50%;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.profile__level-number {
+  padding: 0 5px;
+
+  font-size: 38px;
+  font-weight: 800;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  line-height: 38px;
+  color: #192144;
+
+  border-bottom: 1px solid fade(#444444, 30%);
+}
+
+.profile__level-text {
+  padding-top: 5px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  color: #444444;
+}
+
+.profile__image {
+  border-radius: 50%;
+}
+
+.profile__form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.profile__form-button {
+  width: 100%;
+  margin-bottom: 27px;
+  padding: 5px 0;
+
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @dark-blue;
+
+  background-color: #dfe3f0;
+  border: none;
+  border-radius: 20px;
+}
+
+.profile__form-fieldset {
+  padding: 0;
+
+  border-radius: 10px;
+  border: 1px solid #cbced9;
+}
+
+.profile__form--hashtags {
+  margin-bottom: 20px;
+}
+
+.profile__form-legend {
+  padding: 0 18px;
+
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1d2e5b;
+}
+
+.profile__form-wrapper {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+.profile__hashtags {
+  width: 100%;
+  padding: 5px 25px;
+
+  font-size: 16px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 22px;
+  color: #444444;
+
+  resize: none;
+  background: none;
+  border: none;
+}
+
+.profile__label {
+  width: 32px;
+  height: 32px;
+
+  font-size: 0;
+
+  border-radius: 50%;
+}
+
+.profile__label--plane {
+  background: #ffffff url("../../img/plane@0.15.svg") no-repeat left 7px center;
+  background-size: 50%;
+}
+
+.profile__input--plane:checked + .profile__label--plane {
+  background: #ffffff url("../../img/plane.svg") no-repeat left 7px center;
+  background-size: 50%;
+}
+
+.profile__label--bus {
+  background: #ffffff url("../../img/bus@0.15.svg") no-repeat left 9px center;
+  background-size: 50%;
+}
+
+.profile__input--bus:checked + .profile__label--bus {
+  background: #ffffff url("../../img/bus.svg") no-repeat left 9px center;
+  background-size: 50%;
+}
+
+
+.profile__label--bicycle {
+  background: #ffffff url("../../img/bike@0.15.svg") no-repeat left 6px center;
+  background-size: 60%;
+}
+
+.profile__input--bicycle:checked + .profile__label--bicycle {
+  background: #ffffff url("../../img/bike.svg") no-repeat left 6px center;
+  background-size: 60%;
+}
+
+.profile__label--onfoot {
+  background: #ffffff url("../../img/run@0.15.svg") no-repeat left 8px center;
+  background-size: 55%;
+}
+
+.profile__input--onfoot:checked + .profile__label--onfoot {
+  background: #ffffff url("../../img/run.svg") no-repeat left 8px center;
+  background-size: 55%;
+}

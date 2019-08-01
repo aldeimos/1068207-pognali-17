@@ -1,0 +1,490 @@
+.planning-form__steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding: 25px;
+
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.planning-form__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 20px;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.planning-form__desc {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  line-height: 22px;
+  color: #444444;
+}
+
+.planning-form__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.planning-form__label {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    color: fade(#1d2e5b, 30%);
+  }
+}
+
+.planning-form__label--companions {
+  &::after {
+    content: "Чел.";
+  }
+}
+
+.planning-form__label--duration {
+  &::after {
+    content: "ДН.";
+  }
+}
+
+
+.planning-form__input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px 35px;
+
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  line-height: 13px;
+  text-align: center;
+  color: inherit;
+
+  border: 1px solid #cbced9;
+}
+
+.planning-form__button {
+  position: absolute;
+  z-index: 1;
+
+  font-size: 0;
+
+  border: none;
+  background: transparent;
+
+  &--minus {
+    top: 44px;
+    left: 12px;
+
+    width: 14px;
+    height: 2px;
+
+    background: url("../../img/qty-minus-mobile.svg") no-repeat center;
+  }
+
+  &--plus {
+    top: 38px;
+    right: 12px;
+
+    width: 14px;
+    height: 14px;
+
+    background: url("../../img/qty-plus-mobile.svg") no-repeat center;
+  }
+}
+
+.planning-form__checkbox {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.planning-form__input-checkbox:checked + .planning-form__label-checkbox {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: 9px;
+
+    width: 9px;
+    height: 9px;
+
+    background: url("../../img/tick.svg") no-repeat center;
+  }
+}
+
+.planning-form__label-checkbox {
+  position: relative;
+  padding-left: 40px;
+
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  line-height: 15px;
+  color: #444444;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -7px;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid #cbced9;
+  }
+}
+
+.planning-form__select {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 51px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #1d2e5b;
+    border-radius: 50%;
+  }
+
+  &--choose {
+    flex-direction: column;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+
+      background-color: transparent;
+      border: 1px solid #cbced9;
+    }
+  }
+}
+
+.planning-form__option {
+  position: relative;
+
+  box-sizing: border-box;
+
+  width: 168px;
+  margin: 0;
+  padding: 16px 11px 12px 12px;
+
+  font-size: 14px;
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  border: 1px solid #cbced9;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+
+  &--choose {
+    width: 100%;
+
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 47px;
+
+    background: #ffffff url("../../img/dropdown-form.svg") no-repeat center;
+    background-size: 30%;
+  }
+}
+
+.planning-form__option-img {
+  position: relative;
+
+  width: 35px;
+  height: 24px;
+  padding: 11px 9px;
+
+
+  border: 1px solid #cbced9;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.planning-form__option-button {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+
+  font-size: 0;
+
+  width: 21px;
+  height: 21px;
+
+  background: url("../../img/close.svg") no-repeat center;
+  background-color: #edeff6;
+  background-size: 40%;
+  border: none;
+  border-radius: 50%;
+}
+
+.planning-form__button-add {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 16px 11px 12px 12px;
+
+  font-size: 14px;
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #1d2e5b;
+
+  background-color: #edeff6;
+  border: none;
+  border-radius: 5px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: 16px;
+
+    width: 14px;
+    height: 14px;
+
+    background: url("../../img/qty-plus.svg") no-repeat center;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    right: 50px;
+
+    width: 7px;
+    height: 7px;
+
+    background: transparent;
+    border: 1px solid #cbced9;
+    border-radius: 50%;
+  }
+}
+
+.planning-form__dropdown {
+  position: absolute;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+
+  background-color: #ffffff;
+}
+
+.planning-form__select--choose:hover > .planning-form__dropdown {
+  display: block;
+}
+
+.planning-form__dropdown-title {
+  position: relative;
+
+  margin: 0;
+  padding: 15px;
+
+  font-size: 14px;
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #1d2e5b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 19px;
+    right: 17px;
+
+    width: 9px;
+    height: 9px;
+
+    background: url("../../img/close.svg") no-repeat center;
+  }
+}
+
+.planning-form__dropdown-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding-top: 16px;
+    padding-bottom: 12px;
+
+    font-size: 14px;
+    font-family: "BloggerSans-Medium", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: 1px solid #cbced9;
+  }
+}
+
+.planning-form__dropdown-cell--active {
+  background-color: #edeff6;
+}
+
+.planning-form__dropdown-list {
+  .list-default-style();
+  padding: 18px 0;
+  padding-left: 20px;
+
+  border: 1px solid #cbced9;
+  border-top-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.planning-form__dropdown-item {
+  margin-bottom: 5px;
+}
+
+.planning-form__dropdown-item-name {
+  margin: 0;
+
+  font-size: 16px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 22px;
+  color: #444444;
+}
+
+
+.planning-form__button-next {
+  width: 100%;
+  padding: 5px 0;
+
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: @dark-blue;
+
+  background-color: @light-yellow;
+  border: none;
+  border-radius: 20px;
+}
+
+.planning-form__button-stepback {
+  background: none;
+}
+
+.planning-form__country-name {
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+
+.planning-form__steps-entertaiment {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.planning-form__label--country {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+  padding-left: 15px;
+
+  text-transform: none;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -4px;
+
+    width: 35px;
+    height: 24px;
+
+    background: url("../../img/bosnia-flag.png") no-repeat center;
+  }
+}
+
+.planning-form__textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 15px;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  line-height: 24px;
+  color: #444444;
+
+  border: 1px solid fade(#444444, 30%);
+  resize: none;
+
+  &::placeholder {
+    font: inherit;
+    color: fade(#444444, 30%);
+  }
+}

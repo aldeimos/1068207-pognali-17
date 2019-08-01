@@ -39,6 +39,12 @@
 @media (min-width: @tablet-width) {
   .directions__wrapper {
     background: url("../../img/flags-back@1x.png") no-repeat top 70px right;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background: url("../../img/flags-back@2x.png") no-repeat top 70px right;
+      background-size: 289px auto;
+    }
   }
 
   .directions__title {
