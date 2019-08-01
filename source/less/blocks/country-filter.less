@@ -124,10 +124,12 @@
   display: none;
   margin-bottom: 25px;
 
-  p {
+  a {
     margin: 0;
 
+    font: inherit;
     font-family: "BloggerSans", "Arial", sans-serif;
+    text-decoration: none;
     color: #444444;
   }
 }
@@ -281,10 +283,6 @@
     display: none;
   }
 
-  .alphabet__country-title {
-    display: block;
-  }
-
   .alphabet__catalog {
     display: flex;
     flex-wrap: wrap;
@@ -302,6 +300,9 @@
     }
 
     .alphabet__country-title {
+      display: block;
+      margin: 0;
+
       font-size: 60px;
       line-height: 24px;
       color: #192144;
