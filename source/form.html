@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -84,6 +84,7 @@
   </header>
   <main class="main main-form">
     <section class="profile">
+      <h2 class="visually-hidden">Ваш профиль</h2>
       <div class="container">
         <div class="profile__wrapper">
           <div class="profile__level">
@@ -93,7 +94,7 @@
           <img class="profile__image" src="./img/demin-desktop@1x.jpg" alt="Фотография в профиле" width="100"
             height="100">
           <form class="profile__form" action="https://echo.htmlacademy.ru" method="POST">
-            <button class="profile__form-button" type="file">Сменить фото</button>
+            <input class="profile__form-button" type="file">
             <fieldset class="profile__form-fieldset profile__form--hashtags">
               <legend class="profile__form-legend">Тэги</legend>
               <div class="profile__form-wrapper">
@@ -132,13 +133,13 @@
             <h3 class="plans__card-title">1. Франция, Италия</h3>
             <p class="plans__card-companions">3 попутчика</p>
             <p class="plans__card-dates">26 мар – 29 мар</p>
-            <a class="plans__card-button" href="#">Изменить</a>
+            <a class="plans__card-button" href="change.html">Изменить</a>
           </li>
           <li class="plans__card">
             <h3 class="plans__card-title">2. Тайланд, Индонезия</h3>
             <p class="plans__card-companions">1 попутчик</p>
             <p class="plans__card-dates">1 июл – 15 июл</p>
-            <a class="plans__card-button" href="#">Изменить</a>
+            <a class="plans__card-button" href="change.html">Изменить</a>
           </li>
         </ul>
       </div>
@@ -256,10 +257,10 @@
                 </tr>
               </table>
             </div>
-            <a class="planning-form__button-next">Следующий шаг</a>
+            <a class="planning-form__button-next" href="#step-2">Следующий шаг</a>
           </div>
           <div class="planning-form__steps">
-            <h3 class="planning-form__title">
+            <h3 class="planning-form__title" id="step-2">
               Шаг 2.<br>
               Маршрут
             </h3>
@@ -358,11 +359,11 @@
               </div>
             </div>
             <button class="planning-form__button-add">Добавить страну</button>
-            <a class="planning-form__button-next" href="#">Следующий шаг</a>
-            <a class="planning-form__button-next planning-form__button-stepback" href="#">Шаг назад</a>
+            <a class="planning-form__button-next" href="#step-3">Следующий шаг</a>
+            <a class="planning-form__button-next planning-form__button-stepback" href="#step-1">Шаг назад</a>
           </div>
           <div class="planning-form__steps">
-            <h3 class="planning-form__title">
+            <h3 class="planning-form__title" id="step-3">
               Шаг 3.<br>
               Развлечения
             </h3>
@@ -385,7 +386,7 @@
                 placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это всё.</textarea>
             </div>
             <button class="planning-form__button-next" type="submit">Отправить</button>
-            <a class="planning-form__button-next planning-form__button-stepback" href="#">Шаг назад</a>
+            <a class="planning-form__button-next planning-form__button-stepback" href="#step-2">Шаг назад</a>
           </div>
         </form>
       </div>
