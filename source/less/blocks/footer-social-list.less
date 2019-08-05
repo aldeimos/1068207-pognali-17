@@ -3,7 +3,9 @@
 }
 
 .footer-social-list__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0;
 
   width: 45px;
@@ -11,53 +13,20 @@
 
   background-color: @light-yellow;
   border-radius: 50%;
-}
 
-.footer-social-list__link--fb {
-
-  background: @light-yellow url("../../img/facebook.svg") no-repeat center;
-  background-size: 25%;
-
-  &:hover,
-  &:focus {
-    background: @dark-blue url("../../img/facebook@fff.svg") no-repeat center;
-    background-size: 25%;
+  &:hover {
+    background-color: #192144;
   }
 
-  &:active {
-    background: @dark-blue url("../../img/facebook@0.3.svg") no-repeat center;
-    background-size: 25%;
-  }
-}
-
-.footer-social-list__link--vk {
-  background: @light-yellow url("../../img/vk.svg") no-repeat center;
-  background-size: 50%;
-
-  &:hover,
-  &:focus {
-    background: @dark-blue url("../../img/vk@fff.svg") no-repeat center;
-    background-size: 50%;
+  &--icon {
+    fill: @dark-blue;
   }
 
-  &:active {
-    background: @dark-blue url("../../img/vk@0.3.svg") no-repeat center;
-    background-size: 50%;
-  }
-}
-
-.footer-social-list__link--inst {
-  background: @light-yellow url("../../img/instagram.svg") no-repeat center left 12px;
-  background-size: 50%;
-
-  &:hover,
-  &:focus {
-    background: @dark-blue url("../../img/instagram@fff.svg") no-repeat center left 12px;
-    background-size: 50%;
+  &:hover>&--icon {
+    fill: #ffffff;
   }
 
-  &:active {
-    background: @dark-blue url("../../img/instagram@0.3.svg") no-repeat center left 12px;
-    background-size: 50%;
+  &:active>&--icon {
+    fill-opacity: 0.3;
   }
 }

@@ -16,26 +16,48 @@
 
 .catalog__nav-buttons {
   display: flex;
+  width: 100%;
   justify-content: center;
   .list-default-style();
+
+  .catalog__nav-item {
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+    &:first-child {
+      border-right: 1px solid rgba(68, 68, 68, 0.1);
+    }
+  }
 }
 
 .catalog__nav-link {
   position: relative;
 
+  box-sizing: border-box;
   display: inline-block;
+  width: 100%;
   padding: 25px 63px;
 
   font-size: 0;
   vertical-align: middle;
 
   background-color: #ffffff;
+
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .catalog__nav-link--prev {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-right: 1px solid rgba(68, 68, 68, 0.1);
 
   &::before {
     content: "";
@@ -77,6 +99,7 @@
 
   .catalog__nav-buttons {
     display: flex;
+    width: 30%;
     justify-content: center;
     .list-default-style();
     margin-top: 20px;
@@ -84,6 +107,14 @@
     padding-bottom: 20px;
 
     background-color: #ffffff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .catalog__nav-item {
+      &:first-child {
+        border-right: 0;
+      }
+    }
 
     .catalog__nav-link {
       border-radius: 0;
@@ -99,6 +130,8 @@
     padding: 20px 28px;
 
     background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
 
     .catalog__nav-link {
       padding: 17px 26px;
@@ -118,7 +151,6 @@
 
   .catalog__nav-link--prev {
     padding-right: 10px;
-    border-right: none;
 
     &::before {
       top: 20px;

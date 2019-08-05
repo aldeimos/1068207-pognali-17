@@ -68,6 +68,10 @@
   background-color: @light-yellow;
   border-radius: 5px;
 
+  &:hover {
+    background-color: #ffbd30;
+  }
+
   &::after {
     content: "";
 
@@ -79,5 +83,9 @@
     height: 14px;
 
     background: url("../../img/triangle-arrow-right.svg");
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }

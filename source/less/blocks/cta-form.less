@@ -5,18 +5,48 @@
 }
 
 .cta-form__input {
+  box-sizing: border-box;
   width: 100%;
 
   font-size: 18px;
-  box-sizing: border-box;
-  padding: 19px 84px 19px 24px;
-  border: 2px solid white;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+  font-weight: bold;
+  color: #444444;
+
+  padding: 14px 84px 14px 24px;
+  border: 7px solid white;
   border-radius: 10px;
 
-  &::placeholder {
-    .paragraph-style-text();
-    color: #444444;
+  &:hover {
+    background-color: #edeff6;
+    border-color: #edeff6;
   }
+
+  &::placeholder {
+    color: fade(#444444, 30%);
+  }
+
+  &:hover::placeholder {
+    color: fade(#444444, 100%);
+  }
+
+  &:invalid {
+    background-color: #ffffff;
+    color: #ff0000;
+  }
+
+  &:focus {
+    color: #ffffff;
+
+    background-color: #192144;
+    border: 7px solid white;
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: #ffffff;
+  }
+
 }
 
 .cta-form__button {
@@ -42,8 +72,8 @@
   }
 
   .cta-form__input {
-    padding-top: 29px;
-    padding-bottom: 29px;
+    padding-top: 24px;
+    padding-bottom: 23px;
   }
 
   .cta-form__button {

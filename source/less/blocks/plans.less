@@ -65,4 +65,127 @@
   text-transform: uppercase;
   text-decoration: none;
   color: fade(#000000, 30%);
+
+  &:hover,
+  &:focus {
+    color: fade(#000000, 60%);
+  }
+
+  &:active {
+    color: fade(#000000, 10%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .plans__title {
+    padding-left: 35px;
+
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .plans__list {
+    padding: 0 35px;
+  }
+
+  .plans__card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 38px;
+    padding-bottom: 18px;
+
+    p {
+      font-size: 20px;
+      line-height: 18px;
+    }
+
+    .plans__card-companions,
+    .plans__card-dates {
+      margin: 0;
+    }
+
+    .plans__card-companions {
+      margin-right: 45px;
+    }
+
+    .plans__card-dates {
+      margin-right: auto;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 54px;
+
+
+      width: 100%;
+      height: 1px;
+
+      background-color: #eff0f4;
+    }
+  }
+
+  .plans__card-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 34px;
+
+    font-size: 24px;
+    line-height: 50px;
+
+    span {
+      order: 1;
+    }
+  }
+
+  .plans__card-button {
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .plans {
+    padding: 60px 0;
+  }
+
+  .plans__title {
+    margin-bottom: 55px;
+  }
+
+  .plans__card {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 24px 45px;
+    margin-bottom: 15px;
+
+    &::before {
+      content: none;
+    }
+
+    .plans__card-companions--extra-margin {
+      margin-right: 54px;
+    }
+  }
+
+  .plans__card-title {
+    width: auto;
+    justify-content: flex-start;
+    margin: 0;
+    margin-right: 345px;
+
+    span {
+      order: -1;
+      margin-right: 35px;
+    }
+
+    &--extra-margin {
+      margin-right: 312px;
+    }
+  }
 }

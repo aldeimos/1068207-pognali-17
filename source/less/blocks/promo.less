@@ -30,7 +30,7 @@
   }
 
   @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+  (min-resolution: @retina-dppx) {
     &::after {
       background: url("../../img/rates@2x.png") no-repeat center;
       background-size: 100px auto;
@@ -153,7 +153,17 @@
   font-weight: 800;
   line-height: 16px;
   text-decoration: none;
-  color: @dark-blue;
+  color: #192144;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 @media (min-width: @tablet-width) {
@@ -320,7 +330,7 @@
     }
 
     @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
       &::after {
         background: url("../../img/rates@2x.png") no-repeat center;
         background-size: 198px auto;

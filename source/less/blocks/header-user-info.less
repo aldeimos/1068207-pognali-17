@@ -1,0 +1,50 @@
+.header-user-info {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .header-user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    margin-top: 60px;
+  }
+
+  .header-user-info__image {
+    width: 190px;
+    height: 190px;
+  }
+
+  .header-user-info__level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 45px;
+    padding: 20px 27px 14px 27px;
+
+    color: #ffffff;
+
+    border: 2px solid @orange;
+    border-radius: 50%;
+  }
+
+  .header-user-info__level-number {
+    margin: 0;
+
+    font-size: 38px;
+    font-family: "BloggerSans-Bold", "Arial", sans-serif;
+    font-weight: 800;
+    line-height: 38px;
+
+    border-bottom: 1px solid #edeff6;
+  }
+
+  .header-user-info__level-text {
+    margin: 0;
+    padding-top: 5px;
+
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+}

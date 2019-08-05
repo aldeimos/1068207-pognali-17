@@ -21,6 +21,17 @@
   background: none;
   border: none;
 
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
   &--prev {
     left: 0;
 
@@ -69,6 +80,11 @@
   }
 }
 
+.calendar__cell-choosed--checkin,
+.calendar__cell-choosed--checkout {
+  display: none;
+}
+
 .calendar__table-weekday {
   padding-bottom: 12px;
 
@@ -77,6 +93,10 @@
   &--weekend {
     color: #ff5c23;
   }
+}
+
+.calendar__table-weekday--tablet {
+  display: none;
 }
 
 td.calendar__cell-choosed {
@@ -93,4 +113,85 @@ td.calendar__cell-booking-yes {
   color: #444444;
 
   background-color: #edeff6;
+}
+
+@media (min-width: @tablet-width) {
+  .calendar {
+    order: 7;
+  }
+
+  .calendar__header-title {
+    padding: 30px 0;
+
+    font-size: 36px;
+  }
+
+  .calendar__header-button {
+    top: 25px;
+
+    width: 19px;
+    height: 34px;
+  }
+
+  .calendar__table {
+    th {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    td {
+      padding: 25px 8px;
+
+      font-size: 20px;
+      font-family: "BloggerSans-Medium", "Arial", sans-serif;
+      font-weight: 500;
+      line-height: 18px;
+    }
+  }
+
+  .calendar__table-weekday--tablet {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calendar__header-title {
+    border-bottom: none;
+  }
+
+  .calendar__table-header {
+    border-top: 1px solid #cbced9;
+  }
+
+  .calendar__table {
+    width: auto;
+    margin-bottom: 55px;
+
+    th {
+      padding: 20px 0;
+    }
+
+    td {
+      width: 129px;
+      height: 92px;
+      padding: 0;
+      padding-top: 15px;
+      padding-left: 15px;
+
+
+      font-size: 18px;
+      font-family: "BloggerSans", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: left;
+      vertical-align: top;
+    }
+  }
+
+  .calendar__cell-choosed--checkin,
+  .calendar__cell-choosed--checkout {
+    display: block;
+    width: 50px;
+    margin: 0;
+  }
 }

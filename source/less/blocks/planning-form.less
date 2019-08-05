@@ -95,8 +95,19 @@
   border: none;
   background: transparent;
 
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
   &--minus {
-    top: 44px;
+    top: 46px;
     left: 12px;
 
     width: 14px;
@@ -106,7 +117,7 @@
   }
 
   &--plus {
-    top: 38px;
+    top: 40px;
     right: 12px;
 
     width: 14px;
@@ -121,7 +132,7 @@
   margin-bottom: 20px;
 }
 
-.planning-form__input-checkbox:checked + .planning-form__label-checkbox {
+.planning-form__input-checkbox:checked+.planning-form__label-checkbox {
   &::after {
     content: "";
 
@@ -157,6 +168,7 @@
     height: 25px;
 
     border: 1px solid #cbced9;
+    border-radius: 5px;
   }
 }
 
@@ -328,7 +340,7 @@
   background-color: #ffffff;
 }
 
-.planning-form__select--choose:hover > .planning-form__dropdown {
+.planning-form__select--choose:hover>.planning-form__dropdown {
   display: block;
 }
 
@@ -414,25 +426,78 @@
 
 
 .planning-form__button-next {
+  position: relative;
   width: 100%;
-  padding: 5px 0;
+  padding: 5px 20px;
 
   font-size: 17px;
   font-weight: 800;
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   line-height: 30px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: @dark-blue;
 
   background-color: @light-yellow;
   border: none;
   border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+
+    background-color: #ffbd30;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    right: 10px;
+
+    width: 10px;
+    height: 14px;
+
+    background: url("../../img/triangle-arrow-right.svg") no-repeat center;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .planning-form__button-stepback {
+  color: fade(@dark-blue, 40%);
+  text-align: center;
+
   background: none;
+
+  span {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: fade(@dark-blue, 70%);
+
+    background: none;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 100%);
+
+    background: none;
+  }
+
+  &::after {
+    content: none;
+  }
 }
 
 .planning-form__country-name {
@@ -442,10 +507,42 @@
 }
 
 .planning-form__steps-entertaiment {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin-bottom: 20px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: -12px;
+
+    width: 2px;
+    height: 308px;
+
+    background-color: #1d2e5b;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: -12px;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #1d2e5b;
+  }
+
+  &--czech::before {
+    content: none;
+  }
 }
 
 .planning-form__label--country {
@@ -455,6 +552,20 @@
   padding-left: 15px;
 
   text-transform: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 2.5px;
+    left: 0;
+
+    width: 7px;
+    height: 7px;
+
+    background-color: #1d2e5b;
+    border-radius: 50%;
+  }
 
   &::after {
     content: "";
@@ -466,6 +577,13 @@
     height: 24px;
 
     background: url("../../img/bosnia-flag.png") no-repeat center;
+    border-radius: 2px;
+  }
+
+  &-czech {
+    &::after {
+      background: url("../../img/czech-flag.png") no-repeat center;
+    }
   }
 }
 
@@ -486,5 +604,521 @@
   &::placeholder {
     font: inherit;
     color: fade(#444444, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .planning-form {
+    padding: 0 35px;
+  }
+
+  .planning-form__steps {
+    padding: 35px;
+  }
+
+  .planning-form__title {
+    order: 1;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .planning-form__desc {
+    order: 2;
+    width: 540px;
+    margin-bottom: 0;
+    padding-right: 28px;
+    padding-bottom: 35px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .planning-form__wrapper {
+    order: 5;
+    padding-top: 25px;
+
+    border-top: 1px solid #edeff6;
+  }
+
+  .planning-form__wrapper--companions {
+    order: 3;
+  }
+
+  .planning-form__input {
+    margin-bottom: 35px;
+    padding: 25px 0;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  .planning-form__label {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  .planning-form__button {
+    &--minus {
+      top: 98px;
+      left: 23px;
+
+      width: 20px;
+    }
+
+    &--plus {
+      top: 90px;
+      right: 23px;
+
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+  .planning-form__checkbox {
+    order: 4;
+    margin-bottom: 25px;
+  }
+
+  .planning-form__label-checkbox {
+    padding-left: 53px;
+
+    font-size: 20px;
+    line-height: 18px;
+    color: @dark-blue;
+    text-transform: uppercase;
+
+    &::before {
+      top: -10px;
+
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .planning-form__input-checkbox:checked+.planning-form__label-checkbox {
+    &::after {
+      left: 12px;
+
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .planning-form__button-next {
+    order: 8;
+    width: 217px;
+    padding: 20px 34px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+
+    &::after {
+      top: 23px;
+      right: 36px;
+    }
+  }
+
+  .planning-form__button-stepback {
+    width: 150px;
+    margin-left: auto;
+
+    color: @dark-blue;
+
+    &:hover,
+    &:focus {
+      color: fade(@dark-blue, 80%);
+    }
+
+    &:active {
+      color: fade(@dark-blue, 50%);
+    }
+
+    span {
+      display: inline;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 23px;
+      left: 0;
+
+      width: 10px;
+      height: 14px;
+
+      background: url(../../img/triangle-arrow-right.svg) no-repeat center;
+
+      transform: rotate(180deg);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.8;
+    }
+
+    &:active::before {
+      opacity: 0.5;
+    }
+
+  }
+
+  .planning-form__select-wrapper {
+    position: relative;
+    order: 3;
+    width: 100%;
+    padding-top: 41px;
+
+    border-top: 1px solid #edeff6;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 150px;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: #edeff6;
+    }
+  }
+
+  .planning-form__select {
+    justify-content: flex-start;
+
+    &::before {
+      top: 28px;
+      right: 142.5px;
+
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .planning-form__option,
+  .planning-form__button-add {
+    width: 370px;
+    padding: 27px;
+
+    font-size: 20px;
+    line-height: 18px;
+
+    border-radius: 5px;
+  }
+
+  .planning-form__option {
+    &::after {
+      top: 12px;
+      right: 10px;
+
+      background-size: 17px 9px;
+    }
+  }
+
+  .planning-form__option-img {
+    width: 70px;
+    height: 47px;
+    margin-left: 55px;
+    padding-left: 0;
+
+    border: none;
+  }
+
+  .planning-form__button-add {
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+
+    &::after {
+      top: 28px;
+      right: -35px;
+
+      width: 15px;
+      height: 15px;
+
+      background-color: #edeff6;
+    }
+  }
+
+  .planning-form__select--choose {
+    &::before {
+      background-color: #ffffff;
+    }
+  }
+
+  .planning-form__option-button {
+    top: 23px;
+    right: 0;
+
+    background-color: transparent;
+    background-size: 18px;
+  }
+
+  .planning-form__steps-entertaiment {
+    order: 3;
+    padding-right: 30px;
+
+    &::before {
+      top: 50px;
+      left: auto;
+      right: 0;
+
+      height: 290px;
+      width: 3px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .planning-form__label--country {
+    margin-bottom: 40px;
+    padding-top: 38px;
+    padding-left: 0;
+
+    font-size: 30px;
+    line-height: 18px;
+
+    border-top: 1px solid #edeff6;
+
+    &::before {
+      left: auto;
+      top: 35px;
+      right: -36px;
+
+      width: 15px;
+      height: 15px;
+    }
+
+
+    &::after {
+      top: 24px;
+
+      width: 70px;
+      height: 47px;
+    }
+  }
+
+  .planning-form__textarea {
+    min-height: 142px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .planning-form__steps {
+    margin-bottom: 45px;
+    padding: 100px 160px;
+  }
+
+  .planning-form__steps-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    border-bottom: 1px solid #edeff6;
+  }
+
+  .planning-form__title {
+    margin-bottom: 35px;
+  }
+
+  .planning-form__title--desktop {
+    display: none;
+  }
+
+  .planning-form__desc {
+    width: 550px;
+
+    &--step-2 {
+      width: 410px;
+    }
+
+    &--step-3 {
+      width: 500px;
+    }
+  }
+
+  .planning-form__progress-step {
+    position: relative;
+    margin: 0;
+    margin-bottom: 25px;
+    padding-left: 35px;
+
+    font-size: 20px;
+    font-family: "BloggerSans", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: fade(#1d2e5b, 60%);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 2.5px;
+      left: 0;
+
+      width: 5px;
+      height: 5px;
+
+      background-color: #d9d9da;
+      border-radius: 50%;
+    }
+
+    &--active {
+      color: #1d2e5b;
+
+      &::before {
+        background-color: #1d2e5b;
+      }
+    }
+  }
+
+  .planning-form__wrapper {
+    width: 41%;
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 0;
+
+    border: none;
+
+    &--companions {
+      margin-top: 32px;
+    }
+
+    &--duration {
+      margin-bottom: 32px;
+    }
+  }
+
+  .planning-form__label {
+    width: auto;
+    margin-right: 32px;
+    margin-bottom: 0;
+
+    &::after {
+      color: #1d2e5b;
+    }
+
+    &--companions {
+      &::after {
+        right: -285px;
+      }
+    }
+
+    &--duration {
+      margin-right: 53px;
+
+      &::after {
+        right: -300px;
+      }
+    }
+  }
+
+  .planning-form__input {
+    width: 180px;
+    margin: 0;
+    padding: 23px 0;
+  }
+
+  .planning-form__checkbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 500px;
+    margin: 0;
+    margin-top: 32px;
+  }
+
+  .planning-form__button {
+    &--minus {
+      top: 35px;
+      left: 215px;
+    }
+
+    &--plus {
+      top: 26px;
+      right: 25px;
+    }
+  }
+
+  .planning-form__option,
+  .planning-form__button-add {
+    width: 730px;
+  }
+
+  .planning-form__button-add {
+    &::after {
+      right: -58px;
+    }
+  }
+
+  .planning-form__option-img {
+    padding-left: 25px;
+  }
+
+  .planning-form__steps-entertaiment {
+    &--czech {
+      margin-bottom: 56px;
+    }
+
+    &::before {
+      top: 85px;
+      right: 135px;
+
+      height: 261px;
+    }
+  }
+
+  .planning-form__label--country {
+    padding-top: 80px;
+    padding-bottom: 35px;
+
+    border: none;
+
+    &-czech {
+      padding-top: 35px;
+    }
+
+    &::before {
+      top: 85px;
+      right: -513px;
+    }
+
+    &::after {
+      top: 65px;
+      right: -600px;
+    }
+
+    &-czech {
+      &::before {
+        top: 10px;
+        right: -623px;
+      }
+
+      &::after {
+        top: -10px;
+        right: -710px;
+      }
+    }
+  }
+
+  .planning-form__textarea {
+    width: 730px;
   }
 }

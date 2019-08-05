@@ -43,32 +43,45 @@
 }
 
 .contacts__button {
-  position: relative;
-
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 24px 24px 21px 24px;
 
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 18px;
+  text-align: center;
   color: @dark-blue;
   text-decoration: none;
 
   border-radius: 10px;
   border: 2px solid @dark-blue;
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    right: 24px;
-
-    width: 10px;
-    height: 14px;
-
-    background: url("../../img/triangle-arrow-right.svg");
+  &--icon {
+    fill: @dark-blue;
   }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    background-color: #192144;
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+  }
+}
+
+.contacts__button:hover>.contacts__button&--icon,
+.contacts__button:focus>.contacts__button&--icon {
+  fill: #ffffff;
+}
+
+.contacts__button:active>.contacts__button--icon {
+  fill-opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -100,7 +113,7 @@
 @media (min-width: @desktop-width) {
   .contacts__address {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-top: 55px;
   }
@@ -108,6 +121,10 @@
   .contacts__address-title {
     padding-top: 0;
     margin-bottom: 0;
+    margin-left: 225px;
+
+    font-size: 28px;
+    line-height: 28px;
 
     &::before {
       top: -24px;
@@ -116,7 +133,12 @@
 
   .contacts__button {
     box-sizing: border-box;
+    width: 320px;
     margin: 0;
-    padding: 31px 67px 28px 37px;
+    margin-right: 75px;
+    padding: 30px 35px;
+
+    font-size: 24px;
+    line-height: 24px;
   }
 }
