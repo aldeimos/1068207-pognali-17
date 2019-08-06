@@ -132,7 +132,7 @@
   margin-bottom: 20px;
 }
 
-.planning-form__input-checkbox:checked+.planning-form__label-checkbox {
+.planning-form__input-checkbox:checked + .planning-form__label-checkbox {
   &::after {
     content: "";
 
@@ -340,7 +340,7 @@
   background-color: #ffffff;
 }
 
-.planning-form__select--choose:hover>.planning-form__dropdown {
+.planning-form__select--choose:hover + .planning-form__dropdown {
   display: block;
 }
 
@@ -699,7 +699,7 @@
     }
   }
 
-  .planning-form__input-checkbox:checked+.planning-form__label-checkbox {
+  .planning-form__input-checkbox:checked + .planning-form__label-checkbox {
     &::after {
       left: 12px;
 
@@ -753,7 +753,7 @@
       width: 10px;
       height: 14px;
 
-      background: url(../../img/triangle-arrow-right.svg) no-repeat center;
+      background: url("../../img/triangle-arrow-right.svg") no-repeat center;
 
       transform: rotate(180deg);
     }
@@ -766,7 +766,6 @@
     &:active::before {
       opacity: 0.5;
     }
-
   }
 
   .planning-form__select-wrapper {
@@ -1093,6 +1092,15 @@
 
     &-czech {
       padding-top: 35px;
+      &::before {
+        top: 10px;
+        right: -623px;
+      }
+
+      &::after {
+        top: -10px;
+        right: -710px;
+      }
     }
 
     &::before {
@@ -1105,17 +1113,6 @@
       right: -600px;
     }
 
-    &-czech {
-      &::before {
-        top: 10px;
-        right: -623px;
-      }
-
-      &::after {
-        top: -10px;
-        right: -710px;
-      }
-    }
   }
 
   .planning-form__textarea {
