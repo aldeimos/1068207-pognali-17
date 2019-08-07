@@ -171,7 +171,20 @@
   font-size: 20px;
   font-weight: 800;
   line-height: 20px;
-  color: @dark-blue;
+
+  a {
+    text-decoration: none;
+    color: @dark-blue;
+
+    &:hover {
+      color: fade(@dark-blue, 70%);
+    }
+
+    &:active {
+      color: fade(@dark-blue, 30%);
+    }
+
+  }
 
   &::before {
     content: "";
@@ -196,14 +209,6 @@
     &::before {
       background-color: #81e31e;
     }
-  }
-
-  &:hover {
-    color: fade(@dark-blue, 70%);
-  }
-
-  &:active {
-    color: fade(@dark-blue, 30%);
   }
 
   &:hover::before {
