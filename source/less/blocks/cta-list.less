@@ -5,11 +5,17 @@
     align-self: flex-start;
 
     &:nth-child(1) {
-      margin-bottom: 25px;
+      margin-bottom: 0;
     }
   }
 
   .user-list__link {
+    order: 1;
+    margin-left: 15px;
+
+    font-family: "BloggerSans-Bold", "Arial", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
     color: @light-yellow;
 
     &:hover,
@@ -17,32 +23,37 @@
       color: #ffbd30;
     }
 
-    &-phone::before,
-    &-email::before {
-      background-color: #121936;
+    &:active {
+      color: fade(#ffbd30, 30%);
     }
+  }
+
+  .user-list__link:hover + svg {
+    fill: #ffbd30;
+  }
+
+  .user-list__link:active + svg {
+    fill: #ffbd30;
+    fill-opacity: 0.3;
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .cta-list {
-    .user-list__item {
-      &:nth-child(1) {
-        margin-bottom: 45px;
-      }
-    }
+    margin-left: 35px;
 
     .user-list__link {
-      padding-left: 130px;
+      margin-left: 20px;
 
-      &-phone::before,
-      &-email::before {
-        top: -23px;
-        left: 35px;
+      font-size: 28px;
+      line-height: 28px;
+    }
 
-        width: 68px;
-        height: 68px;
-      }
+    .user-list__link-phone--icon {
+      padding: 21.5px 16.5px;
+      width: 35px;
+      height: 25px;
     }
   }
 }
@@ -51,5 +62,13 @@
   .cta-list {
     flex-direction: row;
     justify-content: center;
+
+    .user-list__item {
+      margin-right: 110px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

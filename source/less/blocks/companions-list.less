@@ -23,6 +23,7 @@
 }
 
 .companions-list__item-name {
+  position: relative;
   margin: 0;
   margin-bottom: 10px;
 
@@ -32,6 +33,49 @@
   line-height: 21px;
   text-align: center;
   color: @dark-blue;
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+  }
+
+  &--offline {
+    &::before {
+      left: 50px;
+      background-color: #f97676;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+      left: 63px;
+    }
+  }
+
+  &:hover {
+    color: fade(@dark-blue, 70%);
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .companions-list__item-hashtags {
@@ -119,13 +163,60 @@
 }
 
 .companions-list__card-name {
+  position: relative;
+
   margin: 0;
 
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 800;
   line-height: 20px;
-  color: @dark-blue;
+
+  a {
+    text-decoration: none;
+    color: @dark-blue;
+
+    &:hover {
+      color: fade(@dark-blue, 70%);
+    }
+
+    &:active {
+      color: fade(@dark-blue, 30%);
+    }
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    right: -43px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+  }
+
+  &--offline {
+    &::before {
+      background-color: #f97676;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+    }
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .companions-list__card-additional {
@@ -229,6 +320,15 @@
 
   background-color: @light-yellow;
   border-radius: 30px;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -294,10 +394,13 @@
   }
 
   .companions-list__card-name {
-    width: 100%;
-
     font-size: 30px;
     line-height: 30px;
+
+    &::before {
+      top: 12px;
+      right: -25px;
+    }
   }
 
   .companions-list__card-hashtags {
@@ -329,8 +432,9 @@
 
   .companions-list__card-picture {
     width: 285px;
-    height: 305px;
-    border-radius: 0;
+    height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .companions-list__preferences {

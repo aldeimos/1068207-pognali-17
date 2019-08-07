@@ -23,6 +23,7 @@
 }
 
 .cta__desc {
+  width: 240px;
   margin: 0;
   margin-bottom: 32px;
   text-align: center;
@@ -32,6 +33,15 @@
     color: @light-yellow;
 
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: @orange;
+    }
+
+    &:active {
+      color: fade(@orange, 30%);
+    }
   }
 }
 
@@ -54,8 +64,13 @@
   }
 
   .cta__desc {
+    width: 100%;
     margin-bottom: 67px;
     .paragraph-style-text-tablet();
+
+    &--mobile-br {
+      display: none;
+    }
   }
 
   .cta__additional {
@@ -65,11 +80,11 @@
     margin-bottom: 40px;
 
     &--tablet {
-      display: none;
+      display: inline;
     }
 
     &--desktop {
-      display: inline;
+      display: none;
     }
   }
 }

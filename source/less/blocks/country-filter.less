@@ -28,6 +28,20 @@
 
   border: none;
   background: url("../../img/filter-close.svg") no-repeat center;
+
+  &--open {
+    display: none;
+    background: url("../../img/dots.svg") no-repeat center;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .country-filter__nav-title {
@@ -86,6 +100,11 @@
 
   border: none;
   background: none;
+
+  &:hover,
+  &:focus {
+    color: fade(#192144, 60%);
+  }
 
   &--active {
     color: #192144;
@@ -158,6 +177,15 @@
   background-color: #d6daed;
   border: none;
   border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -176,6 +204,7 @@
   }
 
   .country-filter__nav-button {
+    display: none;
     width: auto;
     height: auto;
     margin: 0;
@@ -190,6 +219,14 @@
 
     background-position: top 3px right 37px;
     background-size: 8%;
+
+    &--open {
+      display: block;
+      padding-right: 35px;
+      margin-right: 40px;
+      background-position: top 10px right;
+      background-size: 10%;
+    }
   }
 
   .continents__list {
@@ -244,7 +281,8 @@
     padding: 42px 0;
     font-size: 20px;
     line-height: 30px;
-    background-position: top 40px left 243px;
+    background-position: top 45px left 250px;
+    background-size: 20px 20px;
   }
 }
 

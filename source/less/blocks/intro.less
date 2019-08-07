@@ -35,6 +35,7 @@
 
 .intro-nav__list {
   position: relative;
+  z-index: 15;
   top: 430px;
 
   display: flex;
@@ -63,41 +64,42 @@
 
 .intro-nav__link--phone,
 .intro-nav__link--email {
-  display: inline-block;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
-
-  vertical-align: middle;
+  text-align: center;
 
   border-radius: 50%;
-}
 
-.intro-nav__link--phone {
-  background: #ff8d30 url("../../img/topmenu-phone.svg") no-repeat center;
-  background-size: 45%;
-
-  &:hover {
-    background-color: #f26926;
+  svg {
+    fill: #161c35;
   }
 
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+
+.intro-nav__link--phone {
+  background-color: #ff8d30;
+
+  &:hover,
+  &:focus,
   &:active {
-    background: #f26926 url("../../img/topmenu-phone@0.3.svg") no-repeat center;
-    background-size: 45%;
+    background-color: #f26926;
   }
 }
 
 .intro-nav__link--email {
-  background: #ffbd30 url("../../img/topmenu-mail.svg") no-repeat center;
-  background-size: 45%;
+  background-color: #ffbd30;
 
-  &:hover {
-    background-color: #ff8d30;
-  }
-
+  &:hover,
+  &:focus,
   &:active {
-    background: #ff8d30 url("../../img/topmenu-mail@0.3.svg") no-repeat center;
-    background-size: 45%;
+    background-color: #ff8d30;
   }
 }
 
