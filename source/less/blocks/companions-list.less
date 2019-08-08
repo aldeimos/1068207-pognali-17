@@ -245,6 +245,14 @@
     background-color: #f9eaea;
     border-radius: 50%;
   }
+
+  &--notlike {
+    &::before {
+      background: url("../../img/heart.svg") no-repeat center;
+      background-color: #edeff6;
+      background-size: 13px 11px;
+    }
+  }
 }
 
 .companions-list__card-hashtags {
@@ -369,6 +377,14 @@
       background-color: #f9eaea;
       border-radius: 50%;
     }
+
+    &--notlike {
+      &::before {
+        background: url(../../img/heart.svg) no-repeat center;
+        background-color: #edeff6;
+        background-size: 20px 17px;
+      }
+    }
   }
 
   .companions-list__card-button {
@@ -410,10 +426,6 @@
     font-size: 20px;
     line-height: 24px;
   }
-
-  .companions-list__preferences {
-    margin-top: 10px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -425,14 +437,15 @@
   }
 
   .companions-list__card-submenu {
+    box-sizing: border-box;
     padding-top: 48px;
-    padding-bottom: 47px;
+    padding-bottom: 40px;
     padding-left: 55px;
   }
 
   .companions-list__card-picture {
     width: 285px;
-    height: 285px;
+    height: 100%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
