@@ -14,123 +14,141 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <div class="container">
-      <div class="page-header__wrapper">
-        <a href="catalog.html" class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1440px)"
-              srcset="../img/logo-desktop-white@1x.png 1x, ../img/logo-desktop-white@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="../img/logo-tablet-white@1x.png 1x, ../img/logo-tablet-white@2x.png 2x">
-            <img class="page-header__logo-image" src="../img/logo-mobile-white.png"
-              srcset="../img/logo-mobile-white@2x.png 2x" alt="Логотип компании «Погнали?»">
-          </picture>
-        </a>
-        <button class="page-header__toggle page-header__toggle--open" type="button">Кнопка открытия выпадающего
-          меню</button>
-        <button class="page-header__toggle page-header__toggle--close visually-hidden" type="button">Кнопка закрытия
-          выпадающего
-          меню</button>
-        <nav class="main-nav">
-          <ul class="main-nav__list site-list">
-            <li class="main-nav__list-item site-list__item">
-              <a class="main-nav__list-link site-list__link" href="#"><span data-hover="О Сервисе">О сервисе</span></a>
-            </li>
-            <li class="main-nav__list-item site-list__item">
-              <a class="main-nav__list-link site-list__link" href="#"><span
-                  data-hover="Направления">Направления</span></a>
-            </li>
-            <li class="main-nav__list-item site-list__item">
-              <a class="main-nav__list-link site-list__link" href="catalog.html"><span
-                  data-hover="Попутчики">Попутчики</span></a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__link user-list__link-login" href="#">Авторизация</a>
-            </li>
-            <li class="user-list__item">
-              <svg class="user-list__link-phone--icon" width="18" height="18">
-                <use xlink:href="#svgo-contacts-phone"></use>
-              </svg>
-              <a class="user-list__link user-list__link-phone" href="tel:+7800555-86-28">8 800 555-86-28</a>
-            </li>
-            <li class="user-list__item">
-              <svg class="user-list__link-phone--icon" width="18" height="13">
-                <use xlink:href="#svgo-contacts-mail"></use>
-              </svg>
-              <a class="user-list__link user-list__link-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="social-list header-social-list">
-            <li class="header-social-list__item">
-              <a class="header-social-list__link" href="#">
-                <svg class="header-social-list__link--fb" width="11" height="21" aria-labelledby="heading">
-                  <title id="heading">Ссылка на страницу в Фейсбук</title>
-                  <use xlink:href="#svgo-facebook"></use>
+    <div class="page-header--background">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <a href="#" class="page-header__logo">
+            <picture class="page-header__picture page-header__picture--opener page-header__picture--white">
+              <source media="(min-width: 1440px)"
+                srcset="../img/logo-desktop-white@1x.webp 1x, ../img/logo-desktop-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="../img/logo-tablet-white@1x.webp 1x, ../img/logo-tablet-white@2x.webp 2x" type="image/webp">
+              <source type="image/webp" srcset="../img/logo-mobile-white.webp 1x, ../img/logo-mobile-white@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                srcset="../img/logo-desktop-white@1x.png 1x, ../img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="../img/logo-tablet-white@1x.png 1x, ../img/logo-tablet-white@2x.png 2x">
+              <img class="page-header__logo-image" src="../img/logo-mobile-white.png"
+                srcset="../img/logo-mobile-white@2x.png 2x" alt="Логотип компании «Погнали?»">
+            </picture>
+            <picture class="page-header__picture page-header__picture--blue">
+              <source media="(min-width: 1440px)"
+                srcset="../img/logo-desktop-blue@1x.webp 1x, ../img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="../img/logo-tablet-blue@1x.webp 1x, ../img/logo-tablet-blue@2x.webp 2x" type="image/webp">
+              <source type="image/webp" srcset="../img/logo-mobile-blue@1x.webp 1x, ../img/logo-mobile-blue@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                srcset="../img/logo-desktop-blue@1x.png 1x, ../img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="../img/logo-tablet-blue@1x.png 1x, ../img/logo-tablet-blue@2x.png 2x">
+              <img class="page-header__logo-image" src="../img/logo-mobile-blue@1x.png"
+                srcset="../img/logo-mobile-blue@2x.png 2x" alt="Логотип компании «Погнали?»">
+            </picture>
+          </a>
+          <button class="page-header__toggle page-header__toggle--closed" type="button">Кнопка выпадающего меню</button>
+          <nav class="main-nav main-nav__toggle-closed main-nav--nojs">
+            <ul class="main-nav__list site-list">
+              <li class="main-nav__list-item site-list__item">
+                <a class="main-nav__list-link site-list__link" href="#"><span data-hover="О Сервисе">О
+                    сервисе</span></a>
+              </li>
+              <li class="main-nav__list-item site-list__item">
+                <a class="main-nav__list-link site-list__link" href="#"><span
+                    data-hover="Направления">Направления</span></a>
+              </li>
+              <li class="main-nav__list-item site-list__item">
+                <a class="main-nav__list-link site-list__link" href="catalog.html"><span
+                    data-hover="Попутчики">Попутчики</span></a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
+                <a class="user-list__link user-list__link-login" href="#">Авторизация</a>
+              </li>
+              <li class="user-list__item">
+                <svg class="user-list__link-phone--icon" width="18" height="18">
+                  <use xlink:href="#svgo-contacts-phone"></use>
+                </svg>
+                <a class="user-list__link user-list__link-phone" href="tel:+7800555-86-28">8 800 555-86-28</a>
+              </li>
+              <li class="user-list__item">
+                <svg class="user-list__link-phone--icon" width="18" height="13">
+                  <use xlink:href="#svgo-contacts-mail"></use>
+                </svg>
+                <a class="user-list__link user-list__link-email"
+                  href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+            <ul class="social-list header-social-list">
+              <li class="header-social-list__item">
+                <a class="header-social-list__link" href="#">
+                  <svg class="header-social-list__link--fb" width="11" height="21" aria-labelledby="heading">
+                    <title id="heading">Ссылка на страницу в Фейсбук</title>
+                    <use xlink:href="#svgo-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header-social-list__item">
+                <a class="header-social-list__link" href="#">
+                  <svg class="header-social-list__link--vk" width="21" height="12" aria-labelledby="heading">
+                    <title id="heading">Ссылка на страницу в Вконтакте</title>
+                    <use xlink:href="#svgo-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header-social-list__item">
+                <a class="header-social-list__link" href="#">
+                  <svg class="header-social-list__link--inst" width="18" height="18" aria-labelledby="heading">
+                    <title id="heading">Ссылка на страницу в Инстаграмм</title>
+                    <use xlink:href="#svgo-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="intro-nav__list page-header-list">
+            <li class="intro-nav__item">
+              <a class="intro-nav__link intro-nav__link--phone" href="tel:+7800555-86-28">
+                <svg width="18" height="18" aria-labelledby="heading">
+                  <title id="heading">Наш телефон: +7800555-86-28</title>
+                  <use xlink:href="#svgo-topmenu-phone"></use>
                 </svg>
               </a>
             </li>
-            <li class="header-social-list__item">
-              <a class="header-social-list__link" href="#">
-                <svg class="header-social-list__link--vk" width="21" height="12" aria-labelledby="heading">
-                  <title id="heading">Ссылка на страницу в Вконтакте</title>
-                  <use xlink:href="#svgo-vk"></use>
+            <li class="intro-nav__item">
+              <a class="intro-nav__link intro-nav__link--email" href="mailto:mail@htmlacademy.ru">
+                <svg width="18" height="14" aria-labelledby="heading">
+                  <title id="heading">Наша почта: mail@htmlacademy.ru</title>
+                  <use xlink:href="#svgo-topmenu-mail"></use>
                 </svg>
               </a>
             </li>
-            <li class="header-social-list__item">
-              <a class="header-social-list__link" href="#">
-                <svg class="header-social-list__link--inst" width="18" height="18" aria-labelledby="heading">
-                  <title id="heading">Ссылка на страницу в Инстаграмм</title>
-                  <use xlink:href="#svgo-instagram"></use>
-                </svg>
-              </a>
+            <li class="intro-nav__item">
+              <a class="intro-nav__link intro-nav__link-login" href="#">Авторизация</a>
             </li>
           </ul>
-        </nav>
-        <ul class="intro-nav__list page-header-list">
-          <li class="intro-nav__item">
-            <a class="intro-nav__link intro-nav__link--phone" href="tel:+7800555-86-28">
-              <svg width="18" height="18" aria-labelledby="heading">
-                <title id="heading">Наш телефон: +7800555-86-28</title>
-                <use xlink:href="#svgo-topmenu-phone"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="intro-nav__item">
-            <a class="intro-nav__link intro-nav__link--email" href="mailto:mail@htmlacademy.ru">
-              <svg width="18" height="14" aria-labelledby="heading">
-                <title id="heading">Наша почта: mail@htmlacademy.ru</title>
-                <use xlink:href="#svgo-topmenu-mail"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="intro-nav__item">
-            <a class="intro-nav__link intro-nav__link-login" href="#">Авторизация</a>
-          </li>
-        </ul>
-        <h2 class="page-header__title page-header__title--form">Направления</h2>
-        <div class="header-user-info">
-          <div class="header-user-info__level">
-            <p class="header-user-info__level-number">80</p>
-            <p class="header-user-info__level-text">level</p>
+          <h2 class="page-header__title page-header__title--form">Направления</h2>
+          <div class="header-user-info">
+            <div class="header-user-info__level">
+              <p class="header-user-info__level-number">80</p>
+              <p class="header-user-info__level-text">level</p>
+            </div>
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="../img/demin-desktop@1x.webp 1x, ../img/demin-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="../img/demin-tablet@1x.webp 1x, ../img/demin-tablet@2x.webp 2x"
+                type="image/webp">
+              <source srcset="../img/demin-mobile@1x.webp 1x, ../img/demin-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)"
+                srcset="../img/demin-desktop@1x.jpg 1x, ../img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/demin-tablet@1x.jpg 1x, ../img/demin-tablet@2x.jpg 2x">
+              <img class="header-user-info__image" src="./img/demin-desktop@1x.jpg" alt="Фотография в профиле"
+                width="100" height="100">
+            </picture>
           </div>
-          <picture>
-            <source media="(min-width: 1440px)"
-              srcset="../img/demin-desktop@1x.webp 1x, ../img/demin-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 768px)" srcset="../img/demin-tablet@1x.webp 1x, ../img/demin-tablet@2x.webp 2x"
-              type="image/webp">
-            <source srcset="../img/demin-mobile@1x.webp 1x, ../img/demin-mobile@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1440px)" srcset="../img/demin-desktop@1x.jpg 1x, ../img/demin-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="../img/demin-tablet@1x.jpg 1x, ../img/demin-tablet@2x.jpg 2x">
-            <img class="header-user-info__image" src="./img/demin-desktop@1x.jpg" alt="Фотография в профиле" width="100"
-              height="100">
-          </picture>
         </div>
       </div>
     </div>
-
   </header>
   <main class="main main-form">
     <section class="profile">
@@ -548,6 +566,7 @@
       </div>
     </div>
   </footer>
+  <script src="../js/global.js"></script>
 </body>
 
 </html>

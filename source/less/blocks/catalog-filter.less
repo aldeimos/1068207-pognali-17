@@ -19,6 +19,39 @@
 
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 
+  &--hobby,
+  &--music,
+  &--food,
+  &--transport,
+  &--level {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 13px 0;
+
+    font-size: 16px;
+    font-family: "BloggerSans-Bold", "Arial", sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @filter-title-blue;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 18px;
+      right: 0;
+
+      width: 8px;
+      height: 4px;
+
+      background: url("../img/dropdown.svg") no-repeat center;
+      transform: rotate(0deg);
+    }
+  }
+
   &::after {
     content: "";
 
@@ -30,28 +63,32 @@
     height: 4px;
 
     background: url("../img/dropdown.svg") no-repeat center;
-  }
-
-  &--hobby:hover + .catalog-filter__wrapper--hobby,
-  &--music:hover + .catalog-filter__wrapper--music,
-  &--food:hover + .catalog-filter__wrapper--food,
-  &--transport:hover + .catalog-filter__wrapper--transport,
-  &--level:hover + .catalog-filter__wrapper--level {
-    display: flex;
+    transform: rotate(180deg);
   }
 }
 
 .catalog-filter__wrapper--transport {
-  display: flex;
   flex-wrap: nowrap;
 }
 
 .catalog-filter__wrapper {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   width: 220px;
+}
+
+.catalog-filter__wrapper--closed {
+  display: none;
+}
+
+.catalog-filter__wrapper--opened {
+  display: flex;
+}
+
+.catalog-filter__wrapper--nojs {
+  display: flex;
 }
 
 .catalog-filter__label,
@@ -96,7 +133,7 @@
   }
 }
 
-.catalog-filter__input:checked + .catalog-filter__label {
+.catalog-filter__input:checked+.catalog-filter__label {
   &::after {
     content: "";
 
@@ -116,8 +153,8 @@
   }
 }
 
-.catalog-filter__input:focus + .catalog-filter__label::before,
-.catalog-filter__input--transport:focus + .catalog-filter__label--transport {
+.catalog-filter__input:focus+.catalog-filter__label::before,
+.catalog-filter__input--transport:focus+.catalog-filter__label--transport {
   outline: rgb(59, 153, 252) auto 5px;
 }
 
@@ -152,22 +189,22 @@
   background-size: 55%;
 }
 
-.catalog-filter__input--plane:checked + .catalog-filter__label--plane {
+.catalog-filter__input--plane:checked+.catalog-filter__label--plane {
   background: #ffffff url("../img/plane.svg") no-repeat center left 7px;
   background-size: 50%;
 }
 
-.catalog-filter__input--bus:checked + .catalog-filter__label--bus {
+.catalog-filter__input--bus:checked+.catalog-filter__label--bus {
   background: #ffffff url("../img/bus.svg") no-repeat center;
   background-size: 50%;
 }
 
-.catalog-filter__input--bicycle:checked + .catalog-filter__label--bicycle {
+.catalog-filter__input--bicycle:checked+.catalog-filter__label--bicycle {
   background: #ffffff url("../img/bike.svg") no-repeat center;
   background-size: 60%;
 }
 
-.catalog-filter__input--onfoot:checked + .catalog-filter__label--onfoot {
+.catalog-filter__input--onfoot:checked+.catalog-filter__label--onfoot {
   background: #ffffff url("../img/run.svg") no-repeat center;
   background-size: 55%;
 }
@@ -361,7 +398,7 @@
     }
   }
 
-  .catalog-filter__input:checked + .catalog-filter__label {
+  .catalog-filter__input:checked+.catalog-filter__label {
     &::after {
       top: 2px;
       left: 6px;
@@ -415,9 +452,58 @@
 
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 
+
     &--transport {
       padding-bottom: 0;
     }
+
+    &--hobby,
+    &--music,
+    &--food,
+    &--transport,
+    &--level {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 13px 0;
+
+      font-size: 16px;
+      font-family: "BloggerSans-Bold", "Arial", sans-serif;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: @filter-title-blue;
+
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 18px;
+        right: 0;
+
+        width: 8px;
+        height: 4px;
+
+        background: url("../img/dropdown.svg") no-repeat center;
+        transform: rotate(0deg);
+      }
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 18px;
+      right: 0;
+
+      width: 8px;
+      height: 4px;
+
+      background: url("../img/dropdown.svg") no-repeat center;
+      transform: rotate(180deg);
+    }
+
   }
 
   .catalog-filter__wrapper {
@@ -428,6 +514,18 @@
     &--transport {
       flex-direction: row;
     }
+  }
+
+  .catalog-filter__wrapper--closed {
+    display: none;
+  }
+
+  .catalog-filter__wrapper--opened {
+    display: flex;
+  }
+
+  .catalog-filter__wrapper--nojs {
+    display: flex;
   }
 
   .catalog-filter__label {

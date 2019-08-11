@@ -117,4 +117,33 @@ gulp.task("build", gulp.series(
   "html"
 ));
 
+gulp.task("css-source", function () {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("server", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/less/**/*.less", gulp.series("css-source"));
+
+  gulp.watch("source/*.html", gulp.series("refresh"));
+});
+
+gulp.task("start-source", gulp.series("css-source", "server"));
+
 gulp.task("start", gulp.series("build", "server"));
