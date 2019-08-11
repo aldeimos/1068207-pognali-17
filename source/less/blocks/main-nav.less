@@ -1,16 +1,31 @@
 .main-nav {
   position: absolute;
-  top: 75px;
+  top: 73px;
   z-index: 15;
 
-  display: none;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 320px;
+  margin-left: -25px;
   padding-top: 25px;
   padding-bottom: 50px;
 
   background-color: #ffffff;
+}
+
+.main-nav__toggle-closed {
+  display: none;
+}
+
+.main-nav__toggle-opened {
+  display: flex;
+}
+
+.main-nav--nojs {
+  position: static;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 0;
 }
 
 .main-nav__list {
@@ -40,12 +55,28 @@
   color: @dark-blue;
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    box-sizing: border-box;
+    width: 768px;
+    margin-left: -40px;
+    padding-left: 95px;
+    align-items: flex-start;
+  }
+
+  .main-nav--nojs {
+    order: 4;
+    margin-left: 0;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .main-nav {
     position: relative;
     top: 0;
 
     display: flex;
+    order: 2;
     align-items: center;
     width: auto;
     padding: 0;
@@ -58,7 +89,7 @@
 
       position: absolute;
       top: 22px;
-      left: 0;
+      left: 30px;
 
       width: 60px;
       height: 2px;
@@ -69,6 +100,11 @@
     .user-list {
       display: none;
     }
+  }
+
+  .main-nav--nojs {
+    order: 2;
+    margin-top: 0;
   }
 
   .main-nav__list-item {

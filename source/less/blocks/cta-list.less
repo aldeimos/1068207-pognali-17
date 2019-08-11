@@ -1,4 +1,6 @@
 .cta-list {
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
 
   .user-list__item {
@@ -11,12 +13,28 @@
 
   .user-list__link {
     order: 1;
-    margin-left: 15px;
+    padding-left: 30px;
+    margin-bottom: 20px;
 
     font-family: "BloggerSans-Bold", "Arial", sans-serif;
     font-weight: 800;
     text-transform: uppercase;
     color: @light-yellow;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: -12px;
+      left: -32px;
+
+      width: 45px;
+      height: 45px;
+
+      background-color: #121936;
+      border-radius: 50%;
+    }
 
     &:hover,
     &:focus {
@@ -36,8 +54,13 @@
     fill: #ffbd30;
     fill-opacity: 0.3;
   }
-}
 
+  .user-list__link-mail--icon,
+  .user-list__link-phone--icon {
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .cta-list {
@@ -45,15 +68,31 @@
 
     .user-list__link {
       margin-left: 20px;
+      margin-bottom: 40px;
 
       font-size: 28px;
       line-height: 28px;
+
+      &::before {
+        left: -67px;
+        top: -20px;
+        width: 68px;
+        height: 68px;
+      }
     }
 
     .user-list__link-phone--icon {
-      padding: 21.5px 16.5px;
-      width: 35px;
-      height: 25px;
+      width: 27px;
+      height: 27px;
+      margin-bottom: 40px;
+      padding-left: 30px;
+    }
+
+    .user-list__link-mail--icon {
+      width: 27px;
+      height: 20px;
+      margin-bottom: 40px;
+      padding-left: 30px;
     }
   }
 }

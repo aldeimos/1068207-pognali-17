@@ -82,10 +82,25 @@
     width: 10px;
     height: 14px;
 
-    background: url("../../img/triangle-arrow-right.svg");
+    background: url("../../img/svgo-triangle-arrow-right.svg");
   }
 
   &:active::after {
     opacity: 0.3;
+  }
+}
+
+.catalog-title-line() {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: -18px;
+
+    width: 12px;
+    height: 1px;
+
+    background: #edeff6;
   }
 }
