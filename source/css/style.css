@@ -2029,6 +2029,9 @@ body {
   .page-header__title {
     margin-right: auto;
   }
+  .page-header__title--form {
+    margin-top: 160px;
+  }
   .page-header__logo-image {
     margin-right: 40px;
   }
@@ -5922,8 +5925,6 @@ td.calendar__cell-booking-yes {
   width: 270px;
   padding: 0 25px;
   margin: 0 auto;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
 }
 img {
   max-width: 100%;
@@ -5934,8 +5935,6 @@ img {
     width: 688px;
     padding: 0 40px;
     margin: 0 auto;
-    border-left: 1px solid green;
-    border-right: 1px solid green;
   }
 }
 @media (min-width: 1440px) {
@@ -5943,8 +5942,6 @@ img {
     width: 1320px;
     padding: 0 60px;
     margin: 0 auto;
-    border-left: 1px solid orange;
-    border-right: 1px solid orange;
   }
 }
 .visually-hidden {
