@@ -1,6 +1,9 @@
 .user-list {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+  width: 270px;
+  .list-default-style();
 }
 
 .user-list__item {
@@ -24,8 +27,7 @@
   text-decoration: none;
 }
 
-.user-list__link-phone--icon,
-.user-list__link-mail--icon {
+.user-list__link-svg {
   margin-left: 25px;
   fill: #ffd74b;
 }
@@ -70,8 +72,7 @@
     display: none;
   }
 
-  .user-list__link-phone--icon,
-  .user-list__link-mail--icon {
+  .user-list__link-svg {
     margin-left: 10px;
   }
 }

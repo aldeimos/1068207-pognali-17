@@ -17,11 +17,6 @@
   border: 7px solid white;
   border-radius: 10px;
 
-  &:hover {
-    background-color: #edeff6;
-    border-color: #edeff6;
-  }
-
   &::placeholder {
     color: fade(#444444, 30%);
   }
@@ -33,6 +28,11 @@
   &:invalid {
     background-color: #ffffff;
     color: #ff0000;
+  }
+
+  &:hover {
+    background-color: #edeff6;
+    border-color: #edeff6;
   }
 
   &:focus {
@@ -61,6 +61,15 @@
   background-color: @light-yellow;
   border: none;
   border-radius: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: #fcca5e;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 40%);
+  }
 }
 
 @media (min-width: @tablet-width) {

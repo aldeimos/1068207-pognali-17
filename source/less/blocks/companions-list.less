@@ -5,13 +5,16 @@
 
 .companions-list__wrapper {
   position: relative;
+
   margin-top: -4px;
+
   background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .companions-list__item {
   margin-bottom: 10px;
-  padding-bottom: 22px;
 
   background-color: #ffffff;
   border-radius: 10px;
@@ -95,8 +98,9 @@
   .companions-list {
     display: flex;
     justify-content: space-between;
-    padding-left: 25px;
-    padding-right: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+    padding-right: 35px;
   }
 
   .companions-list__wrapper {
@@ -104,11 +108,11 @@
   }
 
   .companions-list__item {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     padding-bottom: 0;
 
     &:nth-child(1) {
-      margin-right: 48px;
+      margin-right: 28px;
     }
   }
 
@@ -118,12 +122,15 @@
   }
 
   .companions-list__item-name {
+    margin-top: 5px;
+    margin-bottom: 25px;
+
     font-size: 24px;
     line-height: 24px;
   }
 
   .companions-list__item-hashtags {
-    width: 205px;
+    width: 225px;
 
     font-size: 20px;
     line-height: 24px;
@@ -246,10 +253,32 @@
     border-radius: 50%;
   }
 
+  &:hover::before {
+    background-color: #f9d8d8;
+  }
+
+  &:active::before {
+    background: url("../img/heart-active@0.3.svg") no-repeat center;
+    background-size: 40%;
+    background-color: #f9d8d8;
+  }
+
   &--notlike {
     &::before {
       background: url("../img/heart.svg") no-repeat center;
       background-color: #edeff6;
+      background-size: 13px 11px;
+    }
+
+    &:hover::before {
+      background: url("../img/heart@hvr.svg") no-repeat center;
+      background-color: #e2e5f2;
+      background-size: 13px 11px;
+    }
+
+    &:active::before {
+      background: url("../img/heart@act.svg") no-repeat center;
+      background-color: #e2e5f2;
       background-size: 13px 11px;
     }
   }
@@ -295,16 +324,16 @@
   line-height: 24px;
 
   border-bottom: 1px solid rgba(256, 256, 256, 0.1);
+}
 
-  &--text {
-    margin: 0;
-    padding-top: 5px;
+.companions-list__card-level-text {
+  margin: 0;
+  padding-top: 5px;
 
-    font-size: 14px;
-    font-family: "BloggerSans", "Arial", sans-serif;
-    font-weight: 400;
-    line-height: 14px;
-  }
+  font-size: 14px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 14px;
 }
 
 .companions-list__card-button {
@@ -343,6 +372,8 @@
   .companions-catalog {
     .companions-list__item {
       position: relative;
+
+      margin-bottom: 40px;
       padding: 35px 25px 25px 25px;
 
       &:nth-child(1) {
@@ -361,6 +392,9 @@
     position: relative;
     order: 6;
     padding-left: 60px;
+
+    font-size: 20px;
+    line-height: 30px;
 
     &::before {
       content: "";
@@ -401,7 +435,7 @@
     align-items: center;
     align-content: space-between;
     width: 335px;
-    padding: 0 35px 0 33px;
+    padding: 0 24px 0 33px;
     box-sizing: border-box;
   }
 
@@ -422,6 +456,7 @@
   .companions-list__card-hashtags {
     left: 0;
     margin: 0;
+    margin-bottom: 25px;
 
     font-size: 20px;
     line-height: 24px;

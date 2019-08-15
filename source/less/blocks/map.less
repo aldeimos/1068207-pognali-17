@@ -3,9 +3,9 @@
   z-index: 4;
 
   display: flex;
-  height: 546px;
+  height: 410px;
   align-items: center;
-  margin-top: -125px;
+  margin-top: -100px;
 
   background: url("../img/map-tablet@1x.jpg") no-repeat center;
   background-size: 1100px auto;
@@ -26,13 +26,25 @@
 
 @media (min-width: @tablet-width) {
   .map {
+    height: 630px;
+    margin-top: -275px;
+
     background: url("../img/map-desktop@1x.jpg") no-repeat center;
-    background-size: 1600px auto;
+    background-size: 1440px auto;
+
 
     @media (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
       background: url("../img/map-desktop@2x.jpg") no-repeat center;
-      background-size: 1600px auto;
+      background-size: 1440px auto;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    width: 100%;
+    height: 550px;
+    margin-top: -315px;
   }
 }

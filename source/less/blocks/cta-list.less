@@ -1,6 +1,7 @@
 .cta-list {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   width: 100%;
 
   .user-list__item {
@@ -13,7 +14,7 @@
 
   .user-list__link {
     order: 1;
-    padding-left: 30px;
+    padding-left: 20px;
     margin-bottom: 20px;
 
     font-family: "BloggerSans-Bold", "Arial", sans-serif;
@@ -46,6 +47,10 @@
     }
   }
 
+  .user-list__link-svg {
+    margin-bottom: 17px;
+  }
+
   .user-list__link:hover + svg {
     fill: #ffbd30;
   }
@@ -64,7 +69,8 @@
 
 @media (min-width: @tablet-width) {
   .cta-list {
-    margin-left: 35px;
+    margin-left: 115px;
+    padding-bottom: 10px;
 
     .user-list__link {
       margin-left: 20px;
@@ -81,16 +87,9 @@
       }
     }
 
-    .user-list__link-phone--icon {
+    .user-list__link-svg {
       width: 27px;
       height: 27px;
-      margin-bottom: 40px;
-      padding-left: 30px;
-    }
-
-    .user-list__link-mail--icon {
-      width: 27px;
-      height: 20px;
       margin-bottom: 40px;
       padding-left: 30px;
     }
@@ -99,15 +98,38 @@
 
 @media (min-width: @desktop-width) {
   .cta-list {
+    box-sizing: border-box;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 950px;
+    margin-left: 50px;
 
     .user-list__item {
-      margin-right: 110px;
+
+      margin-right: 100px;
 
       &:last-child {
         margin-right: 0;
       }
+    }
+
+    .user-list__link {
+      margin-left: 5px;
+      padding-left: 55px;
+
+      &::before {
+        left: -67px;
+        top: -30px;
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .user-list__link-svg {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 40px;
+      padding-left: 30px;
     }
   }
 }

@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 24px 21px 24px;
+  padding: 20px 24px 18px 24px;
 
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 18px;
@@ -59,7 +59,7 @@
   border-radius: 10px;
   border: 2px solid @dark-blue;
 
-  &--icon {
+  svg {
     fill: @dark-blue;
   }
 
@@ -75,25 +75,32 @@
   }
 }
 
-.contacts__button:hover > .contacts__button&--icon,
-.contacts__button:focus > .contacts__button&--icon {
+.contacts__button:hover > svg,
+.contacts__button:focus > svg {
   fill: #ffffff;
 }
 
-.contacts__button:active > .contacts__button--icon {
+.contacts__button:active > svg {
   fill-opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
+    top: -200px;
     padding-bottom: 85px;
+
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   .contacts__address-title {
     width: 430px;
     margin-bottom: 64px;
-    padding-top: 70px;
+    padding-top: 110px;
     padding-left: 130px;
+
+    font-size: 28px;
+    line-height: 28px;
 
     &::before {
       left: 35px;
@@ -107,15 +114,30 @@
   .contacts__button {
     margin-left: 35px;
     margin-right: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-width: 3px;
+    border-radius: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    top: -265px;
+
+    padding-bottom: 55px;
+  }
+
   .contacts__address {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
+    padding-top: 100px;
   }
 
   .contacts__address-title {
@@ -127,7 +149,10 @@
     line-height: 28px;
 
     &::before {
-      top: -24px;
+      top: -30px;
+      left: 0;
+      width: 90px;
+      height: 90px;
     }
   }
 

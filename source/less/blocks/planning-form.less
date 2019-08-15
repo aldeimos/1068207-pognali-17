@@ -439,7 +439,7 @@
   font-family: "BloggerSans-Bold", "Arial", sans-serif;
   line-height: 30px;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   color: @dark-blue;
 
@@ -468,7 +468,7 @@
     width: 10px;
     height: 14px;
 
-    background: url("../img/triangle-arrow-right.svg") no-repeat center;
+    background: url("../img/svgo-triangle-arrow-right.svg") no-repeat center;
   }
 
   &:active::after {
@@ -617,11 +617,17 @@
   }
 
   .planning-form__steps {
-    padding: 35px;
+    margin-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 55px;
+    padding-bottom: 60px;
   }
+
 
   .planning-form__title {
     order: 1;
+    margin-bottom: 30px;
 
     font-size: 36px;
     line-height: 36px;
@@ -636,11 +642,19 @@
 
     font-size: 20px;
     line-height: 24px;
+
+    &--step-2 {
+      width: 400px;
+    }
+
+    &--step-3 {
+      width: 500px;
+    }
   }
 
   .planning-form__wrapper {
     order: 5;
-    padding-top: 25px;
+    padding-top: 30px;
 
     border-top: 1px solid #edeff6;
   }
@@ -666,14 +680,14 @@
 
   .planning-form__button {
     &--minus {
-      top: 98px;
+      top: 108px;
       left: 23px;
 
       width: 20px;
     }
 
     &--plus {
-      top: 90px;
+      top: 100px;
       right: 23px;
 
       width: 20px;
@@ -688,10 +702,11 @@
   }
 
   .planning-form__label-checkbox {
-    padding-left: 53px;
+    padding-left: 60px;
 
     font-size: 20px;
     line-height: 18px;
+    letter-spacing: 0.1em;
     color: @dark-blue;
     text-transform: uppercase;
 
@@ -715,21 +730,33 @@
   .planning-form__button-next {
     order: 8;
     width: 217px;
-    padding: 20px 34px;
+    padding: 24px 0;
+    padding-left: 10px;
+    padding-right: 50px;
 
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
 
     &::after {
-      top: 23px;
-      right: 36px;
+      top: 30px;
+      right: 30px;
+    }
+
+    &--submit {
+      width: 280px;
+      padding-left: 30px;
+
+      text-align: left;
     }
   }
 
   .planning-form__button-stepback {
     width: 150px;
     margin-left: auto;
+    padding-top: 30px;
+    padding-left: 35px;
+    padding-right: 0;
 
     color: @dark-blue;
 
@@ -751,13 +778,13 @@
 
       position: absolute;
 
-      top: 23px;
+      top: 30px;
       left: 0;
 
       width: 10px;
       height: 14px;
 
-      background: url("../img/triangle-arrow-right.svg") no-repeat center;
+      background: url("../img/svgo-triangle-arrow-right.svg") no-repeat center;
 
       transform: rotate(180deg);
     }
@@ -813,6 +840,7 @@
 
     font-size: 20px;
     line-height: 18px;
+    letter-spacing: 0.1em;
 
     border-radius: 5px;
   }
@@ -836,6 +864,8 @@
   }
 
   .planning-form__button-add {
+    margin-bottom: 10px;
+
     &::before {
       width: 18px;
       height: 18px;
@@ -843,7 +873,7 @@
 
     &::after {
       top: 28px;
-      right: -35px;
+      right: -26px;
 
       width: 15px;
       height: 15px;
@@ -875,7 +905,7 @@
       left: auto;
       right: 0;
 
-      height: 290px;
+      height: 275px;
       width: 3px;
     }
 
@@ -896,7 +926,7 @@
 
     &::before {
       left: auto;
-      top: 35px;
+      top: 34px;
       right: -36px;
 
       width: 15px;
@@ -905,10 +935,21 @@
 
 
     &::after {
-      top: 24px;
+      top: 20px;
+      right: 10px;
 
       width: 70px;
       height: 47px;
+    }
+
+    &-czech {
+      padding-top: 20px;
+
+      border-top: none;
+
+      &::after {
+        top: 5px;
+      }
     }
   }
 
@@ -921,9 +962,15 @@
 }
 
 @media (min-width: @desktop-width) {
+  .planning-form {
+    padding: 0;
+  }
+
   .planning-form__steps {
     margin-bottom: 45px;
     padding: 100px 160px;
+
+    border-radius: 50px;
   }
 
   .planning-form__steps-wrapper {
@@ -952,19 +999,22 @@
 
     &--step-3 {
       width: 500px;
+      padding-bottom: 50px;
     }
   }
 
   .planning-form__progress {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+    margin-right: 65px;
   }
 
   .planning-form__progress-step {
     position: relative;
     margin: 0;
     margin-bottom: 25px;
-    padding-left: 35px;
+    padding-left: 40px;
 
     font-size: 20px;
     font-family: "BloggerSans", "Arial", sans-serif;
@@ -1006,11 +1056,11 @@
     border: none;
 
     &--companions {
-      margin-top: 32px;
+      margin-top: 50px;
     }
 
     &--duration {
-      margin-bottom: 32px;
+      margin-bottom: 0;
     }
   }
 
@@ -1061,7 +1111,22 @@
 
     &--plus {
       top: 26px;
-      right: 25px;
+      right: 50px;
+    }
+  }
+
+  .planning-form__select-wrapper {
+    padding-top: 80px;
+    padding-bottom: 20px;
+
+    &::after {
+      right: 220px;
+    }
+  }
+
+  .planning-form__select {
+    &::before {
+      right: 213px;
     }
   }
 
@@ -1086,8 +1151,8 @@
     }
 
     &::before {
-      top: 85px;
-      right: 135px;
+      top: 90px;
+      right: 205px;
 
       height: 261px;
     }
