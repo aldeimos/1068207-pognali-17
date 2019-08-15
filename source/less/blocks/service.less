@@ -2,7 +2,7 @@
   position: relative;
   top: -10px;
   z-index: 10;
-  padding-top: 280px;
+  padding-top: 210px;
 
   background-color: #192144;
   border-bottom-left-radius: 20px;
@@ -46,31 +46,41 @@
 
 @media (min-width: @tablet-width) {
   .service {
-    padding-top: 50px;
+    padding-top: 100px;
+
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   .service__wrapper {
-    padding-bottom: 113px;
-    background: #192144 url("../img/about-tablet@1x.png") no-repeat top 33px right;
-    background-size: 50%;
+    padding-left: 35px;
+    padding-bottom: 90px;
+    background: #192144 url("../img/about-tablet@1x.png") no-repeat top 35px right;
+    background-size: 340px 548px;
 
     @media (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
-      background: #192144 url("../img/about-tablet@2x.png") no-repeat top 33px right;
-      background-size: 50%;
+      background: #192144 url("../img/about-tablet@2x.png") no-repeat top 35px right;
+      background-size: 340px 548px;
     }
   }
 
   .service__title {
+    margin-bottom: 40px;
+    padding-left: 0;
     .section-index-title-tablet();
   }
 
   .service__desc {
     width: 300px;
+    margin: 0;
+    margin-bottom: 25px;
+    padding-left: 0;
     .paragraph-style-text-tablet();
 
     &--bold {
-      width: 260px;
+      width: 300px;
+      margin-bottom: 55px;
 
       font-size: 21px;
       line-height: 25px;
@@ -81,8 +91,7 @@
     position: relative;
 
     display: inline-block;
-    margin-left: 25px;
-    padding: 30px 126px 28px 34px;
+    padding: 30px 130px 28px 35px;
     font-family: "BloggerSans", "Arial", sans-serif;
     font-size: 24px;
     line-height: 24px;
@@ -110,10 +119,18 @@
 
 @media (min-width: @desktop-width) {
   .service {
-    padding-top: 65px;
+    top: -40px;
+
+    padding-top: 140px;
   }
 
   .service__wrapper {
+    position: relative;
+    z-index: 1;
+
+    padding-bottom: 162px;
+    padding-left: 70px;
+
     background: #192144 url("../img/about-desktop@1x.png") no-repeat bottom right;
     background-size: contain;
 
@@ -122,25 +139,35 @@
       background: #192144 url("../img/about-desktop@2x.png") no-repeat bottom right;
       background-size: contain;
     }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: -15px;
+      left: 0;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+    }
   }
 
   .service__title {
-    padding-left: 70px;
+    margin-bottom: 60px;
+    padding-top: 42px;
   }
 
   .service__desc {
     width: 620px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    padding-left: 70px;
+    margin-bottom: 38px;
 
     &--bold {
       width: 420px;
       margin-bottom: 86px;
     }
-  }
-
-  .service__button {
-    margin-left: 70px;
   }
 }

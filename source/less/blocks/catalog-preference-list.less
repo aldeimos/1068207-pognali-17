@@ -19,22 +19,40 @@
       justify-content: flex-end;
     }
 
-    &:last-child {
+    &--level {
       position: static;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       margin-right: 15px;
       margin-left: auto;
 
 
       color: #1d2e5b;
-      background: transparent;
+      text-align: center;
+
+      background: url("../img/status-bar-firsova.png") no-repeat;
+      background-position: bottom -1.5px left -13.5px;
+      background-color: transparent;
+      border-radius: 50%;
+
+      &-demin {
+        background: url("../img/status-bar-demin.png") no-repeat;
+        background-position: center;
+      }
+
+      &-smolov {
+        background: url("../img/status-bar-smolov.png") no-repeat;
+        background-position: center;
+      }
+
+      &-rogovaya {
+        background: url("../img/status-bar-rogovaya.png") no-repeat;
+        background-position: right;
+      }
     }
 
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6) {
+    &--transport {
       width: 35.25px;
       height: 35px;
       margin-right: 0;
@@ -42,6 +60,30 @@
       border-radius: 50%;
       justify-content: center;
     }
+  }
+
+  .preference-list__item-tooltip {
+    top: 50px;
+  }
+
+  .preference-list__item--airplane:hover > .preference-list__item-tooltip--airplane {
+    left: -58px;
+  }
+
+  .preference-list__item--bus:hover > .preference-list__item-tooltip--bus {
+    left: -62px;
+
+    &::before {
+      left: 70px;
+    }
+  }
+
+  .preference-list__item--bicycle:hover > .preference-list__item-tooltip--bicycle {
+    left: -52px;
+  }
+
+  .preference-list__item--onfoot:hover > .preference-list__item-tooltip--onfoot {
+    left: -38px;
   }
 
   .companions-list__card-level {
@@ -98,7 +140,7 @@
 @media (min-width: @tablet-width) {
   .catalog-preference-list {
     position: absolute;
-    top: 15px;
+    top: 35px;
     right: 25px;
 
     flex-direction: column;
@@ -125,23 +167,67 @@
         display: none;
       }
 
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6) {
+      &--transport {
         width: auto;
         height: auto;
 
         background-color: #ffffff;
       }
 
-      &:last-child {
+      &--level {
         padding-right: 0;
         margin-right: 0;
         justify-content: center;
 
-        background: transparent;
+
+        color: #1d2e5b;
+        text-align: center;
+
+        background: url("../img/status-bar-firsova.png") no-repeat;
+        background-position: bottom -1.5px left -13.5px;
+        background-color: transparent;
+        border-radius: 50%;
+
+        &-demin {
+          background: url("../img/status-bar-demin.png") no-repeat;
+          background-position: center;
+        }
+
+        &-smolov {
+          background: url("../img/status-bar-smolov.png") no-repeat;
+          background-position: center;
+        }
+
+        &-rogovaya {
+          background: url("../img/status-bar-rogovaya.png") no-repeat;
+          background-position: right;
+        }
       }
+    }
+
+    .preference-list__item-tooltip {
+      top: 40px;
+      left: 10px;
+    }
+
+    .preference-list__item--airplane:hover > .preference-list__item-tooltip--airplane {
+      left: -65px;
+    }
+
+    .preference-list__item--bus:hover > .preference-list__item-tooltip--bus {
+      left: -70px;
+
+      &::before {
+        left: 70px;
+      }
+    }
+
+    .preference-list__item--bicycle:hover > .preference-list__item-tooltip--bicycle {
+      left: -58px;
+    }
+
+    .preference-list__item--onfoot:hover > .preference-list__item-tooltip--onfoot {
+      left: -45px;
     }
   }
 
@@ -157,6 +243,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    width: 233px;
     padding: 0;
 
     .preference-list__item {
@@ -168,10 +255,7 @@
         display: none;
       }
 
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6) {
+      &--transport {
         width: 35.25px;
         height: 35px;
         margin-right: 0;
@@ -180,15 +264,62 @@
         justify-content: center;
       }
     }
+
+    .preference-list__item-tooltip {
+      top: 50px;
+      left: 10px;
+    }
+
+    .preference-list__item--airplane:hover > .preference-list__item-tooltip--airplane {
+      left: -60px;
+    }
+
+    .preference-list__item--bus:hover > .preference-list__item-tooltip--bus {
+      left: -63px;
+
+      &::before {
+        left: 70px;
+      }
+    }
+
+    .preference-list__item--bicycle:hover > .preference-list__item-tooltip--bicycle {
+      left: -52px;
+    }
+
+    .preference-list__item--onfoot:hover > .preference-list__item-tooltip--onfoot {
+      left: -37px;
+    }
+
+    .preference-list__item--level {
+      position: static;
+      margin-left: auto;
+
+      text-align: center;
+
+      background-color: transparent;
+    }
+
+    .preference-list__item-title {
+      display: none;
+    }
   }
 
   .preference-list__item--level {
-    margin-left: auto;
+    .companions-list__card-level {
+      color: @dark-blue;
+    }
 
-    text-align: center;
+    .companions-list__card-level-text {
+      color: fade(#444444, 40%);
+
+      border-top: 1px solid fade(#444444, 40%);
+    }
   }
 
-  .preference-list__item-title {
-    display: none;
+  .companions-list__index {
+    .companions-list__card-level,
+    .companions-list__card-level-text {
+      color: #ffffff;
+    }
   }
 }

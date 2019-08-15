@@ -14,11 +14,11 @@
   <div style="display: none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="page-header">
-    <div class="page-header--background">
+  <header class="page-header page-header__form">
+    <div class="page-header__background">
       <div class="container">
         <div class="page-header__wrapper">
-          <a href="#" class="page-header__logo">
+          <a href="index.html" class="page-header__logo">
             <picture class="page-header__picture page-header__picture--opener page-header__picture--white">
               <source media="(min-width: 1440px)"
                 srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
@@ -62,18 +62,18 @@
                     data-hover="Попутчики">Попутчики</span></a>
               </li>
             </ul>
-            <ul class="main-nav__list user-list">
+            <ul class="user-list user-list--nojs">
               <li class="user-list__item">
                 <a class="user-list__link user-list__link-login" href="#">Авторизация</a>
               </li>
               <li class="user-list__item">
-                <svg class="user-list__link-phone--icon" width="18" height="18">
+                <svg class="user-list__link-svg" width="18" height="18">
                   <use xlink:href="#svgo-contacts-phone"></use>
                 </svg>
                 <a class="user-list__link user-list__link-phone" href="tel:+7800555-86-28">8 800 555-86-28</a>
               </li>
               <li class="user-list__item">
-                <svg class="user-list__link-phone--icon" width="18" height="13">
+                <svg class="user-list__link-svg" width="18" height="13">
                   <use xlink:href="#svgo-contacts-mail"></use>
                 </svg>
                 <a class="user-list__link user-list__link-email"
@@ -83,49 +83,49 @@
             <ul class="social-list header-social-list">
               <li class="header-social-list__item">
                 <a class="header-social-list__link" href="#">
-                  <svg class="header-social-list__link--fb" width="11" height="21" aria-labelledby="heading">
-                    <title id="heading">Ссылка на страницу в Фейсбук</title>
+                  <svg class="header-social-list__link-svg" width="11" height="21" aria-labelledby="heading__icon-fb">
+                    <title id="heading__icon-fb">Ссылка на страницу в Фейсбук</title>
                     <use xlink:href="#svgo-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="header-social-list__item">
                 <a class="header-social-list__link" href="#">
-                  <svg class="header-social-list__link--vk" width="21" height="12" aria-labelledby="heading">
-                    <title id="heading">Ссылка на страницу в Вконтакте</title>
+                  <svg class="header-social-list__link-svg" width="21" height="12" aria-labelledby="heading__icon-vk">
+                    <title id="heading__icon-vk">Ссылка на страницу в Вконтакте</title>
                     <use xlink:href="#svgo-vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="header-social-list__item">
                 <a class="header-social-list__link" href="#">
-                  <svg class="header-social-list__link--inst" width="18" height="18" aria-labelledby="heading">
-                    <title id="heading">Ссылка на страницу в Инстаграмм</title>
+                  <svg class="header-social-list__link-svg" width="18" height="18" aria-labelledby="heading__icon-inst">
+                    <title id="heading__icon-inst">Ссылка на страницу в Инстаграмм</title>
                     <use xlink:href="#svgo-instagram"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </nav>
-          <ul class="intro-nav__list page-header-list">
+          <ul class="intro-nav page-header-list">
             <li class="intro-nav__item">
               <a class="intro-nav__link intro-nav__link--phone" href="tel:+7800555-86-28">
-                <svg width="18" height="18" aria-labelledby="heading">
-                  <title id="heading">Наш телефон: +7800555-86-28</title>
+                <svg width="18" height="18" aria-labelledby="heading__topmenu-phone-icon">
+                  <title id="heading__topmenu-phone-icon">Наш телефон: +7800555-86-28</title>
                   <use xlink:href="#svgo-topmenu-phone"></use>
                 </svg>
               </a>
             </li>
             <li class="intro-nav__item">
               <a class="intro-nav__link intro-nav__link--email" href="mailto:mail@htmlacademy.ru">
-                <svg width="18" height="14" aria-labelledby="heading">
-                  <title id="heading">Наша почта: mail@htmlacademy.ru</title>
+                <svg width="18" height="14" aria-labelledby="heading__topmenu-mail-icon">
+                  <title id="heading__topmenu-mail-icon">Наша почта: mail@htmlacademy.ru</title>
                   <use xlink:href="#svgo-topmenu-mail"></use>
                 </svg>
               </a>
             </li>
             <li class="intro-nav__item">
-              <a class="intro-nav__link intro-nav__link-login" href="#">Авторизация</a>
+              <a class="intro-nav__link intro-nav__link--login" href="#">Авторизация</a>
             </li>
           </ul>
           <h2 class="page-header__title page-header__title--form">Направления</h2>
@@ -171,16 +171,15 @@
               height="100">
           </picture>
           <form class="profile__form" action="https://echo.htmlacademy.ru" method="POST">
-            <input class="profile__form-button" type="file">
-            <fieldset class="profile__form-fieldset profile__form--hashtags">
-
+            <button class="profile__form-button" type="button"><span>Сменить</span> фото</button>
+            <fieldset class="profile__form-fieldset profile__form-fieldset--hashtags">
+              <legend class="profile__form-legend profile__form-legend--hashtags">Тэги</legend>
               <div class="profile__form-wrapper">
                 <label class="profile__label-textarea visually-hidden" for="hashtags-field">Поле для ввода
                   хэштегов</label>
                 <textarea class="profile__hashtags" name="hashtags"
                   id="hashtags-field">#бургер #бар #футбол #концерт #крафт</textarea>
               </div>
-              <legend class="profile__form-legend profile__form-legend--hashtags">Тэги</legend>
             </fieldset>
             <fieldset class="profile__form-fieldset profile__form-fieldset--transport">
               <legend class="profile__form-legend">Транспорт</legend>
@@ -224,12 +223,12 @@
     </section>
     <section class="add-plan">
       <div class="container">
-        <h2 class="add-plan__title">Добавить планы:</h2>
+        <h2 class="add-plan__title">Добавить план:</h2>
         <form class="planning-form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="planning-form__steps">
             <div class="planning-form__steps-wrapper">
               <div class="planning-form__steps-header">
-                <h3 class="planning-form__title" id="step-1">
+                <h3 class="planning-form__title" id="back-to-step-1">
                   Шаг 1.<br class="planning-form__title--desktop">
                   Даты пребывания
                 </h3>
@@ -248,7 +247,7 @@
               <label class="planning-form__label planning-form__label--companions" for="companions-field">
                 Ищу попутчиков:
               </label>
-              <input class="planning-form__input" type="number" name="companions-sum" min="1" max="5"
+              <input class="planning-form__input" type="text" name="companions-sum" min="1" max="5"
                 id="companions-field">
               <button class="planning-form__button planning-form__button--minus" type="button">Уменьшить значение
                 поля</button>
@@ -259,8 +258,7 @@
               <label class="planning-form__label planning-form__label--duration" for="duration-field">
                 Длительность:
               </label>
-              <input class="planning-form__input" type="number" name="duration-sum" min="1" max="365"
-                id="duration-field">
+              <input class="planning-form__input" type="text" name="duration-sum" min="1" max="365" id="duration-field">
               <button class="planning-form__button planning-form__button--minus" type="button">Уменьшить значение
                 поля</button>
               <button class="planning-form__button planning-form__button--plus" type="button">Увеличить значение
@@ -281,15 +279,15 @@
               </div>
               <table class="calendar__table">
                 <tr class="calendar__table-header">
-                  <th class="calendar__table-weekday">П<span class="calendar__table-weekday--tablet">н</span></th>
-                  <th class="calendar__table-weekday">В<span class="calendar__table-weekday--tablet">т</span></th>
-                  <th class="calendar__table-weekday">С<span class="calendar__table-weekday--tablet">р</span></th>
-                  <th class="calendar__table-weekday">Ч<span class="calendar__table-weekday--tablet">т</span></th>
-                  <th class="calendar__table-weekday">П<span class="calendar__table-weekday--tablet">т</span></th>
+                  <th class="calendar__table-weekday">П<span class="calendar__table-weekday-tablet">н</span></th>
+                  <th class="calendar__table-weekday">В<span class="calendar__table-weekday-tablet">т</span></th>
+                  <th class="calendar__table-weekday">С<span class="calendar__table-weekday-tablet">р</span></th>
+                  <th class="calendar__table-weekday">Ч<span class="calendar__table-weekday-tablet">т</span></th>
+                  <th class="calendar__table-weekday">П<span class="calendar__table-weekday-tablet">т</span></th>
                   <th class="calendar__table-weekday calendar__table-weekday--weekend">С<span
-                      class="calendar__table-weekday--tablet">б</span></th>
+                      class="calendar__table-weekday-tablet">б</span></th>
                   <th class="calendar__table-weekday calendar__table-weekday--weekend">В<span
-                      class="calendar__table-weekday--tablet">с</span></th>
+                      class="calendar__table-weekday-tablet">с</span></th>
                 </tr>
                 <tr>
                   <td>24</td>
@@ -330,16 +328,16 @@
                 <tr>
                   <td>24</td>
                   <td>25</td>
-                  <td class="calendar__cell-choosed calendar__cell-choosed--active">
+                  <td class="calendar__cell-booking-yes calendar__cell-choosed calendar__cell-choosed--active">
                     26
-                    <p class="calendar__cell-choosed--checkin">Заезд</p>
+                    <p class="calendar__cell-booking-yes calendar__cell-choosed-checkin">Заезд</p>
                   </td>
-                  <td class="calendar__cell-choosed">27</td>
-                  <td class="calendar__cell-choosed">
+                  <td class="calendar__cell-booking-yes calendar__cell-choosed">27</td>
+                  <td class="calendar__cell-booking-yes calendar__cell-choosed">
                     28
-                    <p class="calendar__cell-choosed--checkout">Выезд</p>
+                    <p class="calendar__cell-booking-yes calendar__cell-choosed-checkout">Выезд</p>
                   </td>
-                  <td class="calendar__cell-booking-yes">29</td>
+                  <td class="calendar__cell-booking-yes calendar__cell-booking-yes">29</td>
                   <td class="calendar__cell-booking-yes">30</td>
                 </tr>
                 <tr>
@@ -358,7 +356,7 @@
           <div class="planning-form__steps">
             <div class="planning-form__steps-wrapper">
               <div class="planning-form__steps-header">
-                <h3 class="planning-form__title" id="step-1">
+                <h3 class="planning-form__title" id="step-2">
                   Шаг 2.<br class="planning-form__title--desktop">
                   Маршрут
                 </h3>
@@ -475,7 +473,7 @@
           <div class="planning-form__steps">
             <div class="planning-form__steps-wrapper">
               <div class="planning-form__steps-header">
-                <h3 class="planning-form__title" id="step-1">
+                <h3 class="planning-form__title" id="step-3">
                   Шаг 3.<br class="planning-form__title--desktop">
                   Развлечения
                 </h3>
@@ -505,7 +503,8 @@
               <textarea class="planning-form__textarea" name="travel-entertainment" id="country-field-2"
                 placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это всё.</textarea>
             </div>
-            <button class="planning-form__button-next" type="submit">Отправить</button>
+            <button class="planning-form__button-next planning-form__button-next--submit"
+              type="submit">Отправить</button>
             <a class="planning-form__button-next planning-form__button-stepback" href="#step-2">
               <span>На</span>
               шаг назад
@@ -515,50 +514,58 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer page-footer__catalog">
+  <footer class="page-footer page-footer__form">
     <div class="container">
-      <div class="footer__wrapper">
+      <div class="page-footer__wrapper">
         <a href="#">
           <picture>
             <source media="(min-width: 1440px)"
+              srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x"
+              type="image/webp">
+            <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="footer__social-logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
-              alt="Логотип компании «Погнали?»">
+            <img class="page-footer__social-logo" src="img/logo-mobile-blue@1x.png"
+              srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип компании «Погнали?»">
           </picture>
         </a>
-        <div class="footer__social">
+        <div class="page-footer__social">
           <ul class="social-list footer-social-list">
             <li class="footer-social-list__item">
               <a class="footer-social-list__link" href="#">
-                <svg class="footer-social-list__link--icon" width="11" height="21" aria-labelledby="heading">
-                  <title id="heading">Ссылка на страницу в Фейсбук</title>
+                <svg class="footer-social-list__link-svg footer-social-list__link-svg--fb" width="11" height="21"
+                  aria-labelledby="heading__icon-fb-f">
+                  <title id="heading__icon-fb-f">Ссылка на страницу в Фейсбук</title>
                   <use xlink:href="#svgo-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-list__item">
               <a class="footer-social-list__link" href="#">
-                <svg class="footer-social-list__link--icon" width="23" height="12" aria-labelledby="heading">
-                  <title id="heading">Ссылка на страницу в Вконтакте</title>
+                <svg class="footer-social-list__link-svg footer-social-list__link-svg--vk" width="23" height="12"
+                  aria-labelledby="heading__icon-vk-f">
+                  <title id="heading__icon-vk-f">Ссылка на страницу в Вконтакте</title>
                   <use xlink:href="#svgo-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-list__item">
               <a class="footer-social-list__link" href="#">
-                <svg class="footer-social-list__link--icon" width="18" height="18" aria-labelledby="heading">
-                  <title id="heading">Ссылка на страницу в Инстаграмм</title>
+                <svg class="footer-social-list__link-svg footer-social-list__link-svg--inst" width="18" height="18"
+                  aria-labelledby="heading__icon-inst-f">
+                  <title id="heading__icon-inst-f">Ссылка на страницу в Инстаграмм</title>
                   <use xlink:href="#svgo-instagram"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="footer__copyright">
-          <p class="footer__copyright-title">Разработано</p>
-          <a href="#">
-            <img class="footer__copyright-logo" src="img/htmlacademy.svg"
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+            Разработано
+            <img class="page-footer__copyright-logo" src="img/htmlacademy.svg"
               alt="Логотип компании-разработчика «HtmlAcademy»" width="27" height="34">
           </a>
         </div>

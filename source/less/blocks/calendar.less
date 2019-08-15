@@ -80,8 +80,8 @@
   }
 }
 
-.calendar__cell-choosed--checkin,
-.calendar__cell-choosed--checkout {
+.calendar__cell-choosed-checkin,
+.calendar__cell-choosed-checkout {
   display: none;
 }
 
@@ -95,8 +95,18 @@
   }
 }
 
-.calendar__table-weekday--tablet {
+.calendar__table-weekday-tablet {
   display: none;
+}
+
+td.calendar__cell-booking-yes {
+  color: #444444;
+
+  background-color: #edeff6;
+
+  &:hover {
+    outline: 2px solid #ff5c23;
+  }
 }
 
 td.calendar__cell-choosed {
@@ -109,15 +119,11 @@ td.calendar__cell-choosed {
   }
 }
 
-td.calendar__cell-booking-yes {
-  color: #444444;
-
-  background-color: #edeff6;
-}
-
 @media (min-width: @tablet-width) {
   .calendar {
     order: 7;
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
 
   .calendar__header-title {
@@ -131,6 +137,14 @@ td.calendar__cell-booking-yes {
 
     width: 19px;
     height: 34px;
+
+    &--next {
+      right: 25px;
+    }
+
+    &--minus {
+      left: 25px;
+    }
   }
 
   .calendar__table {
@@ -149,13 +163,15 @@ td.calendar__cell-booking-yes {
     }
   }
 
-  .calendar__table-weekday--tablet {
+  .calendar__table-weekday-tablet {
     display: inline;
   }
 }
 
 @media (min-width: @desktop-width) {
   .calendar__header-title {
+    padding-bottom: 0;
+
     border-bottom: none;
   }
 
@@ -168,12 +184,14 @@ td.calendar__cell-booking-yes {
     margin-bottom: 55px;
 
     th {
-      padding: 20px 0;
+      padding: 20px 15px;
+
+      text-align: left;
     }
 
     td {
       width: 129px;
-      height: 92px;
+      height: 50px;
       padding: 0;
       padding-top: 15px;
       padding-left: 15px;
@@ -188,8 +206,8 @@ td.calendar__cell-booking-yes {
     }
   }
 
-  .calendar__cell-choosed--checkin,
-  .calendar__cell-choosed--checkout {
+  .calendar__cell-choosed-checkin,
+  .calendar__cell-choosed-checkout {
     display: block;
     width: 50px;
     margin: 0;

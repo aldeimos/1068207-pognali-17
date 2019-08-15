@@ -1,0 +1,69 @@
+.alphabet-countries {
+  display: flex;
+}
+
+.alphabet-countries__list {
+  display: none;
+  margin-bottom: 25px;
+
+  a {
+    margin: 0;
+
+    font: inherit;
+    font-family: "BloggerSans", "Arial", sans-serif;
+    text-decoration: none;
+    color: #444444;
+  }
+}
+
+.alphabet-countries__list--a {
+  display: flex;
+  flex-direction: column;
+}
+
+.alphabet-countries__item-title {
+  display: none;
+}
+
+
+@media (min-width: @tablet-width) {
+  .alphabet-countries {
+    padding-right: 37px;
+  }
+
+  .alphabet-countries__list {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .alphabet-countries {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 65px;
+  }
+
+  .alphabet-countries__list {
+    display: flex;
+    flex-direction: column;
+    width: 16.5%;
+    margin-bottom: 92px;
+  }
+
+  .alphabet-countries__item {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  .alphabet-countries__item-title {
+    display: block;
+    margin: 0;
+
+    font-size: 60px;
+    font-family: "BloggerSans-Bold", "Arial", sans-serif;
+    line-height: 24px;
+    color: #192144;
+  }
+}

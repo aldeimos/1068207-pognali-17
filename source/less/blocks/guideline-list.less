@@ -1,6 +1,6 @@
 .guideline-list {
   position: relative;
-  top: 500px;
+  top: 425px;
   z-index: 5;
 
   display: flex;
@@ -14,7 +14,7 @@
 
   display: flex;
   justify-content: space-between;
-  padding: 23px 23px 23px 25px;
+  padding: 27px 23px 23px 25px;
 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -32,6 +32,10 @@
   &:nth-child(3) {
     top: -98px;
     background-color: #ffbd30;
+
+    br {
+      display: none;
+    }
   }
 
   &:nth-child(4) {
@@ -43,10 +47,10 @@
 }
 
 .guideline-list__text {
-  width: 150px;
+  width: 140px;
   margin: 0;
 
-  font-family: "BloggerSand-Bold", "Arial", sans-serif;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 18px;
@@ -56,7 +60,7 @@
 .guideline-list__number {
   margin: 0;
 
-  font-family: "BloggerSand-Bold", "Arial", sans-serif;
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 18px;
@@ -65,7 +69,7 @@
 
 @media (min-width: @tablet-width) {
   .guideline-list {
-    top: 100px;
+    top: -1px;
 
     flex-direction: row;
     flex-wrap: wrap;
@@ -74,7 +78,10 @@
   .guideline-list__item {
     position: static;
     flex-direction: column;
-    width: 306px;
+    width: 294px;
+    padding-top: 35px;
+    padding-left: 33px;
+
     border-radius: 0;
 
     &:nth-child(even) {
@@ -87,10 +94,15 @@
 
     &:nth-child(2) {
       border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
     }
 
     &:nth-child(3) {
       border-bottom-left-radius: 20px;
+
+      br {
+        display: block;
+      }
     }
 
     &:nth-child(4) {

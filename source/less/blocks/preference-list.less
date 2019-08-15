@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   .list-default-style();
-  padding-bottom: 22px;
+  padding-bottom: 15px;
 }
 
 .preference-list__item {
+  position: relative;
+
   &:nth-child(1) {
     margin-right: 17px;
   }
@@ -34,12 +36,75 @@
     text-align: center;
     color: #ffffff;
 
+    background: url("../img/status-bar-firsova.png") no-repeat;
+    background-position: bottom -1.5px left -13.5px;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 3px solid @orange;
-    border-radius: 50px;
+    border-radius: 50%;
+  }
+
+  &--level-demin {
+    background: url("../img/status-bar-demin.png");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
   }
 }
 
 .preference-list__item-tooltip {
+  position: absolute;
+  z-index: 1;
+  top: 40px;
   display: none;
+  padding: 15px 24px;
+  margin: 0;
+
+  font-size: 20px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+
+  background-color: #101d41;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 65px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #101d41;
+  }
+}
+
+.preference-list__item--airplane:hover > .preference-list__item-tooltip--airplane {
+  display: block;
+  left: -63.5px;
+}
+
+.preference-list__item--bus:hover > .preference-list__item-tooltip--bus {
+  display: block;
+  left: -66px;
+}
+
+.preference-list__item--bicycle:hover > .preference-list__item-tooltip--bicycle {
+  display: block;
+  left: -58px;
+
+  &::before {
+    left: 60px;
+  }
+}
+
+.preference-list__item--onfoot:hover > .preference-list__item-tooltip--onfoot {
+  display: block;
+  left: -45px;
+
+  &::before {
+    left: 45px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .preference-list {
+    padding-bottom: 25px;
+  }
 }

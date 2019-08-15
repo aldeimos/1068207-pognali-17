@@ -1,5 +1,6 @@
 .footer-social-list {
   justify-content: center;
+  width: 135px;
 }
 
 .footer-social-list__link {
@@ -18,15 +19,43 @@
     background-color: #192144;
   }
 
-  &--icon {
+  svg {
     fill: @dark-blue;
   }
 
-  &:hover > &--icon {
+  &:hover > svg {
     fill: #ffffff;
   }
 
-  &:active > &--icon {
+  &:active > svg {
     fill-opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .footer-social-list {
+    width: 180px;
+  }
+
+  .footer-social-list__link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-social-list__link-svg {
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--inst {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
