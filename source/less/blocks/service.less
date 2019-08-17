@@ -1,6 +1,6 @@
 .service {
   position: relative;
-  top: -10px;
+  top: -20px;
   z-index: 10;
   padding-top: 210px;
 
@@ -23,6 +23,7 @@
 
 .service__title {
   margin: 0;
+  margin-bottom: 20px;
   padding-top: 33px;
   padding-left: 25px;
 
@@ -31,6 +32,8 @@
 
 .service__desc {
   width: 210px;
+  margin: 0;
+  margin-bottom: 20px;
   padding-left: 25px;
   .paragraph-style-text();
 
@@ -53,9 +56,11 @@
   }
 
   .service__wrapper {
+    position: relative;
+
     padding-left: 35px;
     padding-bottom: 90px;
-    background: #192144 url("../img/about-tablet@1x.png") no-repeat top 35px right;
+    background: url("../img/about-tablet@1x.png") no-repeat top 45px right;
     background-size: 340px 548px;
 
     @media (min-resolution: @retina-dpi),
@@ -63,18 +68,33 @@
       background: #192144 url("../img/about-tablet@2x.png") no-repeat top 35px right;
       background-size: 340px 548px;
     }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      left: 0;
+
+      width: 688px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+    }
   }
 
   .service__title {
     margin-bottom: 40px;
     padding-left: 0;
+    padding-top: 39px;
     .section-index-title-tablet();
   }
 
   .service__desc {
     width: 300px;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     padding-left: 0;
     .paragraph-style-text-tablet();
 
@@ -158,7 +178,7 @@
 
   .service__title {
     margin-bottom: 60px;
-    padding-top: 42px;
+    padding-top: 30px;
   }
 
   .service__desc {

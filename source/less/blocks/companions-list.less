@@ -144,7 +144,7 @@
 
   .companions-list__item {
     &:nth-child(1) {
-      margin-right: 60px;
+      margin-right: 49px;
     }
   }
 }
@@ -471,10 +471,23 @@
     }
   }
 
+  .companions-list__card-name {
+    &::before {
+      right: auto;
+      left: -25px;
+    }
+  }
+
+  .companions-list__card-additional {
+    padding-left: 55px;
+
+    text-transform: uppercase;
+  }
+
   .companions-list__card-submenu {
     box-sizing: border-box;
-    padding-top: 48px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 55px;
     padding-left: 55px;
   }
 
@@ -486,12 +499,25 @@
   }
 
   .companions-list__preferences {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 320px;
-    padding: 49px 44px 42px 43px;
+    padding: 40px 44px 42px 53px;
 
     box-sizing: border-box;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+
+      width: 1px;
+      height: 187px;
+
+      background: url("../img/vertical-line.png") no-repeat center;
+    }
   }
 }

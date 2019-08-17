@@ -3,6 +3,8 @@
   flex-wrap: wrap;
   margin-bottom: 10px;
   padding: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   background-color: #ffffff;
   border-radius: 20px;
@@ -51,6 +53,7 @@
   font-weight: 500;
   font-family: "BloggerSans-Medium", "Arial", sans-serif;
   line-height: 16px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 
   &::after {
@@ -182,7 +185,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 
   &::before {
     content: "";
@@ -555,6 +558,7 @@
   margin-bottom: 18px;
   padding-left: 15px;
 
+  letter-spacing: 0;
   text-transform: none;
 
   &::before {
@@ -804,6 +808,7 @@
     order: 3;
     width: 100%;
     padding-top: 41px;
+    margin-bottom: 40px;
 
     border-top: 1px solid #edeff6;
 
@@ -968,7 +973,9 @@
 
   .planning-form__steps {
     margin-bottom: 45px;
-    padding: 100px 160px;
+    padding: 98px 168px;
+    padding-bottom: 110px;
+    padding-left: 155px;
 
     border-radius: 50px;
   }
@@ -992,6 +999,7 @@
 
   .planning-form__desc {
     width: 550px;
+    padding-bottom: 50px;
 
     &--step-2 {
       width: 410px;
@@ -1006,20 +1014,21 @@
   .planning-form__progress {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-    margin-right: 65px;
+    margin-top: 11px;
+    margin-right: 43px;
   }
 
   .planning-form__progress-step {
     position: relative;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     padding-left: 40px;
 
     font-size: 20px;
     font-family: "BloggerSans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 14px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: fade(#1d2e5b, 60%);
 
@@ -1056,7 +1065,7 @@
     border: none;
 
     &--companions {
-      margin-top: 50px;
+      margin-top: 32px;
     }
 
     &--duration {
@@ -1080,7 +1089,7 @@
     }
 
     &--duration {
-      margin-right: 53px;
+      margin-right: 57px;
 
       &::after {
         right: -300px;
@@ -1100,24 +1109,25 @@
     align-items: center;
     width: 500px;
     margin: 0;
-    margin-top: 32px;
+    margin-top: 20px;
   }
 
   .planning-form__button {
     &--minus {
-      top: 35px;
-      left: 215px;
+      top: 30px;
+      left: 245px;
     }
 
     &--plus {
-      top: 26px;
-      right: 50px;
+      top: 23px;
+      right: 25px;
     }
   }
 
   .planning-form__select-wrapper {
-    padding-top: 80px;
-    padding-bottom: 20px;
+    margin-bottom: 0;
+    padding-top: 67px;
+    padding-bottom: 47px;
 
     &::after {
       right: 220px;
@@ -1125,7 +1135,10 @@
   }
 
   .planning-form__select {
+    margin-bottom: 14px;
+
     &::before {
+      top: 25px;
       right: 213px;
     }
   }
@@ -1135,14 +1148,20 @@
     width: 730px;
   }
 
+  .planning-form__option {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
   .planning-form__button-add {
     &::after {
-      right: -58px;
+      top: 25px;
+      right: -54px;
     }
   }
 
   .planning-form__option-img {
-    padding-left: 25px;
+    padding-left: 30px;
   }
 
   .planning-form__steps-entertaiment {
@@ -1151,26 +1170,26 @@
     }
 
     &::before {
-      top: 90px;
-      right: 205px;
+      top: 95px;
+      right: 220px;
 
       height: 261px;
     }
   }
 
   .planning-form__label--country {
-    padding-top: 80px;
-    padding-bottom: 35px;
+    padding-top: 88px;
+    padding-bottom: 41px;
 
     border: none;
 
     &::before {
-      top: 85px;
-      right: -513px;
+      top: 90px;
+      right: -495px;
     }
 
     &::after {
-      top: 65px;
+      top: 75px;
       right: -600px;
     }
 
@@ -1178,18 +1197,22 @@
       padding-top: 35px;
 
       &::before {
-        top: 10px;
-        right: -623px;
+        top: 35px;
+        right: -605px;
       }
 
       &::after {
-        top: -10px;
+        top: 25px;
         right: -710px;
       }
     }
   }
 
   .planning-form__textarea {
-    width: 730px;
+    width: 680px;
+    min-height: 95px;
+    padding: 25px;
+
+    border-radius: 5px;
   }
 }

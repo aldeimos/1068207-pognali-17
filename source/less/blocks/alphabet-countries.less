@@ -45,11 +45,41 @@
   }
 
   .alphabet-countries__list {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 16.5%;
-    margin-bottom: 92px;
+    width: 16.66%;
+    margin-bottom: 86px;
+
+    a {
+      line-height: 20px;
+    }
+
+    &--v,
+    &--g,
+    &--k,
+    &--l,
+    &--s,
+    &--t,
+    &--sh,
+    &--ea {
+      padding-left: 10px;
+    }
+
+    &--d,
+    &--m,
+    &--u {
+      padding-left: 20px;
+    }
+
+    &--e,
+    &--n,
+    &--f,
+    &--ia {
+      padding-left: 35px;
+    }
   }
+
 
   .alphabet-countries__item {
     &:first-child {
