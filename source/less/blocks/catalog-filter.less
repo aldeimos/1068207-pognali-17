@@ -133,7 +133,7 @@
   }
 }
 
-.catalog-filter__input:checked+.catalog-filter__label {
+.catalog-filter__input:checked + .catalog-filter__label {
   &::after {
     content: "";
 
@@ -153,8 +153,8 @@
   }
 }
 
-.catalog-filter__input:focus+.catalog-filter__label::before,
-.catalog-filter__input-transport:focus+.catalog-filter__label-transport {
+.catalog-filter__input:focus + .catalog-filter__label::before,
+.catalog-filter__input-transport:focus + .catalog-filter__label-transport {
   outline: rgb(59, 153, 252) auto 5px;
 }
 
@@ -189,22 +189,22 @@
   background-size: 55%;
 }
 
-.catalog-filter__input-transport--plane:checked+.catalog-filter__label-transport--plane {
+.catalog-filter__input-transport--plane:checked + .catalog-filter__label-transport--plane {
   background: #ffffff url("../img/plane.svg") no-repeat center left 7px;
   background-size: 50%;
 }
 
-.catalog-filter__input-transport--bus:checked+.catalog-filter__label-transport--bus {
+.catalog-filter__input-transport--bus:checked + .catalog-filter__label-transport--bus {
   background: #ffffff url("../img/bus.svg") no-repeat center;
   background-size: 50%;
 }
 
-.catalog-filter__input-transport--bicycle:checked+.catalog-filter__label-transport--bicycle {
+.catalog-filter__input-transport--bicycle:checked + .catalog-filter__label-transport--bicycle {
   background: #ffffff url("../img/bike.svg") no-repeat center;
   background-size: 60%;
 }
 
-.catalog-filter__input-transport--onfoot:checked+.catalog-filter__label-transport--onfoot {
+.catalog-filter__input-transport--onfoot:checked + .catalog-filter__label-transport--onfoot {
   background: #ffffff url("../img/run.svg") no-repeat center;
   background-size: 55%;
 }
@@ -414,7 +414,7 @@
     }
   }
 
-  .catalog-filter__input:checked+.catalog-filter__label {
+  .catalog-filter__input:checked + .catalog-filter__label {
     &::after {
       top: 2px;
       left: 6px;
