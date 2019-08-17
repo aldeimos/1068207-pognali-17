@@ -168,7 +168,7 @@
   &:active {
     color: fade(@dark-blue, 30%);
 
-    background: url("../img/filter-close@act.svg") no-repeat top 13px left 85px;
+    background: #c8cee8 url("../img/filter-close@act.svg") no-repeat top 13px left 85px;
     background-size: 12px 12px;
   }
 }
@@ -212,11 +212,15 @@
     background-size: 8%;
 
     &--open {
-      display: block;
+      display: none;
       padding-right: 35px;
       margin-right: 40px;
       background-position: top 10px right;
       background-size: 10%;
+    }
+
+    &--close {
+      display: block;
     }
   }
 
@@ -275,11 +279,15 @@
 
 @media (min-width: @desktop-width) {
   .country-filter {
-    padding-top: 70px;
+    padding-top: 94px;
+    padding-bottom: 70px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   .country-filter__nav {
-    margin-bottom: 85px;
+    margin-bottom: 75px;
+    padding-left: 30px;
   }
 
   .country-filter__nav-title {
@@ -288,6 +296,13 @@
 
     font-size: 20px;
     line-height: 24px;
+
+    &::before {
+      left: -10px;
+
+      width: 23px;
+      height: 15px;
+    }
   }
 
   .country-filter__list {
@@ -298,10 +313,13 @@
 
   .country-filter__item {
     margin-bottom: 0;
+    margin-right: 10px;
   }
 
   .country-filter__nav-button {
     order: 1;
+    padding-right: 150px;
+    background-position: top 3px right 68px;
   }
 
   .country-filter__table {
@@ -309,8 +327,10 @@
   }
 
   .country-filter__button {
+    margin-top: 10px;
     padding: 35px 0;
-    background-position: top 39px left 575px;
+    padding-left: 20px;
+    background-position: top 39px left 587px;
     background-size: 20px 20px;
 
     &:active {

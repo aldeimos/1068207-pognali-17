@@ -13,7 +13,7 @@
 .directions__title {
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 77px;
+  padding-top: 85px;
   padding-left: 25px;
   .section-index-title();
 }
@@ -38,6 +38,7 @@
 
 @media (min-width: @tablet-width) {
   .directions {
+    top: -63px;
     padding-bottom: 80px;
 
     border-bottom-left-radius: 50px;
@@ -50,7 +51,7 @@
     background: url("../img/flags-back@1x.png") no-repeat top 70px right;
 
     @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
       background: url("../img/flags-back@2x.png") no-repeat top 70px right;
       background-size: 289px auto;
     }
@@ -88,9 +89,9 @@
   .directions__wrapper {
     display: flex;
     flex-direction: row;
-    padding-top: 220px;
+    padding-top: 200px;
     padding-bottom: 15px;
-    padding-left: 65px;
+    padding-left: 80px;
 
     background-position-y: 125px;
   }
@@ -102,7 +103,7 @@
   }
 
   .directions__title {
-    margin-bottom: 67px;
+    margin-bottom: 58px;
     padding-top: 0;
   }
 
@@ -118,5 +119,6 @@
     display: block;
     align-self: flex-start;
     padding-right: 100px;
+    padding-left: 35px;
   }
 }

@@ -15,6 +15,7 @@
 }
 
 .page-header__background {
+  position: relative;
   background: none;
 
   &--white {
@@ -117,8 +118,11 @@
 @media (min-width: @tablet-width) {
   .page-header {
     background-color: #182044;
-    border-bottom-right-radius: 50px;
+  }
+
+  .page-header__form {
     border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   .page-header__title {
@@ -211,6 +215,7 @@
 
   .page-header__toggle {
     order: 2;
+    margin-left: 22px;
   }
 
   .page-header-list {
@@ -246,6 +251,7 @@
 
   .page-header__title {
     margin-right: auto;
+    margin-top: 62px;
     padding-left: 60px;
 
     &::after {
@@ -263,8 +269,8 @@
   }
 
   .page-header__link {
-    margin-top: 75px;
-    margin-right: 25px;
+    margin-top: 54px;
+    margin-right: 28px;
   }
 
   .page-header__logo-image {

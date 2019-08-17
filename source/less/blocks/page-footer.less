@@ -1,7 +1,7 @@
 .page-footer {
   position: absolute;
   z-index: 5;
-  bottom: -143px;
+  bottom: -118px;
   left: 50%;
 
   display: flex;
@@ -68,10 +68,14 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    bottom: -30px;
+    bottom: -23px;
 
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+  }
+
+  .page-footer__form {
+    bottom: -4px;
   }
 
   .page-footer__catalog {
@@ -100,5 +104,11 @@
   .page-footer__copyright-link {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__form {
+    bottom: -25px;
   }
 }

@@ -1,5 +1,6 @@
 .calendar {
   width: 100%;
+  margin-top: 10px;
 }
 
 .calendar__header {
@@ -105,7 +106,8 @@ td.calendar__cell-booking-yes {
   background-color: #edeff6;
 
   &:hover {
-    outline: 2px solid #ff5c23;
+    border: none;
+    outline: 4px solid #ff5c23;
   }
 }
 
@@ -115,7 +117,7 @@ td.calendar__cell-choosed {
   background-color: #1d2e5b;
 
   &--active {
-    border: 2px solid #ff5c23;
+    border: 4px solid #ff5c23;
   }
 }
 
@@ -169,6 +171,10 @@ td.calendar__cell-choosed {
 }
 
 @media (min-width: @desktop-width) {
+  .calendar {
+    margin-bottom: 15px;
+  }
+
   .calendar__header-title {
     padding-bottom: 0;
 
@@ -185,13 +191,14 @@ td.calendar__cell-choosed {
 
     th {
       padding: 20px 15px;
+      padding-bottom: 12px;
 
       text-align: left;
     }
 
     td {
       width: 129px;
-      height: 50px;
+      height: 52px;
       padding: 0;
       padding-top: 15px;
       padding-left: 15px;
@@ -211,5 +218,11 @@ td.calendar__cell-choosed {
     display: block;
     width: 50px;
     margin: 0;
+  }
+
+  .calendar__header-button {
+    &--next {
+      right: 0;
+    }
   }
 }

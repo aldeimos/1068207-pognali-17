@@ -24,7 +24,7 @@
     box-sizing: border-box;
     position: absolute;
     top: -250px;
-    left: 20px;
+    left: 13px;
 
     display: flex;
     flex-direction: column;
@@ -75,17 +75,17 @@
   }
 }
 
-.preference-list__item--airplane:hover > .preference-list__item-tooltip--airplane {
+.preference-list__item--airplane:hover>.preference-list__item-tooltip--airplane {
   display: block;
   left: -63.5px;
 }
 
-.preference-list__item--bus:hover > .preference-list__item-tooltip--bus {
+.preference-list__item--bus:hover>.preference-list__item-tooltip--bus {
   display: block;
   left: -66px;
 }
 
-.preference-list__item--bicycle:hover > .preference-list__item-tooltip--bicycle {
+.preference-list__item--bicycle:hover>.preference-list__item-tooltip--bicycle {
   display: block;
   left: -58px;
 
@@ -94,7 +94,7 @@
   }
 }
 
-.preference-list__item--onfoot:hover > .preference-list__item-tooltip--onfoot {
+.preference-list__item--onfoot:hover>.preference-list__item-tooltip--onfoot {
   display: block;
   left: -45px;
 
@@ -106,5 +106,10 @@
 @media (min-width: @tablet-width) {
   .preference-list {
     padding-bottom: 25px;
+  }
+
+  .preference-list__item--level {
+    top: -263px;
+    left: 30px;
   }
 }
