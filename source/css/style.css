@@ -1010,32 +1010,32 @@ body {
 .directions-list__wrapper--thai::before {
   content: "";
   position: absolute;
-  left: 5px;
-  top: -24px;
-  width: 70px;
-  height: 47px;
+  left: 25px;
+  top: -12px;
+  width: 35px;
+  height: 24px;
   background: url("../img/thai-flag.png") no-repeat center;
-  background-size: 50%;
+  background-size: 35px 24px;
 }
 .directions-list__wrapper--france::before {
   content: "";
   position: absolute;
-  left: 5px;
-  top: -24px;
-  width: 70px;
-  height: 47px;
+  left: 25px;
+  top: -12px;
+  width: 35px;
+  height: 24px;
   background: url("../img/france-flag.png") no-repeat center;
-  background-size: 50%;
+  background-size: 35px 24px;
 }
 .directions-list__wrapper--czech::before {
   content: "";
   position: absolute;
-  left: 5px;
-  top: -24px;
-  width: 70px;
-  height: 47px;
+  left: 25px;
+  top: -12px;
+  width: 35px;
+  height: 24px;
   background: url("../img/czech-flag.png") no-repeat center;
-  background-size: 50%;
+  background-size: 35px 24px;
 }
 .directions-list__item-image {
   border-top-left-radius: 10px;
@@ -1117,10 +1117,12 @@ body {
     border-bottom-left-radius: 20px;
   }
   .directions-list__wrapper::before {
-    top: 10px;
+    top: 16px;
     left: auto;
     right: -35px;
-    background-size: 100%;
+    width: 70px;
+    height: 47px;
+    background-size: 70px 47px;
   }
   .directions-list__picture {
     -webkit-box-ordinal-group: 2;
@@ -1189,7 +1191,7 @@ body {
   .directions-list__wrapper--thai::before,
   .directions-list__wrapper--france::before,
   .directions-list__wrapper--czech::before {
-    top: 20px;
+    top: 23px;
   }
   .directions-list__item {
     width: 100%;
@@ -1575,6 +1577,7 @@ body {
   }
   .guideline-list__item:nth-child(4) {
     margin-left: -15px;
+    padding-left: 60px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -1583,9 +1586,6 @@ body {
   }
   .guideline-list__item:nth-child(3) {
     padding-left: 42px;
-  }
-  .guideline-list__item:nth-child(4) {
-    padding-left: 60px;
   }
   .guideline-list__number {
     font-size: 24px;
@@ -1756,6 +1756,7 @@ body {
     min-height: 965px;
     padding-bottom: 26px;
     background: url("../img/traveller-illustration-tablet@1x.png") no-repeat right 29% bottom 295px, url("../img/globe-back-tablet@1x.jpg") no-repeat center bottom 162px;
+    background-size: 372px 451px, auto auto;
   }
   .intro__title {
     width: 410px;
@@ -1801,6 +1802,7 @@ body {
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .intro {
     background: url("../img/traveller-illustration-tablet@2x.png") no-repeat right 29% bottom 295px, url("../img/globe-back-tablet@2x.jpg") no-repeat center bottom 162px;
+    background-size: 372px 451px, auto auto;
   }
 }
 @media (min-width: 1440px) {
@@ -5232,12 +5234,10 @@ body {
   }
   .profile__image {
     margin-right: 0;
+    border-radius: 5px;
   }
   .profile__form {
     margin-top: 35px;
-  }
-  .profile__image {
-    border-radius: 5px;
   }
   .profile__form-button {
     margin-bottom: 60px;
