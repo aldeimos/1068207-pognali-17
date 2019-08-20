@@ -2,6 +2,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 0;
 
   .preference-list__item {
     display: flex;
@@ -24,7 +25,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-right: 15px;
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
       margin-left: auto;
 
 
@@ -32,23 +35,27 @@
       text-align: center;
 
       background: url("../img/status-bar-firsova.png") no-repeat;
-      background-position: bottom -1.5px left -13.5px;
+      background-position: bottom 5px right 3px;
       background-color: transparent;
+      background-size: 55px 50px;
       border-radius: 50%;
 
       &-demin {
         background: url("../img/status-bar-demin.png") no-repeat;
-        background-position: center;
+        background-position: center top;
+        background-size: 50px 50px;
       }
 
       &-smolov {
         background: url("../img/status-bar-smolov.png") no-repeat;
-        background-position: center;
+        background-position: center top;
+        background-size: 50px 50px;
       }
 
       &-rogovaya {
         background: url("../img/status-bar-rogovaya.png") no-repeat;
-        background-position: right;
+        background-position: center right;
+        background-size: 31px 50px;
       }
     }
 
@@ -141,7 +148,7 @@
   .catalog-preference-list {
     position: absolute;
     top: 35px;
-    right: 25px;
+    right: 29px;
 
     flex-direction: column;
     padding: 0;
@@ -157,7 +164,7 @@
     .preference-list__item {
 
       margin-right: 0;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-align: center;
 
       justify-content: center;
@@ -175,6 +182,8 @@
       }
 
       &--level {
+        width: 60px;
+        height: 60px;
         padding-right: 0;
         margin-right: 0;
         justify-content: center;

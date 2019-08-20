@@ -4,8 +4,8 @@
   z-index: 8;
 
   background-color: @dark-blue;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .companions__wrapper {
@@ -42,7 +42,7 @@
 
   &--bold {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     font-family: "BloggerSans-Bold", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 800;
@@ -111,6 +111,11 @@
 
     font-size: 24px;
     line-height: 24px;
+
+    &::after {
+      top: 30px;
+      right: 35px;
+    }
   }
 }
 
@@ -144,7 +149,7 @@
     margin-bottom: 40px;
 
     &--bold {
-      margin-bottom: 80px;
+      margin-bottom: 90px;
     }
   }
 
@@ -155,8 +160,12 @@
   .companions__button--desktop {
     display: block;
     align-self: flex-start;
-    padding-right: 110px;
-    padding-left: 35px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-right: 105px;
+    padding-left: 30px;
+
+    border-radius: 20px;
 
     &::after {
       right: 40px;

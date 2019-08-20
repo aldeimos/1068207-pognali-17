@@ -8,6 +8,10 @@
 
   background-color: #ffffff;
   border-radius: 20px;
+
+  &--paddingbottom {
+    padding-bottom: 10px;
+  }
 }
 
 .planning-form__title {
@@ -29,6 +33,10 @@
   font-family: "BloggerSans", "Arial", sans-serif;
   line-height: 22px;
   color: #444444;
+
+  &--step-3 {
+    margin-bottom: 22px;
+  }
 }
 
 .planning-form__progress {
@@ -80,7 +88,7 @@
 
 .planning-form__input {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   padding: 12px 35px;
 
   font-size: 15px;
@@ -185,7 +193,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 
   &::before {
     content: "";
@@ -480,13 +488,15 @@
 }
 
 .planning-form__button-stepback {
+  padding-top: 10px;
+
   color: fade(@dark-blue, 40%);
   text-align: center;
 
   background: none;
 
   span {
-    display: none;
+    display: inline;
   }
 
   &:hover,
@@ -519,7 +529,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 
   &::before {
     content: "";
@@ -529,7 +539,7 @@
     left: -12px;
 
     width: 2px;
-    height: 308px;
+    height: 285px;
 
     background-color: #1d2e5b;
   }
@@ -597,8 +607,9 @@
 
 .planning-form__textarea {
   width: 100%;
-  min-height: 220px;
+  min-height: 190px;
   padding: 15px;
+  padding-top: 10px;
 
   font-size: 16px;
   font-weight: 400;
@@ -626,6 +637,10 @@
     padding-right: 40px;
     padding-top: 55px;
     padding-bottom: 60px;
+
+    &--paddingbottom {
+      padding-top: 50px;
+    }
   }
 
 
@@ -817,7 +832,7 @@
 
       position: absolute;
       top: 0;
-      right: 150px;
+      right: 140px;
 
       width: 1px;
       height: 100%;
@@ -830,8 +845,8 @@
     justify-content: flex-start;
 
     &::before {
-      top: 28px;
-      right: 142.5px;
+      top: 25px;
+      right: 134.5px;
 
       width: 15px;
       height: 15px;
@@ -842,6 +857,7 @@
   .planning-form__button-add {
     width: 370px;
     padding: 27px;
+    padding-bottom: 20px;
 
     font-size: 20px;
     line-height: 18px;
@@ -872,13 +888,15 @@
     margin-bottom: 10px;
 
     &::before {
+      top: 24px;
+      right: 27px;
       width: 18px;
       height: 18px;
     }
 
     &::after {
-      top: 28px;
-      right: -26px;
+      top: 20px;
+      right: -36px;
 
       width: 15px;
       height: 15px;
@@ -908,20 +926,24 @@
     &::before {
       top: 50px;
       left: auto;
-      right: 0;
+      right: 8px;
 
-      height: 275px;
+      height: 270px;
       width: 3px;
     }
 
     &::after {
       content: none;
     }
+
+    &--czech {
+      margin-bottom: 50px;
+    }
   }
 
   .planning-form__label--country {
     margin-bottom: 40px;
-    padding-top: 38px;
+    padding-top: 45px;
     padding-left: 0;
 
     font-size: 30px;
@@ -931,8 +953,8 @@
 
     &::before {
       left: auto;
-      top: 34px;
-      right: -36px;
+      top: 38px;
+      right: -28px;
 
       width: 15px;
       height: 15px;
@@ -940,26 +962,26 @@
 
 
     &::after {
-      top: 20px;
-      right: 10px;
+      top: 28px;
+      right: 8px;
 
       width: 70px;
       height: 47px;
     }
 
     &-czech {
-      padding-top: 20px;
+      padding-top: 35px;
 
       border-top: none;
 
       &::after {
-        top: 5px;
+        top: 15px;
       }
     }
   }
 
   .planning-form__textarea {
-    min-height: 142px;
+    min-height: 115px;
 
     font-size: 20px;
     line-height: 24px;
@@ -1194,15 +1216,15 @@
     }
 
     &-czech {
-      padding-top: 35px;
+      padding-top: 28px;
 
       &::before {
-        top: 35px;
+        top: 34px;
         right: -605px;
       }
 
       &::after {
-        top: 25px;
+        top: 20px;
         right: -710px;
       }
     }

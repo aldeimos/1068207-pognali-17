@@ -71,11 +71,22 @@
   .country-list__item-title {
     display: block;
     margin: 0;
+    padding-left: 50px;
+
+    &::before {
+      left: -30px;
+      width: 75px;
+    }
 
     &::after {
-      width: 570px;
-      right: -575px;
+      width: 510px;
+      right: -515px;
     }
+  }
+
+  .country-list__item-image {
+    width: 35px;
+    height: 24px;
   }
 }
 

@@ -13,7 +13,7 @@
 .directions__title {
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 85px;
+  padding-top: 105px;
   padding-left: 25px;
   .section-index-title();
 }
@@ -21,7 +21,7 @@
 .directions__desc {
   width: 195px;
   margin: 0;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
   padding-left: 25px;
 
   .paragraph-style-text();
@@ -29,6 +29,7 @@
 }
 
 .directions__button {
+  margin-top: 15px;
   .view-all-button();
 }
 
@@ -73,15 +74,24 @@
 
   .directions__button {
     margin-right: 35px;
+    padding-left: 35px;
 
     font-size: 24px;
     line-height: 24px;
+
+    &::after {
+      top: 28px;
+      right: 34px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .directions {
     top: -75px;
+
+    padding-bottom: 60px;
+
     border-bottom-left-radius: 65px;
     border-bottom-right-radius: 65px;
   }
@@ -108,7 +118,7 @@
   }
 
   .directions__desc {
-    margin-bottom: 95px;
+    margin-bottom: 85px;
   }
 
   .directions__button {

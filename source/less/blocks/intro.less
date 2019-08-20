@@ -6,13 +6,13 @@
   height: 620px;
   padding-bottom: 135px;
 
-  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat left 53% bottom 365px, url("../img/globe-back-mobile@1x.jpg") no-repeat bottom 360px center;
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat left 59% bottom 370px, url("../img/globe-back-mobile@1x.jpg") no-repeat bottom 360px center;
   background-size: 192px 260px, 300px 420px;
 
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
-    background: url("../img/traveller-illustration-mobile@2x.png") no-repeat center bottom 365px, url("../img/globe-back-mobile@2x.jpg") no-repeat top center;
-    background-size: 192px, 320px;
+    background: url("../img/traveller-illustration-mobile@2x.png") no-repeat left 59% bottom 370px, url("../img/globe-back-mobile@2x.jpg") no-repeat bottom 360px center;
+    background-size: 192px 260px, 300px 420px;
   }
 }
 
@@ -149,7 +149,7 @@
     @media (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
       background: url("../img/traveller-illustration-tablet@2x.png") no-repeat right 29% bottom 295px, url("../img/globe-back-tablet@2x.jpg") no-repeat center bottom 162px;
-      background-size: 372px 451px, auto auto;
+      background-size: 372px 451px, 1479px 612px;
     }
   }
 
@@ -163,6 +163,13 @@
 
   .intro-nav {
     display: none;
+  }
+
+  .intro-nav__link--login {
+    padding-left: 33px;
+    padding-right: 27px;
+
+    letter-spacing: 0.1em;
   }
 
   .intro__guide {
@@ -240,10 +247,12 @@
   }
 
   .intro-nav__link--login {
-    padding-left: 25px;
-    padding-right: 35px;
+    padding-left: 29px;
+    padding-right: 28px;
+
     font-size: 20px;
     line-height: 30px;
+    letter-spacing: 0;
   }
 
   .intro-nav__link--phone,
